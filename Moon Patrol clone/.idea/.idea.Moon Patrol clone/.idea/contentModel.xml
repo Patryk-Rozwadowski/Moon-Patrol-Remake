@@ -7,7 +7,12 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="VehicleController.cs" t="Include" />
+          <e p="Camera" t="Include">
+            <e p="CameraFollow.cs" t="Include" />
+          </e>
+          <e p="Vehicle" t="Include">
+            <e p="VehicleController.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Moon Patrol clone.sln" t="IncludeFlat" />

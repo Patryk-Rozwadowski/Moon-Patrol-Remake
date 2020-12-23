@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a0eaa3f-0cc3-4ede-b0b1-ffa258d06056" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprite ground shaper.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Sprite ground shaper.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ground_grass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ground_grass.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Moon Patrol clone.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Moon Patrol clone.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Moon Patrol clone/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Moon Patrol clone/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Moon Patrol clone/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Moon Patrol clone/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +36,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/VehicleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraFollow.cs" />
       </list>
     </option>
   </component>
@@ -83,6 +82,7 @@
       <updated>1608591596125</updated>
       <workItem from="1608591602323" duration="601000" />
       <workItem from="1608677629557" duration="2515000" />
+      <workItem from="1608747653392" duration="277000" />
     </task>
     <servers />
   </component>
@@ -105,5 +105,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1036" y="384" key="run.anything.popup" timestamp="1608747929401">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1036" y="384" key="run.anything.popup/0.0.2560.1400/-1920.0.1920.1040@0.0.2560.1400" timestamp="1608747929401" />
   </component>
 </project>
