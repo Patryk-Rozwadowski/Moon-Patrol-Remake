@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22757043}
   m_LocalRotation: {x: -0, y: -0, z: -0.020683847, w: -0.99978614}
-  m_LocalPosition: {x: -10.45, y: -1.871, z: 0}
+  m_LocalPosition: {x: -18.48, y: -1.871, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 255987982}
@@ -169,7 +169,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.99485004
+  m_Mass: 0.9948499
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -805,7 +805,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7769784, y: 1}
+    m_SensorSize: {x: 1.7784314, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
