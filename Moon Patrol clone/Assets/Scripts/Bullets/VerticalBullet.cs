@@ -5,16 +5,25 @@ using UnityEngine;
 
 public class VerticalBullet : MonoBehaviour {
 
-    [SerializeField] private float speed = 20f;
-    public Rigidbody2D rb;
+    [SerializeField] 
+    private float speed = 20f;
 
+    [SerializeField]
+    private Transform firePointVertical;
+    
+    [SerializeField]
+    public Rigidbody2D rb;
+    
     private void Start() {
-        rb.velocity = transform.up * speed;
-        Debug.Log("Vertical bullet");
+        rb.velocity = new Vector3(rb.position.x, 5, 0);
+    }
+
+    private void Update() {
+        rb.position = new Vector2(firePointVertical.position.x, rb.position.y);
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
         Debug.Log($"Vertical Bullet hit: {obj.name}");
-        Destroy(gameObject);
+        // Destroy(gameObject);
     }
 }

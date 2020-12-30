@@ -804,7 +804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.049492, y: -0.421, z: -15}
+  m_LocalPosition: {x: -18.049517, y: -0.421, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719969895}
@@ -857,7 +857,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.778761, y: 1}
+    m_SensorSize: {x: 1.7786624, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -940,8 +940,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032870213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06584925, y: 0.17, z: 0}
-  m_LocalScale: {x: 1.596147, y: 0.60682625, z: 0.7802138}
+  m_LocalPosition: {x: 6.131, y: 0.675, z: 0}
+  m_LocalScale: {x: 4.6944985, y: 0.42305687, z: 0.7802138}
   m_Children: []
   m_Father: {fileID: 1942372078}
   m_RootOrder: 0
@@ -1736,6 +1736,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1989427861}
   m_PrefabAsset: {fileID: 0}
+--- !u!50 &2004098794 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2224376245544367699, guid: d476fb639c48c464ba4308bd890007e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1989427861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2004098796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004098791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37199f5c39189243a0f133b91d43957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  rb: {fileID: 2004098794}
 --- !u!1 &2036851703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,12 +1942,32 @@ PrefabInstance:
     - target: {fileID: 5579371619945920681, guid: 3adce52d315d8fb49a50de248162d4ea,
         type: 3}
       propertyPath: speed
-      value: 10
+      value: 0.08
       objectReference: {fileID: 0}
+    - target: {fileID: 5579371619945920681, guid: 3adce52d315d8fb49a50de248162d4ea,
+        type: 3}
+      propertyPath: vehiclePos
+      value: 
+      objectReference: {fileID: 22757044}
     - target: {fileID: 5579371619945920683, guid: 3adce52d315d8fb49a50de248162d4ea,
         type: 3}
       propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579371619945920683, guid: 3adce52d315d8fb49a50de248162d4ea,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579371619945920683, guid: 3adce52d315d8fb49a50de248162d4ea,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579371619945920683, guid: 3adce52d315d8fb49a50de248162d4ea,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5579371619945920686, guid: 3adce52d315d8fb49a50de248162d4ea,
         type: 3}
