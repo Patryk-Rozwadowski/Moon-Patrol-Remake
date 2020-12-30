@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ec4681c81933b5543980afbfca1945d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - firePointHorizon: {instanceID: 0}
+  - firePointVertical: {instanceID: 0}
+  - bulletVertical: {fileID: 5977131570995013821, guid: 76b060003502d50488bf7a6810a65cf7,
+      type: 3}
+  - bulletHorizon: {fileID: 6683127286758199724, guid: d476fb639c48c464ba4308bd890007e3,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
