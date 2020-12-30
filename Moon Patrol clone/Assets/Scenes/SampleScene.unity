@@ -259,8 +259,7 @@ MonoBehaviour:
   horizonFireKey: 97
   verticalFireKey: 115
   bulletVertical: {fileID: 870740701}
-  bulletHorizon: {fileID: 6683127286758199724, guid: d476fb639c48c464ba4308bd890007e3,
-    type: 3}
+  bulletHorizon: {fileID: 6683127286514127673}
   verticalDistance: 2
   horizonDistance: 0.2
 --- !u!1 &234041755
@@ -823,7 +822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.049557, y: -0.421, z: -15}
+  m_LocalPosition: {x: -18.049997, y: -0.421, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719969895}
@@ -876,7 +875,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7784975, y: 1}
+    m_SensorSize: {x: 1.7766714, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
