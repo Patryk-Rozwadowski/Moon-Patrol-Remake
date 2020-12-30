@@ -5,13 +5,8 @@ using UnityEngine;
 
 public class VehicleController : MonoBehaviour {
     [SerializeField] Rigidbody2D backTire;
-    [SerializeField] Rigidbody2D frontTire;
     [SerializeField] private float speed = 200;
     [SerializeField] private Rigidbody2D rb;
-
-    [SerializeField] private GameObject tire;
-    private float movement;
-    
     public static bool isInAir {
         get;
         set;
@@ -35,7 +30,5 @@ public class VehicleController : MonoBehaviour {
             backTire.AddTorque(-speed * Time.fixedDeltaTime);
 
         }
-
-        movement = Input.GetAxis("Horizontal");
     }
 }
