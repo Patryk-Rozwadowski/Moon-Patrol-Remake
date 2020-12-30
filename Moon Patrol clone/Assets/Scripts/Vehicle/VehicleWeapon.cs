@@ -11,6 +11,10 @@ public class VehicleWeapon : MonoBehaviour {
 
     [SerializeField] private GameObject bulletVertical;
     [SerializeField] private GameObject bulletHorizon;
+    
+    [SerializeField] private float verticalDistance;
+    [SerializeField] private float horizonDistance;
+    
     void Update() {
         if (Input.GetKeyDown(horizonFireKey)) {
             HorizontalShoot();
@@ -20,12 +24,15 @@ public class VehicleWeapon : MonoBehaviour {
     }
 
     private void HorizontalShoot() {
-        Instantiate(bulletHorizon, firePointHorizon.position, firePointHorizon.rotation);
+        GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, firePointHorizon.rotation);
+        // Destroy(bullet, verticalDistance);
         Debug.Log("Horizontal shoot");
     }
 
     private void VerticalShoot() {
-        Instantiate(bulletVertical, firePointVertical.position, firePointVertical.rotation);
+        
+        GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, firePointVertical.rotation);
+        // Destroy(bullet, horizonDistance);
         Debug.Log("Vertical shoot");
     }
 }

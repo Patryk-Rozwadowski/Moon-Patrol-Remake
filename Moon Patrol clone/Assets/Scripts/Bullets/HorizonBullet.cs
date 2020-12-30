@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HorizonBullet : MonoBehaviour {
     [SerializeField] private float speed = 20f;
-    public Rigidbody2D rb;
+    [SerializeField] private Transform firePointHorizon;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform vehicleAngle;
 
+    private GameObject _bullet;
     private void Start() {
-        rb.velocity = transform.right * speed;
-        Debug.Log("Horizon bullet");
+        rb.velocity = new Vector2(speed, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
-        Debug.Log($"Horizon Bullet hit: {obj.name}");
-        // Destroy(gameObject);
+        Debug.Log($"Vertical Bullet hit: {obj.name}");
     }
 }

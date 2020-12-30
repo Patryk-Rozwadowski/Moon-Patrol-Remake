@@ -5,17 +5,12 @@ using UnityEngine;
 
 public class VerticalBullet : MonoBehaviour {
 
-    [SerializeField] 
-    private float speed = 20f;
-
-    [SerializeField]
-    private Transform firePointVertical;
-    
-    [SerializeField]
-    public Rigidbody2D rb;
+    [SerializeField] private float speed = 20f;
+    [SerializeField] private Transform firePointVertical;
+    [SerializeField] public Rigidbody2D rb;
     
     private void Start() {
-        rb.velocity = new Vector3(rb.position.x, 5, 0);
+        rb.velocity = new Vector2(rb.transform.position.x, 5);
     }
 
     private void Update() {
