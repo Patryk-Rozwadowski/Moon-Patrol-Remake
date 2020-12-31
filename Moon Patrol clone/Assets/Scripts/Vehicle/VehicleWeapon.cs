@@ -24,8 +24,9 @@ public class VehicleWeapon : MonoBehaviour {
     }
 
     private void HorizontalShoot() {
-        GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, firePointHorizon.rotation);
+        // GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, firePointHorizon.rotation);
         // Destroy(bullet, verticalDistance);
+        ScriptableObject.CreateInstance<pf>();
         Debug.Log("Horizontal shoot");
     }
 
