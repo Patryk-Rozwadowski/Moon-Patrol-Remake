@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletRigidBody: {fileID: 8691790367499978643}
-  projectileData: {fileID: 11400000, guid: e89864acd6932d148b9d0b63caa9999e, type: 2}
+  projectileSpeed: {fileID: 11400000, guid: 53c2899805b08424088fbf12b9138fef, type: 2}

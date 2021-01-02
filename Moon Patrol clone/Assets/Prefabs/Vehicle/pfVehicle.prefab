@@ -82,6 +82,10 @@ MonoBehaviour:
   bulletVertical: {fileID: 8495263545604352594}
   bulletHorizon: {fileID: 8691790367499978655, guid: 0e8affd2396a3e24fa9d0414d54498c4,
     type: 3}
+  horizonDistanceRange: {fileID: 11400000, guid: 7b23d4377f1867d4ab66a52397891a34,
+    type: 2}
+  verticalDistanceRange: {fileID: 11400000, guid: 22c017105cb161b4fb04a5ce8741fa58,
+    type: 2}
 --- !u!1 &5799261185466914943
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,4 +1000,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePointVertical: {fileID: 6670653756850915319}
   bulletRigidBody: {fileID: 8495263545604352622}
-  projectileData: {fileID: 11400000, guid: 004b74197570c1445abb36689db536e4, type: 2}
+  projectileSpeed: {fileID: 11400000, guid: 2a03b6af62d09ec4e9b22a75668bb477, type: 2}

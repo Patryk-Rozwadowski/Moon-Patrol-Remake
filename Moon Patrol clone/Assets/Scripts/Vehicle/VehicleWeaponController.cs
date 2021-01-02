@@ -9,6 +9,9 @@ public class VehicleWeaponController : MonoBehaviour {
 
     [SerializeField] private GameObject bulletVertical;
     [SerializeField] private GameObject bulletHorizon;
+
+    [SerializeField] private ProjectileDistanceSO horizonDistanceRange;
+    [SerializeField] private ProjectileDistanceSO verticalDistanceRange;
     
     private void Update() {
        Shoot();
@@ -25,11 +28,11 @@ public class VehicleWeaponController : MonoBehaviour {
     
     private void VerticalShoot() {
         GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
-        Destroy(bullet, 0.5f);
+        Destroy(bullet, verticalDistanceRange.projectileDistance);
     }
 
     private void HorizontalShoot() {
         GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
-        Destroy(bullet, 0.8f);
+        Destroy(bullet, horizonDistanceRange.projectileDistance);
     }
 }
