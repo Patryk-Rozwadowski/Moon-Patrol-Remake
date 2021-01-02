@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3274a2b093ad447b25e27fca6b63bf, type: 3}
   m_Name: PlayerVerticalProjectile
   m_EditorClassIdentifier: 
+  speed: 5
+  flyingDistanceUntilDestroy: 5
+  firePoint: {fileID: 8543940161190154573, guid: cebb1e1274fbaa34480b245ff4611afc,
+    type: 3}

@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3274a2b093ad447b25e27fca6b63bf, type: 3}
   m_Name: PlayerHorizontalProjectile
   m_EditorClassIdentifier: 
-  speed: 10
-  firePoint: {fileID: 6941098768208270275, guid: 87c71d9a5d25c4b42a0ec0ae65456b83,
+  speed: 9.99
+  firePoint: {fileID: 2541269554849896809, guid: 90f61e41cac7d2044b86fc39bdabc2f0,
     type: 3}
-  rigidBody: {fileID: 0}
   flyingDistanceUntilDestroy: 0
