@@ -2,9 +2,9 @@
 using UnityEngine;
 
 public class VerticalBullet : MonoBehaviour {
-    [SerializeField] private Transform firePointVertical;
-    [SerializeField] public Rigidbody2D bulletRigidBody;
-    [SerializeField] private ProjectileSpeedSO projectileSpeed;
+    [SerializeField] public Transform firePointVertical = null;
+    [SerializeField] public Rigidbody2D bulletRigidBody= null;
+    [SerializeField] public ProjectileSpeedSO projectileSpeed = null;
     private void Start() {
         bulletRigidBody.velocity = new Vector2(firePointVertical.transform.position.x, projectileSpeed.projectileSpeed);
     }

@@ -272,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.566547, y: 0.11116862, z: -15}
+  m_LocalPosition: {x: -18.951519, y: 0.11116862, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719969895}
@@ -331,7 +331,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.911353, y: 1}
+    m_SensorSize: {x: 4.452514, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -969,7 +969,7 @@ PrefabInstance:
     - target: {fileID: 5799261185691537407, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}
       propertyPath: m_Name
-      value: pfVehicle
+      value: Vehicle
       objectReference: {fileID: 0}
     - target: {fileID: 8495263545604352593, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}

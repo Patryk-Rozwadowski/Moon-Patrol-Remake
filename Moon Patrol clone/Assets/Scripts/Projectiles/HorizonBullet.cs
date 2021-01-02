@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
 public class HorizonBullet : MonoBehaviour {
-    [SerializeField] private Rigidbody2D bulletRigidBody;
-    [SerializeField] private ProjectileSpeedSO projectileSpeed;
+    [SerializeField] private Rigidbody2D bulletRigidBody = null;
+    [SerializeField] private ProjectileSpeedSO projectileSpeed = null;
 
     private void Start() {
         bulletRigidBody.velocity = new Vector2( projectileSpeed.projectileSpeed, 0);
