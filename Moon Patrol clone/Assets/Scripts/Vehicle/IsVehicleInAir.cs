@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class IsVehicleInAir : MonoBehaviour {
-
     private void OnTriggerEnter2D(Collider2D other) {
         VehicleController.isInAir = false;
         Debug.Log("Tire on ground");
