@@ -19,6 +19,10 @@ public class VerticalBullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
+        Destroy(gameObject);
+        EnemyController enemy = obj.GetComponent<EnemyController>();
+        if (enemy == null) return;
+        enemy.EnemyDeath();
         Debug.Log($"Vertical Bullet hit: {obj.name}");
     }
 }

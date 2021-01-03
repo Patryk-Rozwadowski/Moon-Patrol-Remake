@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a59149ffa642347a3d97e2651882e2, type: 3}
   m_Name: HorizonProjectileDistance
   m_EditorClassIdentifier: 
-  projectileDistance: 0.5
+  projectileDistance: 1.29
