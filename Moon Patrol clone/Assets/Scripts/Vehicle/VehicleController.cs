@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
 public class VehicleController : MonoBehaviour {
-    [SerializeField] private Rigidbody2D backTire;
+    [SerializeField] private Rigidbody2D backTire= null;
     [SerializeField] private float speed = 200;
-    [SerializeField] private Rigidbody2D vehicleRigidBody;
+    [SerializeField] private Rigidbody2D vehicleRigidBody = null;
     public static bool isInAir { get; set; }
 
     private void Update() {
