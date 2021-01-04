@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backTire: {fileID: 234041759}
-  frontTire: {fileID: 0}
   speed: 0
+  vehicleRigidBody: {fileID: 0}
 --- !u!1 &191847841
 GameObject:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.366158, y: -0.15999985, z: -15}
+  m_LocalPosition: {x: -20.225842, y: -0.15999985, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719969895}
@@ -1202,7 +1202,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0384614, y: 1}
+    m_SensorSize: {x: 6.75, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
