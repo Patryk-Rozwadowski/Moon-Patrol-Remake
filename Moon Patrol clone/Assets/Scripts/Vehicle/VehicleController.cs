@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class VehicleController : MonoBehaviour {
-    [SerializeField] private Rigidbody2D backTire= null;
+    [SerializeField] private Rigidbody2D backTire = null;
     [SerializeField] private float speed = 200;
     [SerializeField] private Rigidbody2D vehicleRigidBody = null;
     public static bool isInAir { get; set; }
@@ -19,5 +19,10 @@ public class VehicleController : MonoBehaviour {
             vehicleRigidBody.freezeRotation = false;
             backTire.AddTorque(-speed * Time.fixedDeltaTime);
         }
+    }
+    
+    public void PlayerDeath() {
+        Destroy(gameObject);
+        Debug.LogWarning("Player death");
     }
 }

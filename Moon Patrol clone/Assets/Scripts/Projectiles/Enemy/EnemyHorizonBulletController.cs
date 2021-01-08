@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class HorizonBullet : MonoBehaviour {
+public class EnemyHorizonBulletController : MonoBehaviour {
     [SerializeField] private Rigidbody2D bulletRigidBody = null;
     [SerializeField] private ProjectileSpeedSO projectileSpeed = null;
 
@@ -13,10 +15,11 @@ public class HorizonBullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
-        EnemyController enemy = obj.GetComponent<EnemyController>();
-        if (enemy == null) return;
-        enemy.EnemyDeath();
         Destroy(gameObject);
+        VehicleController player = obj.GetComponent<VehicleController>();
+        Debug.Log($"Enemy hit: {obj} ");
+        if (player == null) return;
+        player.PlayerDeath();
         Debug.Log($"Vertical Bullet hit: {obj.name}");
     }
 }
