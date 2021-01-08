@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 1
   sprite: {fileID: 21300000, guid: 49d26554983713c4fb8b0b1f858a0572, type: 3}
-  weaponRange: 11.77
-  visionRange: 20.5
+  weaponRange: 11.9
+  visionRange: 28.2
   bulletPrefab: {fileID: 8691790367499978655, guid: 37bd0700836055f4f833b7fe60029b76,
     type: 3}

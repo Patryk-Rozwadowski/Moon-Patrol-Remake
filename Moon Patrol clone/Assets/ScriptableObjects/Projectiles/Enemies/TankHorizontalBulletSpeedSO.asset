@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a4293e442c81d489797300b6d7fd78, type: 3}
   m_Name: TankHorizontalBulletSpeedSO
   m_EditorClassIdentifier: 
-  projectileSpeed: 10
+  projectileSpeed: -12.79

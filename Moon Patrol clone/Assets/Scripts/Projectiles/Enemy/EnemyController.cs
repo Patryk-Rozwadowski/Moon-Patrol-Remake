@@ -9,13 +9,15 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private EnemyParamsSO enemyParams = null;
     [SerializeField] private GameObject enemyHorizontalBullet = null;
 
-    private float fireRate = 1f;
+    private float fireRate = 0.5f;
     private float nextFire = 0f;
     
     private void Start() {
         Debug.Log($"Enemy vision: {enemyParams.visionRange}");
     }
-    private void Update() {
+    private void Update()
+    {
+        if (playerPos == null) return;
         if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) { 
             Shooting();
         }

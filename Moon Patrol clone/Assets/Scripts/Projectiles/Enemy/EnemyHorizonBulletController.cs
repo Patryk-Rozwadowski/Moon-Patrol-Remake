@@ -7,7 +7,7 @@ public class EnemyHorizonBulletController : MonoBehaviour {
     [SerializeField] private ProjectileSpeedSO projectileSpeed = null;
 
     private void Start() {
-        bulletRigidBody.velocity = new Vector2(-projectileSpeed.projectileSpeed, 0);
+        bulletRigidBody.velocity = new Vector2(projectileSpeed.projectileSpeed, 0);
     }
 
     private void OnDestroy() {

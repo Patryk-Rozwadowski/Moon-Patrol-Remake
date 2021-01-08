@@ -95,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.13274756, y: 0}
@@ -147,7 +147,8 @@ MonoBehaviour:
   deathEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
     type: 3}
   firepoint: {fileID: 3400805094466549378}
-  playerPos: {fileID: 5057641617403075852}
+  playerPos: {fileID: 5799261185691537400, guid: 1afe299bbdc3bec4b921f0fabf840491,
+    type: 3}
   enemyParams: {fileID: 11400000, guid: cfd21a32e9e31694d96630f938c2c808, type: 2}
   enemyHorizontalBullet: {fileID: 8691790367499978655, guid: 37bd0700836055f4f833b7fe60029b76,
     type: 3}
