@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8668042001244389441}
   - component: {fileID: 6924933500455243903}
+  - component: {fileID: 792336487}
+  - component: {fileID: 2744760031044524861}
   m_Layer: 0
-  m_Name: Hole
+  m_Name: hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,3 +83,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &792336487
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146700907840957741}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.0128222, y: 0.8330631}
+  - {x: -0.4483919, y: 0.5815642}
+  - {x: -0.2988224, y: 0.41921473}
+  - {x: -0.04977703, y: 0.36033607}
+  - {x: 0.03662491, y: 0.21913052}
+  - {x: 0.5295458, y: 0.3700807}
+  - {x: 0.7085018, y: 0.65636635}
+  - {x: 0.8129635, y: 0.74650216}
+  - {x: 1.0385876, y: 0.8330631}
+--- !u!114 &2744760031044524861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146700907840957741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d8b522b6bcf9a438f2316bb530ac04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleCollider2D: {fileID: 792336487}

@@ -22,7 +22,8 @@ public class VehicleController : MonoBehaviour {
     }
     
     public void PlayerDeath() {
-        Destroy(gameObject);
+        // Destroy(gameObject);
+        gameObject.SetActive(false);
         Debug.LogWarning("Player death");
     }
 }
