@@ -179,7 +179,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5799261185466914943}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -202,7 +202,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: dc8dd1c093e8fb149b2d8ab30b59bf8b, type: 2}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -313,7 +313,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5799261185691537407}
   m_Enabled: 1
   m_Density: 6.07
-  m_Material: {fileID: 6200000, guid: b339c64c7e27a284fa58edda9eeb86bd, type: 2}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -342,13 +342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd0414477050b542a73bd55feb46d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backTire: {fileID: 5799261185751826643}
-  midTire: {fileID: 5799261187123936562}
-  frontTire: {fileID: 5799261185466914939}
-  speed: 0
-  vehicleRigidBody: {fileID: 5799261185691537401}
-  playerSpeed: {fileID: 11400000, guid: b344cb7b8398c3b4eafd3ae7ab386213, type: 2}
-  jumpForce: 19
 --- !u!1 &5799261185751826647
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +436,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5799261185751826647}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -466,7 +459,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: dc8dd1c093e8fb149b2d8ab30b59bf8b, type: 2}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -683,7 +676,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5799261187123936560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -706,7 +699,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: dc8dd1c093e8fb149b2d8ab30b59bf8b, type: 2}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -758,7 +751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5799261187100713569}
   - component: {fileID: 5799261187100713571}
-  - component: {fileID: 5799261187100713596}
   m_Layer: 0
   m_Name: VehicleBoxCollider
   m_TagString: Untagged
@@ -806,18 +798,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8673011, y: 0.4871226}
   m_EdgeRadius: 0
---- !u!114 &5799261187100713596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799261187168670395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39c1d16f17fcd04191a45044415b7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6670653756850915312
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,8 +3,6 @@
 public class VehicleTireController : MonoBehaviour {
     [SerializeField] private Rigidbody2D tireRigidbody2D;
     
-    private bool jumping = false;
-    
     private float jumpTime = 0f;
     private float jumpHeight = 2f;
 
