@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 5799261185466914938}
   - component: {fileID: 5799261185466914939}
   - component: {fileID: 5799261185466914932}
+  - component: {fileID: 1130198228}
   m_Layer: 0
   m_Name: Tire front
   m_TagString: Untagged
@@ -113,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261185466914943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.202, y: -0.174, z: -0.15}
+  m_LocalPosition: {x: -0.202, y: -0.37199995, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -178,7 +179,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5799261185466914943}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -196,15 +197,15 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.13854423
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!235 &5799261185466914932
 WheelJoint2D:
@@ -223,13 +224,26 @@ WheelJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -0.20044148, y: -0.042234734}
   m_Suspension:
-    m_DampingRatio: 1
-    m_Frequency: 11.52
+    m_DampingRatio: 0
+    m_Frequency: 4.26
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 500
     m_MaximumMotorForce: 10000
+--- !u!114 &1130198228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799261185466914943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a375d8269576c664f94a5afc0bd10af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tireRigidbody2D: {fileID: 5799261185466914939}
 --- !u!1 &5799261185691537407
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +280,6 @@ Transform:
   - {fileID: 5799261185751826640}
   - {fileID: 5799261185466914936}
   - {fileID: 5799261187123936561}
-  - {fileID: 5799261187061551885}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -282,15 +295,15 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.193617
+  m_Mass: 0.121803306
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6956607034192976408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -299,12 +312,12 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261185691537407}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
+  m_Density: 6.07
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043370247, y: 0.17804551}
+  m_Offset: {x: -0.510657, y: 0.09472662}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -315,7 +328,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8537045, y: 0.643909}
+  m_Size: {x: 0.021510482, y: 0.9328681}
   m_EdgeRadius: 0
 --- !u!114 &5799261185691537402
 MonoBehaviour:
@@ -329,9 +342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd0414477050b542a73bd55feb46d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backTire: {fileID: 5799261185751826643}
-  speed: 0
-  vehicleRigidBody: {fileID: 5799261185691537401}
 --- !u!1 &5799261185751826647
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +355,7 @@ GameObject:
   - component: {fileID: 5799261185751826642}
   - component: {fileID: 5799261185751826643}
   - component: {fileID: 5799261185751826668}
+  - component: {fileID: 264044153}
   m_Layer: 0
   m_Name: Tire back
   m_TagString: Untagged
@@ -360,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261185751826647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.728, y: -0.153, z: -0.15}
+  m_LocalPosition: {x: -0.728, y: -0.37, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -446,12 +457,12 @@ Rigidbody2D:
   m_UseAutoMass: 1
   m_Mass: 0.13854423
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!235 &5799261185751826668
 WheelJoint2D:
@@ -471,12 +482,25 @@ WheelJoint2D:
   m_ConnectedAnchor: {x: -0.72600234, y: -0.018495768}
   m_Suspension:
     m_DampingRatio: 0
-    m_Frequency: 30
+    m_Frequency: 4.26
     m_Angle: 90
-  m_UseMotor: 1
+  m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 955.98
+    m_MotorSpeed: 500
     m_MaximumMotorForce: 10000
+--- !u!114 &264044153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799261185751826647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a375d8269576c664f94a5afc0bd10af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tireRigidbody2D: {fileID: 5799261185751826643}
 --- !u!1 &5799261185790697537
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,36 +582,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &5799261187061551884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5799261187061551885}
-  m_Layer: 0
-  m_Name: Sterowanie
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5799261187061551885
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799261187061551884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5799261185691537400}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5799261187123936560
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +595,7 @@ GameObject:
   - component: {fileID: 5799261187123936716}
   - component: {fileID: 5799261187123936562}
   - component: {fileID: 5799261187123936563}
+  - component: {fileID: 1105137020}
   m_Layer: 0
   m_Name: Tire mid
   m_TagString: Untagged
@@ -616,7 +611,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261187123936560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.439, y: -0.195, z: -0.15}
+  m_LocalPosition: {x: 0.439, y: -0.39299998, z: -0.15}
   m_LocalScale: {x: 0.93750787, y: 0.88859373, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -681,7 +676,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 5799261187123936560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -699,15 +694,15 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.121769436
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!235 &5799261187123936563
 WheelJoint2D:
@@ -726,13 +721,26 @@ WheelJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.4442041, y: -0.09420422}
   m_Suspension:
-    m_DampingRatio: 1
-    m_Frequency: 11.52
+    m_DampingRatio: 0
+    m_Frequency: 4.26
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 500
     m_MaximumMotorForce: 10000
+--- !u!114 &1105137020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5799261187123936560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a375d8269576c664f94a5afc0bd10af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tireRigidbody2D: {fileID: 5799261187123936562}
 --- !u!1 &5799261187168670395
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +751,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5799261187100713569}
   - component: {fileID: 5799261187100713571}
-  - component: {fileID: 5799261187100713596}
   m_Layer: 0
   m_Name: VehicleBoxCollider
   m_TagString: Untagged
@@ -791,18 +798,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8673011, y: 0.4871226}
   m_EdgeRadius: 0
---- !u!114 &5799261187100713596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5799261187168670395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d39c1d16f17fcd04191a45044415b7aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6670653756850915312
 GameObject:
   m_ObjectHideFlags: 0
