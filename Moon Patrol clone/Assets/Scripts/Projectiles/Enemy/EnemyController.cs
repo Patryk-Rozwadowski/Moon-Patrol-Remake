@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿#pragma warning disable 649
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
-    [SerializeField] private GameObject deathEffect = null;
-    [SerializeField] private Transform firepoint = null;
-    [SerializeField] private Transform playerPos = null;
-    [SerializeField] private EnemyParamsSO enemyParams = null;
-    [SerializeField] private GameObject enemyHorizontalBullet = null;
+    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private Transform firepoint;
+    [SerializeField] private Transform playerPos;
+    [SerializeField] private EnemyParamsSO enemyParams;
+    [SerializeField] private GameObject enemyHorizontalBullet;
 
-    private float fireRate = 0.5f;
-    private float nextFire = 0f;
+    private readonly float fireRate = 0.5f;
+    private float nextFire;
 
     private void Start() {
         Debug.Log($"Enemy vision: {enemyParams.visionRange}");
@@ -18,9 +17,7 @@ public class EnemyController : MonoBehaviour {
 
     private void Update() {
         if (playerPos == null) return;
-        if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) {
-            Shooting();
-        }
+        if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
     }
 
     public void EnemyDeath() {

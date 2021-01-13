@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 public class HorizonBullet : MonoBehaviour {
-    [SerializeField] private Rigidbody2D bulletRigidBody = null;
-    [SerializeField] private ProjectileSpeedSO projectileSpeed = null;
+    [SerializeField] private Rigidbody2D bulletRigidBody;
+    [SerializeField] private ProjectileSpeedSO projectileSpeed;
 
     private void Start() {
         bulletRigidBody.velocity = new Vector2(projectileSpeed.projectileSpeed, 0);
@@ -13,7 +14,7 @@ public class HorizonBullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
-        EnemyController enemy = obj.GetComponent<EnemyController>();
+        var enemy = obj.GetComponent<EnemyController>();
         if (enemy == null) return;
         enemy.EnemyDeath();
         Destroy(gameObject);

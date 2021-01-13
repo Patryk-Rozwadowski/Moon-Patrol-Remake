@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/BaseRespawn")]
 public class BaseRespawnSO : ScriptableObject {
-    [SerializeField] public Sprite baseSprite = null;
+    [SerializeField] public Sprite baseSprite;
 }

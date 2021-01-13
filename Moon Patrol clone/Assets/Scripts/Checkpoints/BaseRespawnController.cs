@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿#pragma warning disable 649
+
 using UnityEngine;
 
 public class BaseRespawnController : MonoBehaviour {
-    [SerializeField] private BaseRespawnSO sprite = null;
-    [SerializeField] private GameObject vehicle = null;
+    [SerializeField] private BaseRespawnSO sprite;
+    [SerializeField] private GameObject vehicle;
 
     private void Start() {
         GetComponent<SpriteRenderer>().sprite = sprite.baseSprite;
