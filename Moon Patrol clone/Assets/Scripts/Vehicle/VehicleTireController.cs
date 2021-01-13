@@ -2,27 +2,30 @@
 
 public class VehicleTireController : MonoBehaviour {
     [SerializeField] private Rigidbody2D tireRigidbody2D;
+    [SerializeField] private PlayerParamsSO playerParams;
     
-    private float jumpTime = 0f;
-    private float jumpHeight = 2f;
+    private float _nextJump = 0f;
+    private float _jumpTime = 0f;
 
-    private float coolDown = 3f;
-    
-    private float nextJump = 0f;
-    private float pos = 0f;
+    private float _pos = 0f;
     private void Start() {
-        pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform.position.y;
+        _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform.position.y;
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.D) && Time.time > nextJump) {
-            jumpTime = Time.time + jumpHeight;
-            nextJump = Time.time + coolDown + jumpHeight;
-        }
-        else if (Time.time < nextJump){
-            Debug.Log($"COOLDOWN: {nextJump - Time.time}");
-        }
+        Jump();
+    }
 
-        tireRigidbody2D.velocity = Time.time < jumpTime ? new Vector2(5f, 1f) : new Vector2(10f, pos);
+    private void Jump() {
+        if (Input.GetKeyDown(KeyCode.D) && Time.time > _nextJump) {
+            _jumpTime = Time.time + playerParams.jumpTimeInAir;
+            _nextJump = Time.time + playerParams.jumpCooldown + _jumpTime;
+        }
+        else if (Time.time < _nextJump){
+            Debug.Log($"COOLDOWN: {_nextJump - Time.time}");
+        }
+        
+        tireRigidbody2D.velocity = Time.time < _jumpTime ? new Vector2(playerParams.playerSpeed, playerParams.jumpHeightAccelerate) : new Vector2(playerParams.playerSpeed, _pos);
+
     }
 }
