@@ -5,10 +5,9 @@ using UnityEngine;
 public class VehicleTireController : MonoBehaviour {
     [SerializeField] private Rigidbody2D tireRigidbody2D;
     [SerializeField] private PlayerParamsSO playerParams;
+    
     private float _jumpTime;
-
     private float _nextJump;
-
     private float _pos;
 
     private void Start() {

@@ -6,9 +6,4 @@ public class VehicleController : MonoBehaviour {
         gameObject.SetActive(false);
         Debug.LogWarning("Player death");
     }
-
-    [RuntimeInitializeOnLoadMethod]
-    static void Smth() {
-        Debug.Log("Elo");
-    }
 }

@@ -18,12 +18,12 @@ public class VehicleWeaponController : MonoBehaviour {
     }
 
     private void VerticalShoot() {
-        var bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
         Destroy(bullet, verticalDistanceRange.projectileDistance);
     }
 
     private void HorizontalShoot() {
-        var bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
         Destroy(bullet, horizonDistanceRange.projectileDistance);
     }
 }

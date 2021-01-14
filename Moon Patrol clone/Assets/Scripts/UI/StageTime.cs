@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿#pragma warning disable 649
+
 using UnityEngine;
 using UnityEngine.UI;
 
