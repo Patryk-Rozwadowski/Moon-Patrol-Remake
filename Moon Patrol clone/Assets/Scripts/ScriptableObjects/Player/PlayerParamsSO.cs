@@ -7,5 +7,4 @@ public class PlayerParamsSO : ScriptableObject {
     [SerializeField] public float playerSpeed = 0f;
     [SerializeField] public float jumpTimeInAir = 0f;
     [SerializeField] public float jumpHeightAccelerate = 0f;
-    [SerializeField] public float jumpCooldown = 0f;
 }
