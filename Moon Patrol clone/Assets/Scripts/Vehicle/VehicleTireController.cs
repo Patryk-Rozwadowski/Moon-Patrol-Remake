@@ -1,14 +1,10 @@
-﻿#pragma warning disable 649
-
-using UnityEngine;
+﻿using UnityEngine;
 
 public class VehicleTireController : MonoBehaviour {
     [SerializeField] private Rigidbody2D tireRigidbody2D;
     [SerializeField] private PlayerParamsSO playerParams;
-    
-    private float _jumpTime;
-    private float _nextJump;
-    private float _pos;
+
+    private float _jumpTime, _pos = 0f;
 
     private void Start() {
         _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform
@@ -20,11 +16,11 @@ public class VehicleTireController : MonoBehaviour {
     }
 
     private void Jump() {
-        if (Input.GetKeyDown(KeyCode.D) && Time.time > _nextJump) {
+        if (Input.GetKeyDown(KeyCode.D) && Time.time > _jumpTime + playerParams.jumpTimeInAir) {
             _jumpTime = Time.time + playerParams.jumpTimeInAir;
         }
-        else if (Time.time < _nextJump) {
-            Debug.Log($"COOLDOWN: {_nextJump - Time.time}");
+        else if (Time.time < _jumpTime) {
+            Debug.Log($"COOLDOWN: {_jumpTime - Time.time}");
         }
 
         tireRigidbody2D.velocity = Time.time < _jumpTime
