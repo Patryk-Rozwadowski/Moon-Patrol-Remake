@@ -23,6 +23,5 @@ public class VerticalBullet : MonoBehaviour {
         var enemy = obj.GetComponent<EnemyController>();
         if (enemy == null) return;
         enemy.EnemyDeath();
-        Debug.Log($"Vertical Bullet hit: {obj.name}");
     }
 }

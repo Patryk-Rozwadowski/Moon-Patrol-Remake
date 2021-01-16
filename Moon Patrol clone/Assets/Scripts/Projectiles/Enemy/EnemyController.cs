@@ -1,4 +1,6 @@
 ﻿#pragma warning disable 649
+
+using System;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
@@ -7,12 +9,15 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private Transform playerPos;
     [SerializeField] private EnemyParamsSO enemyParams;
     [SerializeField] private GameObject enemyHorizontalBullet;
+    
+    private ScoreManager _scoreManager;
 
     private readonly float fireRate = 0.5f;
     private float nextFire;
 
+
     private void Start() {
-        Debug.Log($"Enemy vision: {enemyParams.visionRange}");
+        _scoreManager = GetComponent<ScoreManager>();
     }
 
     private void Update() {
@@ -21,8 +26,9 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void EnemyDeath() {
+        Debug.Log($"Enemy death: {enemyParams.score}");
+        _scoreManager.AddOverallPlayerScore(enemyParams.score);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
-        GetComponent<SpriteRenderer>().sprite = enemyParams.sprite;
         Destroy(gameObject);
     }
 
