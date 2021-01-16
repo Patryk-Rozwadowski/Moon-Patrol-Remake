@@ -15,4 +15,4 @@ MonoBehaviour:
   playerSpeed: 8
   jumpTimeInAir: 0.8
   jumpHeightAccelerate: 1.29
-  jumpCooldown: 1
+  jumpCooldown: 0
