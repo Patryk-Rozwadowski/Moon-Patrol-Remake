@@ -126,10 +126,10 @@ MonoBehaviour:
     type: 3}
   firepoint: {fileID: 0}
   playerPos: {fileID: 0}
-  enemyParams: {fileID: 0}
+  enemyParams: {fileID: 11400000, guid: 0fdb69652eed1444084455ac7aa8637e, type: 2}
   enemyHorizontalBullet: {fileID: 0}
-  scoreStore: {fileID: 0}
-  scoreManager: {fileID: 0}
+  pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
+    type: 3}
 --- !u!114 &7017044516443627483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,4 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aacb58ac08fc46748ba2c94e1b2acbd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreStore: {fileID: 0}
+  scoreStore: {fileID: 11400000, guid: 4026d467acb14fd48bbc4166585ffde2, type: 2}

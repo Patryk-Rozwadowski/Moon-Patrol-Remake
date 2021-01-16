@@ -13,18 +13,13 @@ public class EnemyController : MonoBehaviour {
 
     [SerializeField] private Transform pfScorePopup;
     
-    [SerializeField] private Text deathScoreInfoTextPrefab;
-    
     private ScoreManager _scoreManager;
 
     private readonly float fireRate = 0.5f;
     private float nextFire;
-    private ScoreInfoAfterEnemyDeath _scoreInfoAfterEnemyDeath;
-
 
     private void Start() {
         _scoreManager = GetComponent<ScoreManager>();
-        _scoreInfoAfterEnemyDeath = GetComponent<ScoreInfoAfterEnemyDeath>();
     }
 
     private void Update() {
@@ -33,8 +28,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void EnemyDeath() {
-        Debug.Log($"Enemy death: {enemyParams.score}");
-        
         _scoreManager.AddOverallPlayerScore(enemyParams.score);
         Destroy(gameObject);
 

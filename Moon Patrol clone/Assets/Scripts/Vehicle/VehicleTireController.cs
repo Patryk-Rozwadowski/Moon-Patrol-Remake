@@ -22,7 +22,6 @@ public class VehicleTireController : MonoBehaviour {
     private void Jump() {
         if (Input.GetKeyDown(KeyCode.D) && Time.time > _nextJump) {
             _jumpTime = Time.time + playerParams.jumpTimeInAir;
-            _nextJump = Time.time + playerParams.jumpCooldown + _jumpTime;
         }
         else if (Time.time < _nextJump) {
             Debug.Log($"COOLDOWN: {_nextJump - Time.time}");
