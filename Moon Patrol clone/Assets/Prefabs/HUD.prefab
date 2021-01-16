@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 6459083159663679517}
-  _scoreStore: {fileID: 0}
+  _scoreStore: {fileID: 11400000, guid: 4026d467acb14fd48bbc4166585ffde2, type: 2}
 --- !u!1 &6459083159750184100
 GameObject:
   m_ObjectHideFlags: 0

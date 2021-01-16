@@ -2,6 +2,7 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
     [SerializeField] private GameObject deathEffect;
@@ -9,15 +10,21 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] private Transform playerPos;
     [SerializeField] private EnemyParamsSO enemyParams;
     [SerializeField] private GameObject enemyHorizontalBullet;
+
+    [SerializeField] private Transform pfScorePopup;
+    
+    [SerializeField] private Text deathScoreInfoTextPrefab;
     
     private ScoreManager _scoreManager;
 
     private readonly float fireRate = 0.5f;
     private float nextFire;
+    private ScoreInfoAfterEnemyDeath _scoreInfoAfterEnemyDeath;
 
 
     private void Start() {
         _scoreManager = GetComponent<ScoreManager>();
+        _scoreInfoAfterEnemyDeath = GetComponent<ScoreInfoAfterEnemyDeath>();
     }
 
     private void Update() {
@@ -27,9 +34,13 @@ public class EnemyController : MonoBehaviour {
 
     public void EnemyDeath() {
         Debug.Log($"Enemy death: {enemyParams.score}");
+        
         _scoreManager.AddOverallPlayerScore(enemyParams.score);
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+
+        Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
+        ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
+        scorePopupController.Setup(enemyParams.score);
     }
 
     private void Shooting() {

@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1765201949386851313}
+  - component: {fileID: 5124083997699483533}
   - component: {fileID: 288030415832715035}
   - component: {fileID: 5353777614377167182}
   - component: {fileID: 1585470933}
@@ -20,8 +20,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1765201949386851313
-Transform:
+--- !u!224 &5124083997699483533
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -34,6 +34,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1.31, y: 0.54}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &288030415832715035
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -128,6 +133,9 @@ MonoBehaviour:
   playerPos: {fileID: 0}
   enemyParams: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
   enemyHorizontalBullet: {fileID: 0}
+  pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
+    type: 3}
+  deathScoreInfoTextPrefab: {fileID: 0}
 --- !u!114 &1728946423010840444
 MonoBehaviour:
   m_ObjectHideFlags: 0

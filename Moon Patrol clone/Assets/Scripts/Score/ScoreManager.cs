@@ -18,4 +18,6 @@ public class ScoreManager : MonoBehaviour {
         scoreStore.playerOverallScore += val;
         Debug.Log($"Score manager: {scoreStore.playerOverallScore}");
     }
+    
+    // TODO stage score
 }
