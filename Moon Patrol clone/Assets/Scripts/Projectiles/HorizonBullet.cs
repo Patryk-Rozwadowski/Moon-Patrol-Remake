@@ -14,10 +14,11 @@ public class HorizonBullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D obj) {
-        var enemy = obj.GetComponent<EnemyController>();
-        if (enemy == null) return;
-        
-        enemy.EnemyDeath();
+        EnemyController enemy = obj.GetComponent<EnemyController>();
+        StoneController stone = obj.GetComponent<StoneController>();
+        if (enemy != null) enemy.EnemyDeath();
+        if (stone != null) stone.Destroy();
+
         Debug.Log($"Vertical Bullet hit: {obj.name}");
     }
 }
