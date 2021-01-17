@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
+    
     [SerializeField] private GameObject deathEffect;
     [SerializeField] private Transform firepoint;
     [SerializeField] private Transform playerPos;

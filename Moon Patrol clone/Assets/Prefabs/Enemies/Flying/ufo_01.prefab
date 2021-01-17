@@ -135,7 +135,6 @@ MonoBehaviour:
   enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
-  deathScoreInfoTextPrefab: {fileID: 0}
 --- !u!114 &1728946423010840444
 MonoBehaviour:
   m_ObjectHideFlags: 0
