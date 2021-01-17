@@ -1,32 +1,39 @@
-﻿using System;
-using System.Collections;
+﻿#pragma warning disable 649
+
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour {
-    [SerializeField] private GameObject deathEffect = null;
-    [SerializeField] private Transform firepoint = null;
-    [SerializeField] private Transform playerPos = null;
-    [SerializeField] private EnemyParamsSO enemyParams = null;
-    [SerializeField] private GameObject enemyHorizontalBullet = null;
+    [SerializeField] private GameObject deathEffect;
+    [SerializeField] private Transform firepoint;
+    [SerializeField] private Transform playerPos;
+    [SerializeField] private EnemyParamsSO enemyParams;
+    [SerializeField] private GameObject enemyHorizontalBullet;
 
-    private float fireRate = 0.5f;
-    private float nextFire = 0f;
+    [SerializeField] private Transform pfScorePopup;
+    
+    private ScoreManager _scoreManager;
+
+    private readonly float fireRate = 0.5f;
+    private float nextFire;
 
     private void Start() {
-        Debug.Log($"Enemy vision: {enemyParams.visionRange}");
+        _scoreManager = GetComponent<ScoreManager>();
     }
 
     private void Update() {
         if (playerPos == null) return;
-        if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) {
-            Shooting();
-        }
+        if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
     }
 
     public void EnemyDeath() {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        GetComponent<SpriteRenderer>().sprite = enemyParams.sprite;
+        _scoreManager.AddOverallPlayerScore(enemyParams.score);
         Destroy(gameObject);
+
+        Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
+        ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
+        scorePopupController.Setup(enemyParams.score);
     }
 
     private void Shooting() {

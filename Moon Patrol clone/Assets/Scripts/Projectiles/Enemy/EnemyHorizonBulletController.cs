@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#pragma warning disable 649
+
 using UnityEngine;
 
 public class EnemyHorizonBulletController : MonoBehaviour {
-    [SerializeField] private Rigidbody2D bulletRigidBody = null;
-    [SerializeField] private ProjectileSpeedSO projectileSpeed = null;
+    [SerializeField] private Rigidbody2D bulletRigidBody;
+    [SerializeField] private ProjectileSpeedSO projectileSpeed;
 
     private void Start() {
         bulletRigidBody.velocity = new Vector2(projectileSpeed.projectileSpeed, 0);
@@ -16,7 +16,7 @@ public class EnemyHorizonBulletController : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D obj) {
         Destroy(gameObject);
-        VehicleController player = obj.GetComponent<VehicleController>();
+        var player = obj.GetComponent<VehicleController>();
         Debug.Log($"Enemy hit: {obj} ");
         if (player == null) return;
         player.PlayerDeath();

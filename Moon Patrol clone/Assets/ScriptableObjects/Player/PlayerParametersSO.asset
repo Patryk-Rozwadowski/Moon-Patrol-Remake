@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf177a054cf73e42a22bb08b949b3c2, type: 3}
   m_Name: PlayerParametersSO
   m_EditorClassIdentifier: 
-  playerSpeed: 8
-  jumpTimeInAir: 0.8
-  jumpHeightAccelerate: 1.29
-  jumpCooldown: 1
+  playerSpeed: 5
+  jumpTimeInAir: 0.45
+  jumpHeightAccelerate: 3
