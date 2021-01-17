@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f5ec5576c04f6f4b9be7009ae9b1998, type: 3}
-  m_Name: GroundEnemiesParamsSO
+  m_Name: Blue_ufo
   m_EditorClassIdentifier: 
-  HP: 1
-  sprite: {fileID: 21300000, guid: 49d26554983713c4fb8b0b1f858a0572, type: 3}
-  weaponRange: 11.9
-  visionRange: 28.2
-  bulletPrefab: {fileID: 8691790367499978655, guid: 37bd0700836055f4f833b7fe60029b76,
-    type: 3}
+  HP: 0
+  score: 200
+  sprite: {fileID: 0}
+  weaponRange: 0
+  visionRange: 0
+  bulletPrefab1: {fileID: 0}
+  bulletPrefab2: {fileID: 0}
+  deathEffect: {fileID: 0}

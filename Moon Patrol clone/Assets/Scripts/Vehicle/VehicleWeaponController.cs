@@ -1,16 +1,11 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 public class VehicleWeaponController : MonoBehaviour {
-    [SerializeField] private Transform firePointHorizon = null;
-    [SerializeField] private Transform firePointVertical = null;
-
-    [SerializeField] private GameObject bulletVertical = null;
-    [SerializeField] private GameObject bulletHorizon = null;
-
-    [SerializeField] private ProjectileDistanceSO horizonDistanceRange = null;
-    [SerializeField] private ProjectileDistanceSO verticalDistanceRange= null;
-
-    [SerializeField] private KeyboardActionKeyCode keyboardControl = null;
+    [SerializeField] private Transform firePointHorizon, firePointVertical;
+    [SerializeField] private GameObject bulletVertical, bulletHorizon;
+    [SerializeField] private ProjectileDistanceSO horizonDistanceRange, verticalDistanceRange;
+    [SerializeField] private KeyboardActionKeyCode keyboardControl;
 
     private void Update() {
         Shoot();

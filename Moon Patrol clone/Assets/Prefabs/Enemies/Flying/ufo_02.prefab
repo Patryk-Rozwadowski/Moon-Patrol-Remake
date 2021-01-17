@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2371301398824849081}
   - component: {fileID: -5236590086938606320}
   - component: {fileID: 2065577422}
+  - component: {fileID: 7017044516443627483}
   m_Layer: 0
   m_Name: ufo_02
   m_TagString: Untagged
@@ -124,3 +125,21 @@ MonoBehaviour:
   deathEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
     type: 3}
   firepoint: {fileID: 0}
+  playerPos: {fileID: 0}
+  enemyParams: {fileID: 11400000, guid: 0fdb69652eed1444084455ac7aa8637e, type: 2}
+  enemyHorizontalBullet: {fileID: 0}
+  pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
+    type: 3}
+--- !u!114 &7017044516443627483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997524567895117773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aacb58ac08fc46748ba2c94e1b2acbd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreStore: {fileID: 11400000, guid: 4026d467acb14fd48bbc4166585ffde2, type: 2}
