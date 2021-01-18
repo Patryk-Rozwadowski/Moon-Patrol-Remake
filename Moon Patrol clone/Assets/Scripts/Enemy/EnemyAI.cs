@@ -48,6 +48,8 @@ public class EnemyAI : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D other) {
         Debug.Log(other);
         if (other.name == "AiWalls") {
+            Debug.Log("AI WALL");
+            _latestDirectionChangeTime = 0f;
             CalcuateNewMovementVector();
         }
     }
