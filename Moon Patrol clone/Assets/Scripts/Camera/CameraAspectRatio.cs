@@ -28,8 +28,7 @@ public class CameraAspectRatio : MonoBehaviour {
 
             camera.rect = rect;
         }
-        else // add pillarbox
-        {
+        else {
             var scalewidth = 1.0f / scaleheight;
 
             var rect = camera.rect;
