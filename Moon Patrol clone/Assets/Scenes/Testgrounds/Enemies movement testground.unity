@@ -457,6 +457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 309229233}
   - component: {fileID: 309229232}
+  - component: {fileID: 309229234}
   m_Layer: 0
   m_Name: AiWalls
   m_TagString: Untagged
@@ -473,18 +474,25 @@ EdgeCollider2D:
   m_GameObject: {fileID: 309229231}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 0c31819d069904e409e18fd1ffd49d6c, type: 2}
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 6.661497, y: -0.149827}
-  - {x: 6.655487, y: 3.7920783}
-  - {x: -6.5425415, y: 3.871301}
-  - {x: -6.5828075, y: -0.08026886}
-  - {x: 6.6769114, y: -0.13514233}
+  - {x: 6.765828, y: -0.3301475}
+  - {x: 6.686886, y: 2.1152558}
+  - {x: 6.725788, y: 2.498318}
+  - {x: 6.701394, y: 3.8862612}
+  - {x: 5.6810265, y: 3.9335349}
+  - {x: -0.7163887, y: 3.9753277}
+  - {x: -6.485243, y: 3.9983861}
+  - {x: -6.530401, y: 1.955051}
+  - {x: -6.509001, y: 0.19036508}
+  - {x: -5.7868595, y: -0.4074149}
+  - {x: 6.3136864, y: -0.58727074}
+  - {x: 6.8131638, y: -0.21300077}
 --- !u!4 &309229233
 Transform:
   m_ObjectHideFlags: 0
@@ -504,6 +512,27 @@ Transform:
   m_Father: {fileID: 719969895}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &309229234
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309229231}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 6
 --- !u!1 &380322040
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,14 +904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 309229233}
     m_Modifications:
-    - target: {fileID: 1521184097, guid: 2251f505e479d7c489c64cfee8cff9cd, type: 3}
-      propertyPath: aiWalls
-      value: 
-      objectReference: {fileID: 309229233}
-    - target: {fileID: 1521184102, guid: 2251f505e479d7c489c64cfee8cff9cd, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5124083997699483533, guid: 2251f505e479d7c489c64cfee8cff9cd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -987,11 +1008,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5353777614377167182, guid: 2251f505e479d7c489c64cfee8cff9cd,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9069692674709502549, guid: 2251f505e479d7c489c64cfee8cff9cd,
         type: 3}
@@ -1113,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.39806, y: -3.3678005, z: -15}
+  m_LocalPosition: {x: -22.398277, y: -3.3678005, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 719969895}
@@ -1887,7 +1903,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3351955, y: 1}
+    m_SensorSize: {x: 1.334294, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3261,6 +3277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459083159522586817, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6459083159522586818, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
         type: 3}
