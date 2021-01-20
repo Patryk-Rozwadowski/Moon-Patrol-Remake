@@ -253,7 +253,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.6, y: -15.6}
+  m_AnchoredPosition: {x: -4.6, y: 39.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499499310
@@ -263,13 +263,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499499308}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46f96004e642e40578dff6897e398117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.2
-  fullText: PRESS ANY BUTTON TO INSERT COINN
+  fullText: PRESS ANY BUTTON TO STARTT
 --- !u!114 &499499311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS ANY BUTTON TO INSERT COIN
+  m_Text: PRESS ANY BUTTON TO START
 --- !u!222 &499499312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -513,8 +513,6 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream:Moon Patrol clone/Assets/Scenes/Menu1.unity
-=======
 --- !u!1 &744626466
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +612,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
->>>>>>> Stashed changes:Moon Patrol clone/Assets/Scenes/Testgrounds/Menu1.unity
 --- !u!1 &1732151541
 GameObject:
   m_ObjectHideFlags: 0
