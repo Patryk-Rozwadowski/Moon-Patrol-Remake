@@ -3028,7 +3028,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8067680576121598327, guid: e1ddc825ed578ff48ae10644cebefe9c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e1ddc825ed578ff48ae10644cebefe9c, type: 3}
 --- !u!1 &1197882727
 GameObject:
@@ -3867,6 +3868,12 @@ Transform:
   m_Father: {fileID: 1821331889}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1540433693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2604803884649248077, guid: 65c482fc93a294246bad1fc08c9bf8d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1814758784}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1557099539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5410,12 +5417,12 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1540433693}
     - target: {fileID: 5057390473010526012, guid: b9bd9bfae71bc404594706c3658ac89b,
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1540433693}
     - target: {fileID: 5057390473263448680, guid: b9bd9bfae71bc404594706c3658ac89b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5480,6 +5487,6 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1540433693}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9bd9bfae71bc404594706c3658ac89b, type: 3}
