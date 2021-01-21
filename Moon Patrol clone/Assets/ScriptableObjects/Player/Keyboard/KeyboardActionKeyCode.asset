@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: KeyboardActionKeyCode
   m_EditorClassIdentifier: Assembly-CSharp::KeyboardActionKeyCode
-  jump: 100
-  horizontalShoot: 97
-  verticalShoot: 115
+  jump: 273
+  shoot: 32
   pause: 0
+  speedUp: 275
+  slowDown: 276
+  start: 115
+  throwCoin: 99

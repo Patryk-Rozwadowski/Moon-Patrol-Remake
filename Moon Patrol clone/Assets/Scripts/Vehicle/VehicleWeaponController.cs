@@ -2,9 +2,18 @@
 using UnityEngine;
 
 public class VehicleWeaponController : MonoBehaviour {
-    [SerializeField] private Transform firePointHorizon, firePointVertical;
-    [SerializeField] private GameObject bulletVertical, bulletHorizon;
-    [SerializeField] private ProjectileDistanceSO horizonDistanceRange, verticalDistanceRange;
+    [SerializeField] private Transform
+        firePointHorizon,
+        firePointVertical;
+
+    [SerializeField] private GameObject
+        bulletVertical,
+        bulletHorizon;
+
+    [SerializeField] private ProjectileDistanceSO
+        horizonDistanceRange,
+        verticalDistanceRange;
+
     [SerializeField] private KeyboardActionKeyCode keyboardControl;
 
     private void Update() {
@@ -12,9 +21,9 @@ public class VehicleWeaponController : MonoBehaviour {
     }
 
     private void Shoot() {
-        if (Input.GetKeyDown(keyboardControl.horizontalShoot))
-            HorizontalShoot();
-        else if (Input.GetKeyDown(keyboardControl.verticalShoot)) VerticalShoot();
+        if (!Input.GetKeyDown(keyboardControl.shoot)) return;
+        HorizontalShoot();
+        VerticalShoot();
     }
 
     private void VerticalShoot() {

@@ -4,6 +4,7 @@ public class VehicleTireController : MonoBehaviour {
     [SerializeField] private Rigidbody2D tireRigidbody2D;
     [SerializeField] private PlayerParamsSO playerParams;
 
+    [SerializeField] private KeyboardActionKeyCode keyboardActionKeyCode;
     // TODO get keys from scriptable object keyboard control
 
     private float
@@ -38,7 +39,7 @@ public class VehicleTireController : MonoBehaviour {
 
     private void Jump() {
         bool ifPressedJumpAndReadyToJump =
-            Input.GetKeyDown(KeyCode.D) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
+            Input.GetKeyDown(keyboardActionKeyCode.jump) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
 
         if (ifPressedJumpAndReadyToJump) _jumpTime = Time.time + playerParams.jumpTimeInAir;
 
@@ -58,7 +59,7 @@ public class VehicleTireController : MonoBehaviour {
     private void SpeedUp() {
         bool isSlowerThanMaxSpeed = _playerSpeed <= MAXSpeed;
 
-        if (Input.GetKey(KeyCode.R)) {
+        if (Input.GetKey(keyboardActionKeyCode.speedUp)) {
             if (isSlowerThanMaxSpeed) {
                 Debug.Log($"min speed: {_playerSpeed}");
                 _playerSpeed += Time.deltaTime * SpeedStep;
@@ -69,7 +70,7 @@ public class VehicleTireController : MonoBehaviour {
     private void SlowDown() {
         bool ifFasterThanMinimalSpeed = _playerSpeed >= MINSpeed;
 
-        if (Input.GetKey(KeyCode.E) && ifFasterThanMinimalSpeed) {
+        if (Input.GetKey(keyboardActionKeyCode.slowDown) && ifFasterThanMinimalSpeed) {
             Debug.Log($"min speed: {_playerSpeed}");
             _playerSpeed -= Time.deltaTime * SpeedStep;
             tireRigidbody2D.velocity = new Vector2(_playerSpeed, _pos);
