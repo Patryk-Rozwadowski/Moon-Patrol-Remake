@@ -887,7 +887,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: INSERT COIN
+  m_Text: PrESS ANY KEY TO CONTIUE
 --- !u!222 &1508229485
 CanvasRenderer:
   m_ObjectHideFlags: 0
