@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class ConstantMoveFoward : MonoBehaviour {

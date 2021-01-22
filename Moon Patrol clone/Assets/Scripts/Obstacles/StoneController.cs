@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 public class StoneController : MonoBehaviour {
     [SerializeField] private ObstaclesParamsSO rockScore;
