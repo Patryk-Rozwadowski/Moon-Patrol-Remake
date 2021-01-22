@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class VehicleController : MonoBehaviour {
-
     public void PlayerDeath() {
         // @ TODO add bonus for first run
         gameObject.SetActive(false);

@@ -485,7 +485,7 @@ WheelJoint2D:
   m_ConnectedAnchor: {x: -0.72600234, y: -0.018495768}
   m_Suspension:
     m_DampingRatio: 0
-    m_Frequency: 4.26
+    m_Frequency: 5.28
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
