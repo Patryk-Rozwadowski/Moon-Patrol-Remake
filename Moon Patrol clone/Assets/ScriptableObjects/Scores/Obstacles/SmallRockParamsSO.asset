@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2096243db3121646b423081ec9180de, type: 3}
   m_Name: SmallRockParamsSO
   m_EditorClassIdentifier: 
-  jumpOverScore: 0
+  jumpOverScore: 50
   destroyScore: 0
+  obstacleSprite: {fileID: 21300000, guid: c7e18ef5b3c63ed439cb8e93a275bbb0, type: 3}
