@@ -5,12 +5,18 @@ using ScriptableObjects.Score;
 using UnityEngine;
 
 namespace Score {
-    [Serializable]
     public class ScoreManager : MonoBehaviour {
         [SerializeField] private ScoreStoreSO scoreStore;
 
+        private int _bestScore;
+        
         private int _overallScore;
         private int _stageScore;
+
+        
+        private void Start() {
+            
+        }
 
         public void AddOverallPlayerScore(int val) {
             scoreStore.playerOverallScore += val;
