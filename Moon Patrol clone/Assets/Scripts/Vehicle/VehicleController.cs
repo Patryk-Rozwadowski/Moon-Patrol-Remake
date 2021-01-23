@@ -5,7 +5,9 @@ namespace Vehicle {
         public void PlayerDeath() {
             // @ TODO add bonus for first run
             gameObject.SetActive(false);
-            Debug.LogWarning("Player death");
+            
+            // TODO better animation
+            // https://trello.com/c/VqNCDMnx/118-p-lepsza-animacja-%C5%9Bmierci-gracza
         }
     }
 }

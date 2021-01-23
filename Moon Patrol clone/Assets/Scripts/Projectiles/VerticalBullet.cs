@@ -1,4 +1,5 @@
 ﻿using Enemy;
+using Obstacles;
 using ScriptableObjects.Projectile;
 using UnityEngine;
 
@@ -23,9 +24,17 @@ namespace Projectiles {
 
         private void OnTriggerEnter2D(Collider2D obj) {
             var enemy = obj.GetComponent<EnemyController>();
-            if (enemy == null) return;
-            enemy.EnemyDeath();
-            Destroy(gameObject);
+            var stone = obj.GetComponent<StoneController>();
+            
+            if (enemy != null) {
+                enemy.EnemyDeath();
+                Destroy(gameObject);
+            }
+
+            if (stone != null) {
+                stone.Destroy();
+                Destroy(gameObject);
+            }
         }
     }
 }
