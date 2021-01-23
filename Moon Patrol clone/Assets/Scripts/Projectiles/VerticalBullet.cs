@@ -22,10 +22,10 @@ namespace Projectiles {
         }
 
         private void OnTriggerEnter2D(Collider2D obj) {
-            Destroy(gameObject);
             var enemy = obj.GetComponent<EnemyController>();
             if (enemy == null) return;
             enemy.EnemyDeath();
+            Destroy(gameObject);
         }
     }
 }
