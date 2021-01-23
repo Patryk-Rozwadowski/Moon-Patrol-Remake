@@ -84,7 +84,7 @@ MonoBehaviour:
     type: 2}
   verticalDistanceRange: {fileID: 11400000, guid: 22c017105cb161b4fb04a5ce8741fa58,
     type: 2}
-  keyboardControl: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af, type: 2}
+  keyboardControl: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871, type: 2}
 --- !u!1 &5799261185466914943
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261185466914939}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
-  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+  keyboardActionKeyCode: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871,
     type: 2}
 --- !u!1 &5799261185691537407
 GameObject:
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261185751826643}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
-  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+  keyboardActionKeyCode: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871,
     type: 2}
 --- !u!1 &5799261185790697537
 GameObject:
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261187123936562}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
-  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+  keyboardActionKeyCode: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871,
     type: 2}
 --- !u!1 &5799261187168670395
 GameObject:

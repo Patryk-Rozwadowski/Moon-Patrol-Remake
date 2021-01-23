@@ -1,12 +1,15 @@
 ﻿#pragma warning disable 649
+using ScriptableObjects.Score;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreUIController : MonoBehaviour {
-    [SerializeField] private Text text;
-    [SerializeField] private ScoreStoreSO _scoreStore;
+namespace UI {
+    public class ScoreUIController : MonoBehaviour {
+        [SerializeField] private Text text;
+        [SerializeField] private ScoreStoreSO _scoreStore;
 
-    private void Update() {
-        text.text = $"{_scoreStore.playerOverallScore}";
+        private void Update() {
+            text.text = $"{_scoreStore.playerOverallScore}";
+        }
     }
 }
