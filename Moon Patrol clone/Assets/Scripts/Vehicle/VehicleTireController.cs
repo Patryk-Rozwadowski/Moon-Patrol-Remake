@@ -10,15 +10,14 @@ public class VehicleTireController : MonoBehaviour {
     private float
         _jumpTime,
         _pos,
-        _playerSpeed;
+        _playerSpeed,
+        _minSpeed,
+        _maxSpeed,
+        _speedStep;
 
-    private const float
-        MINSpeed = 1f,
-        MAXSpeed = 6f,
-        SpeedStep = 2f,
-        // SpeedTolerance is for tolerance which is used to calculate differences
-        // between normal vehicle speed and deviation min / max speed
-        SpeedTolerance = 2f;
+    // SpeedTolerance is for tolerance which is used to calculate differences
+    // between normal vehicle speed and deviation min / max speed
+    private float _speedTolerance;
 
     private KeyCode _slowDownKey, _speedUpKey, _jumpKey;
 
@@ -30,6 +29,10 @@ public class VehicleTireController : MonoBehaviour {
         _speedUpKey = keyboardActionKeyCode.speedUp;
         _jumpKey = keyboardActionKeyCode.jump;
         _playerSpeed = playerParams.playerSpeed;
+        _minSpeed = playerParams.minimalSpeed;
+        _maxSpeed = playerParams.maxSpeed;
+        _speedStep = playerParams.speedStep;
+        _speedTolerance = playerParams.maxSpeed - playerParams.minimalSpeed;
         
         _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform
             .position.y;
@@ -58,8 +61,8 @@ public class VehicleTireController : MonoBehaviour {
 
     private void CheckIfVehicleIsStillInAir() {
         bool ifVehicleIsStillInAir = Time.time < _jumpTime;
+        
         if (ifVehicleIsStillInAir) {
-            Debug.Log($"VEHICLE IN AIR FOR: {_jumpTime - Time.time} SECONDS");
             _isJumping = true;
             tireRigidbody2D.velocity = new Vector2(_playerSpeed, playerParams.jumpHeightAccelerate);
         }
@@ -67,11 +70,10 @@ public class VehicleTireController : MonoBehaviour {
     }
 
     private void SpeedUp() {
-        bool isSlowerThanMaxSpeed = _playerSpeed <= MAXSpeed;
+        bool isSlowerThanMaxSpeed = _playerSpeed <= _maxSpeed;
 
         if (Input.GetKey(_speedUpKey) && isSlowerThanMaxSpeed) {
-                Debug.Log($"min speed: {_playerSpeed}");
-                _playerSpeed += Time.deltaTime * SpeedStep;
+            _playerSpeed += Time.deltaTime * _speedStep;
                 _isAnyButtonPressed = false;
         }
         
@@ -79,11 +81,11 @@ public class VehicleTireController : MonoBehaviour {
     }
 
     private void SlowDown() {
-        bool ifFasterThanMinimalSpeed = _playerSpeed >= MINSpeed;
+        bool ifFasterThanMinimalSpeed = _playerSpeed >= _minSpeed;
 
         if (Input.GetKey(_slowDownKey) && ifFasterThanMinimalSpeed) {
             Debug.Log($"min speed: {_playerSpeed}");
-            _playerSpeed -= Time.deltaTime * SpeedStep;
+            _playerSpeed -= Time.deltaTime * _speedStep;
             _isAnyButtonPressed = false;
         }
 
@@ -95,13 +97,13 @@ public class VehicleTireController : MonoBehaviour {
     }
 
     private void BackToNormalSpeed() {
-        if (Math.Abs(_playerSpeed - playerParams.playerSpeed) < SpeedTolerance && _isAnyButtonPressed) {
+        if (Math.Abs(_playerSpeed - playerParams.playerSpeed) < _speedTolerance && _isAnyButtonPressed) {
             if (_playerSpeed < playerParams.playerSpeed) {
-                _playerSpeed += Time.deltaTime * SpeedStep;
+                _playerSpeed += Time.deltaTime * _speedStep;
                 Debug.Log($"Speeding up {_playerSpeed}");
             } else if (_playerSpeed > playerParams.playerSpeed) {
-                _playerSpeed -= Time.deltaTime * SpeedStep;
-                Debug.Log($"slowing down {_playerSpeed}");
+                _playerSpeed -= Time.deltaTime * _speedStep;
+                Debug.Log($"Speeding up {_playerSpeed}");
             }
         }
     }
