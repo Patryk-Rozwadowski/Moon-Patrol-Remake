@@ -5,7 +5,13 @@ public class ObstaclesController : MonoBehaviour {
     
     private void OnTriggerEnter2D(Collider2D obj) {
         VehicleController player = obj.GetComponent<VehicleController>();
-        if (player == null) return;
-        player.PlayerDeath();
+        VerticalBullet playerVerticalBullet = obj.GetComponent<VerticalBullet>();
+        // TODO FIX
+        if (player != null) player.PlayerDeath();
+        if (playerVerticalBullet != null) {
+            EnemyExplosionController enemyExplosionController = GetComponent<EnemyExplosionController>();
+            Instantiate(enemyExplosionController);
+            Destroy(gameObject);
+        }
     }
 }

@@ -1,7 +1,12 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 public class EnemyExplosionController : MonoBehaviour {
-    private void Start() {
-        Destroy(gameObject, 0.5f);
+    [SerializeField] private GameObject explosionEffect;
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        GameObject explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        Destroy(explosionEffectGO, 1);
     }
 }

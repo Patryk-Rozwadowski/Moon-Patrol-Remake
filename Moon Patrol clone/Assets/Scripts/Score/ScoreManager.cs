@@ -9,10 +9,6 @@ public class ScoreManager : MonoBehaviour {
 
     private int _overallScore;
     private int _stageScore;
-    private void Start() {
-        scoreStore.playerOverallScore = 0;
-        scoreStore.playerStageScore = 0;
-    }
 
     public void AddOverallPlayerScore(int val) {
         scoreStore.playerOverallScore += val;

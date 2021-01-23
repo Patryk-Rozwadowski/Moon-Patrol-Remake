@@ -245,6 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261185466914939}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
+  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+    type: 2}
 --- !u!1 &5799261185691537407
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +485,7 @@ WheelJoint2D:
   m_ConnectedAnchor: {x: -0.72600234, y: -0.018495768}
   m_Suspension:
     m_DampingRatio: 0
-    m_Frequency: 4.26
+    m_Frequency: 5.28
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -503,6 +505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261185751826643}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
+  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+    type: 2}
 --- !u!1 &5799261185790697537
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +748,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tireRigidbody2D: {fileID: 5799261187123936562}
   playerParams: {fileID: 11400000, guid: b6392a77c91ab8048b871c228a0a7143, type: 2}
+  keyboardActionKeyCode: {fileID: 11400000, guid: ee0964f76e0fe2d43b886bdfec3905af,
+    type: 2}
 --- !u!1 &5799261187168670395
 GameObject:
   m_ObjectHideFlags: 0
