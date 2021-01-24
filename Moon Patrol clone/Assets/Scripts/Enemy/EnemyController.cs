@@ -23,6 +23,7 @@ namespace Enemy {
         
         private bool _isplayerPosNull;
         private void Start() {
+            _scoreManager = GetComponent<ScoreManager>();
             _isplayerPosNull = playerPos == null;
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
@@ -33,17 +34,20 @@ namespace Enemy {
         }
 
         public void EnemyDeath() {
-            _scoreManager.AddOverallPlayerScore(enemyParams.score);
+            SetScoreAndShowScorePopup();
             Destroy(gameObject);
-
-            Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
-            ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
-            scorePopupController.Setup(enemyParams.score);
         }
 
         private void Shooting() {
             nextFire = Time.time + fireRate;
             Instantiate(enemyHorizontalBullet, firepoint.position, Quaternion.identity);
+        }
+
+        private void SetScoreAndShowScorePopup() {
+            _scoreManager.AddOverallPlayerScore(enemyParams.score);
+            Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
+            ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
+            scorePopupController.Setup(enemyParams.score);
         }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using Score;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Enemy {
     public class EnemyRocketShootingController : MonoBehaviour {
         [SerializeField] private GameObject enemyBulletRocket;
-        [SerializeField] private GameObject verticalFirepoint;
+        [SerializeField] private GameObject firepoint;
         
         private GameObject _firepointTransform;
         private ScoreManager _scoreManager;
 
         void Start() {
             _scoreManager = GetComponent<ScoreManager>();
-
-            Debug.Log(_firepointTransform);
-            Instantiate(enemyBulletRocket, verticalFirepoint.transform.position, Quaternion.identity);
+            // Instantiate(enemyBulletRocket, firepoint.transform.position, Quaternion.identity);
 
         }
 
