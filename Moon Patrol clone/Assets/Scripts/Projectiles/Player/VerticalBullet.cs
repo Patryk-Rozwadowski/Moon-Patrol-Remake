@@ -31,10 +31,11 @@ namespace Projectiles {
                 Destroy(gameObject);
             }
 
-            if (stone != null) {
-                stone.Destroy();
-                Destroy(gameObject);
-            }
+            // TODO stone??
+            // if (stone != null) {
+            //     stone.Destroy();
+            //     Destroy(gameObject);
+            // }
         }
     }
 }

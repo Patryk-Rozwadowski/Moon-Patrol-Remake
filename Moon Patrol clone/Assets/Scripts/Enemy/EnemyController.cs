@@ -14,18 +14,21 @@ namespace Enemy {
         [SerializeField] private GameObject enemyHorizontalBullet;
 
         [SerializeField] private Transform pfScorePopup;
-    
+
+        
         private ScoreManager _scoreManager;
 
         private readonly float fireRate = 0.5f;
         private float nextFire;
-
+        
+        private bool _isplayerPosNull;
         private void Start() {
-            _scoreManager = GetComponent<ScoreManager>();
+            _isplayerPosNull = playerPos == null;
+            if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
         private void Update() {
-            if (playerPos == null) return;
+            if (_isplayerPosNull) return;
             if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
         }
 
