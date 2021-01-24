@@ -53,6 +53,14 @@ namespace Enemy {
         private void OnTriggerEnter2D(Collider2D obj) {
             var ufoProjectile = obj.GetComponent<CircleCollider2D>();
             if (ufoProjectile != null) return;
+
+            var waveManager = obj.GetComponent<WaveManager>();
+            if (waveManager != null) return;
+
+            var waveController = obj.GetComponent<WaveController>();
+            if (waveController != null) return;
+            
+            Debug.LogWarning($"{obj.name} UUFOFOFOFOFO");
             RenderExplosionAndDestroy();
         }
         
