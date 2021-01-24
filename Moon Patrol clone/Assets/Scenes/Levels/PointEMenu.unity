@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 1693665738}
   - component: {fileID: 1693665737}
   m_Layer: 5
-  m_Name: top_recored_text
+  m_Name: top_record_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

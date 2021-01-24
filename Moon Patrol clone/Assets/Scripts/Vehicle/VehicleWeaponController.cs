@@ -1,34 +1,43 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
 
-public class VehicleWeaponController : MonoBehaviour {
-    [SerializeField] private Transform firePointHorizon = null;
-    [SerializeField] private Transform firePointVertical = null;
+using ScriptableObjects.Keyboard;
+using ScriptableObjects.Projectile;
+using UnityEngine;
 
-    [SerializeField] private GameObject bulletVertical = null;
-    [SerializeField] private GameObject bulletHorizon = null;
+namespace Vehicle {
+    public class VehicleWeaponController : MonoBehaviour {
+        [SerializeField] private Transform
+            firePointHorizon,
+            firePointVertical;
 
-    [SerializeField] private ProjectileDistanceSO horizonDistanceRange = null;
-    [SerializeField] private ProjectileDistanceSO verticalDistanceRange= null;
+        [SerializeField] private GameObject
+            bulletVertical,
+            bulletHorizon;
 
-    [SerializeField] private KeyboardActionKeyCode keyboardControl = null;
+        [SerializeField] private ProjectileDistanceSO
+            horizonDistanceRange,
+            verticalDistanceRange;
 
-    private void Update() {
-        Shoot();
-    }
+        [SerializeField] private KeyboardActionKeyCode keyboardControl;
 
-    private void Shoot() {
-        if (Input.GetKeyDown(keyboardControl.horizontalShoot))
+        private void Update() {
+            Shoot();
+        }
+
+        private void Shoot() {
+            if (!Input.GetKeyDown(keyboardControl.shoot)) return;
             HorizontalShoot();
-        else if (Input.GetKeyDown(keyboardControl.verticalShoot)) VerticalShoot();
-    }
+            VerticalShoot();
+        }
 
-    private void VerticalShoot() {
-        GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
-        Destroy(bullet, verticalDistanceRange.projectileDistance);
-    }
+        private void VerticalShoot() {
+            GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
+            Destroy(bullet, verticalDistanceRange.projectileDistance);
+        }
 
-    private void HorizontalShoot() {
-        GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
-        Destroy(bullet, horizonDistanceRange.projectileDistance);
+        private void HorizontalShoot() {
+            GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
+            Destroy(bullet, horizonDistanceRange.projectileDistance);
+        }
     }
 }

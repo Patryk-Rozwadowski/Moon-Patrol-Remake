@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/Projectile/ProjectileSpeed")]
-public class ProjectileSpeedSO : ScriptableObject {
-    public float projectileSpeed = 10f;
+namespace ScriptableObjects.Projectile {
+    [CreateAssetMenu(menuName = "ScriptableObjects/Projectile/ProjectileSpeed")]
+    public class ProjectileSpeedSO : ScriptableObject {
+        [SerializeField] public float projectileSpeed = 10f, rocketSpeed;
+    }
 }

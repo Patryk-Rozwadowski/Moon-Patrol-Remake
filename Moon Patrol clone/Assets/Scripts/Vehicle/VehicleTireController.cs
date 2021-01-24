@@ -1,31 +1,114 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using System;
+using ScriptableObjects.Keyboard;
+using ScriptableObjects.Player;
+using UnityEngine;
 
-public class VehicleTireController : MonoBehaviour {
-    [SerializeField] private Rigidbody2D tireRigidbody2D;
-    [SerializeField] private PlayerParamsSO playerParams;
+namespace Vehicle {
+    public class VehicleTireController : MonoBehaviour {
+        [SerializeField] private Rigidbody2D tireRigidbody2D;
+        [SerializeField] private PlayerParamsSO playerParams;
+        [SerializeField] private KeyboardActionKeyCode keyboardActionKeyCode;
+
+        private float
+            _jumpTime,
+            _pos,
+            _playerSpeed,
+            _minSpeed,
+            _maxSpeed,
+            _speedStep;
+
+        // SpeedTolerance is for tolerance which is used to calculate differences
+        // between normal vehicle speed and deviation min / max speed
+        private float _speedTolerance;
+
+        private KeyCode _slowDownKey, _speedUpKey, _jumpKey;
+
+        private bool _isJumping;
+        private bool _isAnyButtonPressed;
     
-    private float _nextJump = 0f;
-    private float _jumpTime = 0f;
-
-    private float _pos = 0f;
-    private void Start() {
-        _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform.position.y;
-    }
-
-    private void Update() {
-        Jump();
-    }
-
-    private void Jump() {
-        if (Input.GetKeyDown(KeyCode.D) && Time.time > _nextJump) {
-            _jumpTime = Time.time + playerParams.jumpTimeInAir;
-            _nextJump = Time.time + playerParams.jumpCooldown + _jumpTime;
-        }
-        else if (Time.time < _nextJump){
-            Debug.Log($"COOLDOWN: {_nextJump - Time.time}");
-        }
+        private void Start() {
+            _slowDownKey = keyboardActionKeyCode.slowDown;
+            _speedUpKey = keyboardActionKeyCode.speedUp;
+            _jumpKey = keyboardActionKeyCode.jump;
+            _playerSpeed = playerParams.playerSpeed;
+            _minSpeed = playerParams.minimalSpeed;
+            _maxSpeed = playerParams.maxSpeed;
+            _speedStep = playerParams.speedStep;
+            _speedTolerance = playerParams.maxSpeed - playerParams.minimalSpeed;
         
-        tireRigidbody2D.velocity = Time.time < _jumpTime ? new Vector2(playerParams.playerSpeed, playerParams.jumpHeightAccelerate) : new Vector2(playerParams.playerSpeed, _pos);
+            _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform
+                .position.y;
+        }
 
+        private void Update() {
+            Jump();
+            Move();
+            BackToNormalSpeed();
+        }
+
+        private void Move() {
+            SlowDown();
+            SpeedUp();
+            MoveForward();
+        }
+
+        private void Jump() {
+            bool ifPressedJumpAndReadyToJump =
+                Input.GetKeyDown(_jumpKey) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
+
+            if (ifPressedJumpAndReadyToJump) _jumpTime = Time.time + playerParams.jumpTimeInAir;
+
+            CheckIfVehicleIsStillInAir();
+        }
+
+        private void CheckIfVehicleIsStillInAir() {
+            bool ifVehicleIsStillInAir = Time.time < _jumpTime;
+        
+            if (ifVehicleIsStillInAir) {
+                _isJumping = true;
+                tireRigidbody2D.velocity = new Vector2(_playerSpeed, playerParams.jumpHeightAccelerate);
+            }
+            else _isJumping = false;
+        }
+
+        private void SpeedUp() {
+            bool isSlowerThanMaxSpeed = _playerSpeed <= _maxSpeed;
+
+            if (Input.GetKey(_speedUpKey) && isSlowerThanMaxSpeed) {
+                _playerSpeed += Time.deltaTime * _speedStep;
+                _isAnyButtonPressed = false;
+            }
+        
+            if (Input.GetKeyUp(_speedUpKey)) _isAnyButtonPressed = true;
+        }
+
+        private void SlowDown() {
+            bool ifFasterThanMinimalSpeed = _playerSpeed >= _minSpeed;
+
+            if (Input.GetKey(_slowDownKey) && ifFasterThanMinimalSpeed) {
+                Debug.Log($"min speed: {_playerSpeed}");
+                _playerSpeed -= Time.deltaTime * _speedStep;
+                _isAnyButtonPressed = false;
+            }
+
+            if (Input.GetKeyUp(_slowDownKey)) _isAnyButtonPressed = true;
+        }
+
+        private void MoveForward() {
+            if (_isJumping == false) tireRigidbody2D.velocity = new Vector2(_playerSpeed, _pos);
+        }
+
+        private void BackToNormalSpeed() {
+            if (Math.Abs(_playerSpeed - playerParams.playerSpeed) < _speedTolerance && _isAnyButtonPressed) {
+                if (_playerSpeed < playerParams.playerSpeed) {
+                    _playerSpeed += Time.deltaTime * _speedStep;
+                    Debug.Log($"Speeding up {_playerSpeed}");
+                } else if (_playerSpeed > playerParams.playerSpeed) {
+                    _playerSpeed -= Time.deltaTime * _speedStep;
+                    Debug.Log($"Speeding up {_playerSpeed}");
+                }
+            }
+        }
     }
 }

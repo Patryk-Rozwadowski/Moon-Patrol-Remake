@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerHitBox : MonoBehaviour {
-    public void PlayerDeath() {
-        Destroy(gameObject);
-        Debug.LogWarning("Player death");
+namespace Player {
+    public class PlayerHitBox : MonoBehaviour {
+        public void PlayerDeath() {
+            Destroy(gameObject);
+            Debug.LogWarning("Player death");
+        }
     }
 }
