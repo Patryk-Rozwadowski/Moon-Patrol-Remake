@@ -97,7 +97,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 997524567895117773}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 0c31819d069904e409e18fd1ffd49d6c, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -162,6 +162,11 @@ MonoBehaviour:
   enemyBulletRocket: {fileID: 1230540237286939342, guid: d13d106d30679f34da4af4cf70b39262,
     type: 3}
   firepoint: {fileID: 4396688436269967602}
+  rocket: 1
+  bomb: 0
+  color: 0
+  yellow: 1
+  blue: 0
 --- !u!114 &4702296462633787700
 MonoBehaviour:
   m_ObjectHideFlags: 0

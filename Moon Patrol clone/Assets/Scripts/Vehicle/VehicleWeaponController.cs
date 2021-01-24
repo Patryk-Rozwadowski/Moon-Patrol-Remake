@@ -37,6 +37,8 @@ namespace Vehicle {
 
         private void HorizontalShoot() {
             GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
+            
+            // TODO bullet explosion
             Destroy(bullet, horizonDistanceRange.projectileDistance);
         }
     }

@@ -37,6 +37,7 @@ namespace Enemy {
             if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
         }
 
+        // FOR TANK
         private void Shooting() {
             nextFire = Time.time + fireRate;
             Instantiate(enemyHorizontalBullet, firepoint.position, Quaternion.identity);

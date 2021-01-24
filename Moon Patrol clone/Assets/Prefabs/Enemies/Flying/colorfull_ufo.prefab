@@ -200,6 +200,11 @@ MonoBehaviour:
   enemyBulletRocket: {fileID: 1230540237286939342, guid: d13d106d30679f34da4af4cf70b39262,
     type: 3}
   firepoint: {fileID: 7371581154995562157}
+  rocket: 1
+  bomb: 0
+  color: 1
+  yellow: 0
+  blue: 0
 --- !u!1001 &4974640524283527108
 PrefabInstance:
   m_ObjectHideFlags: 0
