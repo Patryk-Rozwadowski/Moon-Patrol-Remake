@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1230540237286939330}
   - component: {fileID: 1230540237286939343}
   - component: {fileID: 2948181338926058891}
+  - component: {fileID: 7934382606101779366}
   m_Layer: 0
   m_Name: Ufo rocket
   m_TagString: Untagged
@@ -117,8 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02126467b8599a149bfeae1908adc14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
-    type: 3}
 --- !u!58 &2948181338926058891
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,3 +134,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &7934382606101779366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230540237286939342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2080e688f9f4c4ea7f851d4bfcd1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
+    type: 3}
