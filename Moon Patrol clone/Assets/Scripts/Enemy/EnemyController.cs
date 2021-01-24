@@ -17,8 +17,6 @@ namespace Enemy {
         private const float ExplosionEffectLifeTime = 0.2f;
         
         private ScoreManager _scoreManager;
-        private readonly float fireRate = 0.5f;
-        private float nextFire;
         private bool _isplayerPosNull;
         
         public void EnemyDeath() {
@@ -30,17 +28,6 @@ namespace Enemy {
             _scoreManager = GetComponent<ScoreManager>();
             _isplayerPosNull = playerPos == null;
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
-        }
-
-        private void Update() {
-            if (_isplayerPosNull) return;
-            if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
-        }
-
-        // FOR TANK
-        private void Shooting() {
-            nextFire = Time.time + fireRate;
-            Instantiate(enemyHorizontalBullet, firepoint.position, Quaternion.identity);
         }
 
         private void SetScoreAndShowScorePopup() {
@@ -60,7 +47,6 @@ namespace Enemy {
             var waveController = obj.GetComponent<WaveController>();
             if (waveController != null) return;
             
-            Debug.LogWarning($"{obj.name} UUFOFOFOFOFO");
             RenderExplosionAndDestroy();
         }
         
