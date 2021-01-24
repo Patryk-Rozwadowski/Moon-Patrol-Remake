@@ -6,8 +6,7 @@ using UnityEngine;
 
 namespace Enemy {
     public class EnemyController : MonoBehaviour {
-    
-        [SerializeField] private GameObject deathEffect;
+        [SerializeField] private GameObject explosionEffect;
         [SerializeField] private Transform firepoint;
         [SerializeField] private Transform playerPos;
         [SerializeField] private EnemyParamsSO enemyParams;
@@ -15,13 +14,18 @@ namespace Enemy {
 
         [SerializeField] private Transform pfScorePopup;
 
+        private const float ExplosionEffectLifeTime = 0.2f;
         
         private ScoreManager _scoreManager;
-
         private readonly float fireRate = 0.5f;
         private float nextFire;
-        
         private bool _isplayerPosNull;
+        
+        public void EnemyDeath() {
+            SetScoreAndShowScorePopup();
+            RenderExplosionAndDestroy();
+        }
+        
         private void Start() {
             _scoreManager = GetComponent<ScoreManager>();
             _isplayerPosNull = playerPos == null;
@@ -31,11 +35,6 @@ namespace Enemy {
         private void Update() {
             if (_isplayerPosNull) return;
             if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
-        }
-
-        public void EnemyDeath() {
-            SetScoreAndShowScorePopup();
-            Destroy(gameObject);
         }
 
         private void Shooting() {
@@ -48,6 +47,18 @@ namespace Enemy {
             Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
             ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
             scorePopupController.Setup(enemyParams.score);
+        }
+        
+        private void OnTriggerEnter2D(Collider2D obj) {
+            var ufoProjectile = obj.GetComponent<CircleCollider2D>();
+            if (ufoProjectile != null) return;
+            RenderExplosionAndDestroy();
+        }
+        
+        private void RenderExplosionAndDestroy() {
+            GameObject explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(explosionEffectGO, ExplosionEffectLifeTime);
+            Destroy(gameObject);
         }
     }
 }

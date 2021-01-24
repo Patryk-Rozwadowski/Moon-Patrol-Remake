@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1585470933}
   - component: {fileID: 1728946423010840444}
   - component: {fileID: 1521184097}
-  - component: {fileID: 2158742686058991107}
   - component: {fileID: 3327034149760743338}
   m_Layer: 0
   m_Name: ufo_01
@@ -153,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb400e617745eb4b83781d4b4ab92b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
+  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
     type: 3}
   firepoint: {fileID: 7371581154995562156}
   playerPos: {fileID: 0}
@@ -186,20 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2982843278cfd489c34075c59468f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2158742686058991107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9069692674709502549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 934d06ec503289142a9e7a4035837f07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
-    type: 3}
 --- !u!114 &3327034149760743338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,12 +210,12 @@ PrefabInstance:
     - target: {fileID: 2541269554849896808, guid: 90f61e41cac7d2044b86fc39bdabc2f0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.27
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2541269554849896808, guid: 90f61e41cac7d2044b86fc39bdabc2f0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.769
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2541269554849896808, guid: 90f61e41cac7d2044b86fc39bdabc2f0,
         type: 3}

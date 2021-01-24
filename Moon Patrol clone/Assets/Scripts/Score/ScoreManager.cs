@@ -8,15 +8,7 @@ namespace Score {
     public class ScoreManager : MonoBehaviour {
         [SerializeField] private ScoreStoreSO scoreStore;
 
-        private int _bestScore;
-        
-        private int _overallScore;
-        private int _stageScore;
-
-        
-        private void Start() {
-            
-        }
+        private int _bestScore, _overallScore, _stageScore;
 
         public void AddOverallPlayerScore(int val) {
             scoreStore.playerOverallScore += val;
