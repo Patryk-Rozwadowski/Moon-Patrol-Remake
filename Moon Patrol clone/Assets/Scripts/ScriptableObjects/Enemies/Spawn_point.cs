@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveController : MonoBehaviour
+public class Spawn_point : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
