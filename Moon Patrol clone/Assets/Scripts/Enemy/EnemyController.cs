@@ -1,6 +1,7 @@
 ﻿#pragma warning disable 649
 
 using Enemy.Waves;
+using Enemy.WaveS;
 using Score;
 using ScriptableObjects.Enemies;
 using UnityEngine;

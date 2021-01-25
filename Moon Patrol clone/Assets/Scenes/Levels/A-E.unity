@@ -3098,6 +3098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveStarter
       objectReference: {fileID: 0}
+    - target: {fileID: 3372304965877041646, guid: b9d34fa5ca52efe4ba9d48d24d4fc66a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9d34fa5ca52efe4ba9d48d24d4fc66a, type: 3}
 --- !u!4 &905354252 stripped
