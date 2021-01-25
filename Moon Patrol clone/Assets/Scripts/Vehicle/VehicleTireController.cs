@@ -57,7 +57,10 @@ namespace Vehicle {
             bool ifPressedJumpAndReadyToJump =
                 Input.GetKeyDown(_jumpKey) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
 
-            if (ifPressedJumpAndReadyToJump) _jumpTime = Time.time + playerParams.jumpTimeInAir;
+            if (ifPressedJumpAndReadyToJump) { 
+                _jumpTime = Time.time + playerParams.jumpTimeInAir;
+                FindObjectOfType<AudioManager>().Play("Jump"); //nie jestem pewien czy w tym miejscu jest wywoływany skok, dźwięk ma odrobine opóźnienia
+            }
 
             CheckIfVehicleIsStillInAir();
         }
