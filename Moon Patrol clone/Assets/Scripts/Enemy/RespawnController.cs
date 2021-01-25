@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+// TODO change WaveController according to this MonoBehaviour
 namespace Enemy {
     public class RespawnController : MonoBehaviour {
 
