@@ -11,6 +11,7 @@ namespace Projectiles {
 
         private void Start() {
             bulletRigidBody.velocity = new Vector2(firePointVertical.transform.position.x, projectileSpeed.projectileSpeed);
+            FindObjectOfType<AudioManager>().Play("Blaster");
         }
 
         private void Update() {

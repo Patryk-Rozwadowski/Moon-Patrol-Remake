@@ -52,6 +52,7 @@ namespace Enemy {
         
         private void RenderExplosionAndDestroy() {
             GameObject explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("Hit");
             Destroy(explosionEffectGO, ExplosionEffectLifeTime);
             Destroy(gameObject);
         }
