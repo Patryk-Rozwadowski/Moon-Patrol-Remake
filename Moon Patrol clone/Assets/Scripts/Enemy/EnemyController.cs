@@ -1,5 +1,7 @@
 ﻿#pragma warning disable 649
 
+using Enemy.Waves;
+using Enemy.WaveS;
 using Score;
 using ScriptableObjects.Enemies;
 using UnityEngine;
@@ -17,8 +19,6 @@ namespace Enemy {
         private const float ExplosionEffectLifeTime = 0.2f;
         
         private ScoreManager _scoreManager;
-        private readonly float fireRate = 0.5f;
-        private float nextFire;
         private bool _isplayerPosNull;
         
         public void EnemyDeath() {
@@ -32,16 +32,6 @@ namespace Enemy {
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
-        private void Update() {
-            if (_isplayerPosNull) return;
-            if (playerPos.position.x < enemyParams.visionRange && Time.time > nextFire) Shooting();
-        }
-
-        private void Shooting() {
-            nextFire = Time.time + fireRate;
-            Instantiate(enemyHorizontalBullet, firepoint.position, Quaternion.identity);
-        }
-
         private void SetScoreAndShowScorePopup() {
             _scoreManager.AddOverallPlayerScore(enemyParams.score);
             Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
@@ -52,6 +42,13 @@ namespace Enemy {
         private void OnTriggerEnter2D(Collider2D obj) {
             var ufoProjectile = obj.GetComponent<CircleCollider2D>();
             if (ufoProjectile != null) return;
+
+            var waveManager = obj.GetComponent<WaveManager>();
+            if (waveManager != null) return;
+
+            var waveController = obj.GetComponent<WaveController>();
+            if (waveController != null) return;
+            
             RenderExplosionAndDestroy();
         }
         

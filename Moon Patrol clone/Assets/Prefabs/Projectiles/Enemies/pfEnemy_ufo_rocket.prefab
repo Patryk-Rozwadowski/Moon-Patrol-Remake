@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1230540237286939343}
   - component: {fileID: 7934382606101779366}
   m_Layer: 0
-  m_Name: Ufo rocket
+  m_Name: pfEnemy_ufo_rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

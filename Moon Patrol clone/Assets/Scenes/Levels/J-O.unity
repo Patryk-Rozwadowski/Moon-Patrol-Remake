@@ -1036,6 +1036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: pfVehicle
       objectReference: {fileID: 0}
+    - target: {fileID: 8495263545604352593, guid: 1afe299bbdc3bec4b921f0fabf840491,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1afe299bbdc3bec4b921f0fabf840491, type: 3}
 --- !u!4 &519742627 stripped
@@ -1667,7 +1672,7 @@ Transform:
   - {fileID: 1253739440}
   - {fileID: 158619438}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &769563792
 PrefabInstance:
@@ -1885,7 +1890,7 @@ Transform:
   - {fileID: 1344673920}
   - {fileID: 529914004}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843480116
 GameObject:
@@ -2402,7 +2407,7 @@ PrefabInstance:
     - target: {fileID: 5057390473263448680, guid: b9bd9bfae71bc404594706c3658ac89b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5057390473263448680, guid: b9bd9bfae71bc404594706c3658ac89b,
         type: 3}
