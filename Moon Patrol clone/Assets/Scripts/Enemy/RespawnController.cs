@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RespawnController : MonoBehaviour {
-    [SerializeField] private List<GameObject> ufoWave = new List<GameObject>();
+// TODO change WaveController according to this MonoBehaviour
+namespace Enemy {
+    public class RespawnController : MonoBehaviour {
 
-    private Transform _aiWalls;
+        private Transform _aiWalls;
    
-    // Update is called once per frame
-    void Update() {
+        // Update is called once per frame
+        void Update() {
         
+        }
     }
 }
