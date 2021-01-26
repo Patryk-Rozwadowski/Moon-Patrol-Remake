@@ -200,6 +200,7 @@ MonoBehaviour:
   color: 0
   yellow: 0
   blue: 1
+  enemyParamsSO: {fileID: 11400000, guid: ab08490525526e246af33fb15ec0dab8, type: 2}
 --- !u!1001 &1343579066891035225
 PrefabInstance:
   m_ObjectHideFlags: 0

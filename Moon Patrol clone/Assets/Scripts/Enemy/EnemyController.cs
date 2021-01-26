@@ -1,5 +1,6 @@
 ﻿#pragma warning disable 649
 
+using System;
 using Enemy.Waves;
 using Enemy.WaveS;
 using Score;
@@ -19,7 +20,10 @@ namespace Enemy {
         private const float ExplosionEffectLifeTime = 0.2f;
         
         private ScoreManager _scoreManager;
-        private bool _isplayerPosNull;
+        private EnemyAI _enemyAi;
+        
+        private bool _isplayerPosNull, _fleeing;
+        private float _spawnedTime, _timeToFlee = 2f;
         
         public void EnemyDeath() {
             SetScoreAndShowScorePopup();
@@ -27,9 +31,18 @@ namespace Enemy {
         }
         
         private void Start() {
+            _enemyAi = gameObject.GetComponent<EnemyAI>();
             _scoreManager = GetComponent<ScoreManager>();
             _isplayerPosNull = playerPos == null;
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
+        }
+
+        private void Update() {
+            if (Time.time > _timeToFlee && _fleeing == false) {
+                _fleeing = true;
+                _enemyAi.EnemyFlee();
+                Debug.Log($"{gameObject.name} is fleeing!");
+            }
         }
 
         private void SetScoreAndShowScorePopup() {

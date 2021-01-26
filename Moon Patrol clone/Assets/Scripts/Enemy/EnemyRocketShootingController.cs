@@ -1,6 +1,7 @@
 ﻿#pragma warning disable 649
 
 using Score;
+using ScriptableObjects.Enemies;
 using UnityEngine;
 
 namespace Enemy {
@@ -10,6 +11,8 @@ namespace Enemy {
         [SerializeField] private bool rocket, bomb;
         [SerializeField] private bool color, yellow, blue;
 
+        // TODO change all properties with EnemeyParamsSO
+        [SerializeField] private EnemyParamsSO enemyParamsSO;
 
         private GameObject _firepointTransform;
         private ScoreManager _scoreManager;
@@ -36,12 +39,13 @@ namespace Enemy {
         private float _attackSpdTimeMinBlue = 6, _attackSpdTimeMaxBlue = 10;
 
         private bool _rocketLaunched = false;
-
-        void Start() {
+        private float _timeToFlee;
         
+        void Start() {
             _scoreManager = GetComponent<ScoreManager>();
             _rocketShootChance = Random.Range(0, 1f);
             _rocketShootChance = Mathf.Round(_rocketShootChance * 100);
+            _timeToFlee = enemyParamsSO.timeToFlee;    
         
             if (yellow) _randomTime = Random.Range(_attackSpdTimeMinYellow, _attackSpdTimeMaxYellow);
             if (color) _randomTime = Random.Range(_attackSpdTimeMinColor, _attackSpdTimeMaxColor);

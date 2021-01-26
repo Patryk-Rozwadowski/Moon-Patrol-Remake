@@ -1,4 +1,5 @@
 ﻿using Projectiles;
+using Projectiles.Player;
 using UnityEngine;
 using UnityEngine.U2D;
 using Vehicle;

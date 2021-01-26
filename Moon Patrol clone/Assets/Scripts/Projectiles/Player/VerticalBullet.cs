@@ -1,9 +1,8 @@
 ﻿using Enemy;
-using Obstacles;
 using ScriptableObjects.Projectile;
 using UnityEngine;
 
-namespace Projectiles {
+namespace Projectiles.Player {
     public class VerticalBullet : MonoBehaviour {
         [SerializeField] public Transform firePointVertical;
         [SerializeField] public Rigidbody2D bulletRigidBody;

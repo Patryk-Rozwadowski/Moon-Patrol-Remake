@@ -206,6 +206,7 @@ MonoBehaviour:
   color: 1
   yellow: 0
   blue: 0
+  enemyParamsSO: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
 --- !u!95 &850879745995757548
 Animator:
   serializedVersion: 3
