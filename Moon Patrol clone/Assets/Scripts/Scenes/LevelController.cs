@@ -1,23 +1,36 @@
-﻿using UnityEngine;
+﻿using ScriptableObjects.Scenes;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
-    private int _currentIndex;
-
-    private Scene _gameOverScene;
+    [SerializeField] private ScenesSO scenesScriptableObject;
+    private string _gameOverScene, _currentLevel;
     private Scene _stageSummaryScene;
 
     public void StartGame() {
-        SceneManager.LoadScene(1);
+        NextLevel();
     }
 
-    public void RestartLevel() {
+    public void GameOver() {
         SceneManager.LoadScene($"DeadPlayerMenu");
     }
 
+    public void NextLevel() {
+        _currentLevel = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name;
+        scenesScriptableObject.currentLevel = _currentLevel;
+        Debug.Log($"NEXT LEVEL: {scenesScriptableObject.currentLevel}");
+        SceneManager.LoadScene(_currentLevel);
+    }
+
+    public void RestartLevel() {
+        SceneManager.LoadScene($"{scenesScriptableObject.currentLevel}");
+    }
+
+    public void SetCurrentLevel() {
+        _currentLevel = SceneManager.GetActiveScene().name;
+    }
+
     private void Start() {
-        _currentIndex = SceneManager.GetActiveScene().buildIndex;
-        _gameOverScene = SceneManager.GetSceneByBuildIndex(5);
-        _stageSummaryScene = SceneManager.GetSceneAt(4);
+        _stageSummaryScene = SceneManager.GetSceneByBuildIndex(4);
     }
 }

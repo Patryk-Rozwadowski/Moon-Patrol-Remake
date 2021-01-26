@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cf913a11e77f3846a355dbe69a55116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenesScriptableObject: {fileID: 11400000, guid: ff654ca03330b04408ce8f84dbd735ae,
+    type: 2}

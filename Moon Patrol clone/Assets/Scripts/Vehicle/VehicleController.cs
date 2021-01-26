@@ -11,8 +11,9 @@ namespace Vehicle {
         public void PlayerDeath() {
             // @ TODO add bonus for first run
             gameObject.SetActive(false);
-            _levelController.RestartLevel();
-            
+            _levelController.SetCurrentLevel();
+
+            _levelController.GameOver();
             // TODO better animation
             // https://trello.com/c/VqNCDMnx/118-p-lepsza-animacja-%C5%9Bmierci-gracza
         }

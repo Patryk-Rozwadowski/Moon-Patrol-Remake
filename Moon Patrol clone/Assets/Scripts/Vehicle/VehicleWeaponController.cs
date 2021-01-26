@@ -1,6 +1,4 @@
 ﻿#pragma warning disable 649
-
-using System;
 using ScriptableObjects.Keyboard;
 using ScriptableObjects.Projectile;
 using UnityEngine;
@@ -29,9 +27,6 @@ namespace Vehicle {
         }
 
 
-        private void Start() {
-            Debug.Log(_blockShooting);
-        }
 
         private void Update() {
             if (_blockShooting) return;
