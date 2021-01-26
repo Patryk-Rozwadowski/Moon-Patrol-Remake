@@ -23,7 +23,7 @@ namespace Enemy {
         private EnemyAI _enemyAi;
         
         private bool _isplayerPosNull, _fleeing;
-        private float _spawnedTime, _timeToFlee = 2f;
+        private float _spawnedTime, _timeToFlee;
         
         public void EnemyDeath() {
             SetScoreAndShowScorePopup();
