@@ -253,6 +253,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPointRight
       objectReference: {fileID: 0}
+    - target: {fileID: 6860831101067345652, guid: 015f2db77f3b45c47a0b38a9e38061a1,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 6860831101067345653, guid: 015f2db77f3b45c47a0b38a9e38061a1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -353,6 +359,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &90594199
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 945216011702905112, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 439.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 329.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 945216011702905114, guid: be0a593f59ebac347a9dca624b9d1fc9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be0a593f59ebac347a9dca624b9d1fc9, type: 3}
 --- !u!1001 &115494090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2003,6 +2078,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPointLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 5414970556773782477, guid: f8a378f474f20784e9250ed4164175e3,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000,
+        type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a378f474f20784e9250ed4164175e3, type: 3}
 --- !u!4 &676716790 stripped
@@ -3392,6 +3473,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnPointUp
       objectReference: {fileID: 0}
+    - target: {fileID: 3567282127538943629, guid: fd6253a1465828c4fba848cda5b0ec2b,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: 3567282127538943630, guid: fd6253a1465828c4fba848cda5b0ec2b,
         type: 3}
       propertyPath: m_LocalPosition.x

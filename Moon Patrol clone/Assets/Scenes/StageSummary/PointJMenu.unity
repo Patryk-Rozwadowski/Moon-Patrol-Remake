@@ -602,7 +602,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3338392, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 1
-  fullText: ': 80'
+  fullText: ': 100'
 --- !u!114 &1718722438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,7 +1509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ': 80'
+  m_Text: ': 100'
 --- !u!222 &1718722439
 CanvasRenderer:
   m_ObjectHideFlags: 0
