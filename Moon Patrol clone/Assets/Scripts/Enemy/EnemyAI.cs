@@ -8,6 +8,8 @@ namespace Enemy {
         // TODO refactor
         private float _latestDirectionChangeTime;
         private float _directionChangeTime = 2f;
+        
+        // TODO take from enemyParamsSO
         private float _characterVelocity = 5f;
     
         private Vector2 _movementDirection;

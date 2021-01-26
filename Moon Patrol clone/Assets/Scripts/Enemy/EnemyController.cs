@@ -12,7 +12,7 @@ namespace Enemy {
         [SerializeField] private GameObject explosionEffect;
         [SerializeField] private Transform firepoint;
         [SerializeField] private Transform playerPos;
-        [SerializeField] private EnemyParamsSO enemyParams;
+        [SerializeField] private EnemyParamsSO enemyParamsSO;
         [SerializeField] private GameObject enemyHorizontalBullet;
 
         [SerializeField] private Transform pfScorePopup;
@@ -33,7 +33,9 @@ namespace Enemy {
         private void Start() {
             _enemyAi = gameObject.GetComponent<EnemyAI>();
             _scoreManager = GetComponent<ScoreManager>();
+            _timeToFlee = enemyParamsSO.timeToFlee;
             _isplayerPosNull = playerPos == null;
+            
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
@@ -46,10 +48,10 @@ namespace Enemy {
         }
 
         private void SetScoreAndShowScorePopup() {
-            _scoreManager.AddOverallPlayerScore(enemyParams.score);
+            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
             Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
             ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
-            scorePopupController.Setup(enemyParams.score);
+            scorePopupController.Setup(enemyParamsSO.score);
         }
         
         private void OnTriggerEnter2D(Collider2D obj) {

@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Checkpoint
   - AiWalls
+  - Ground
   layers:
   - Default
   - TransparentFX
