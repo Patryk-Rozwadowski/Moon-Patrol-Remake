@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UI {
     public class ScoreUIController : MonoBehaviour {
-        [SerializeField] private Text text;
+        [SerializeField] private UnityEngine.UI.Text text;
         [SerializeField] private ScoreStoreSO _scoreStore;
 
         private void Update() {

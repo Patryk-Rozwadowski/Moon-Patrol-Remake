@@ -1,11 +1,13 @@
 ﻿#pragma warning disable 649
 
+using ScriptableObjects.Score;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI {
     public class StageTime : MonoBehaviour {
-        [SerializeField] private Text stageTimer;
+        [SerializeField] private ScoreStoreSO scoreStore;
+        [SerializeField] private UnityEngine.UI.Text stageTimer;
 
         private float _timer;
 

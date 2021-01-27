@@ -10,6 +10,7 @@ namespace Scenes {
         private float _currentIndex;
         private Scene _stageSummaryScene;
         private float _loadSceneTime = 3f;
+        
 
         public void StartGame() {
             NextLevel();
@@ -20,6 +21,9 @@ namespace Scenes {
         }
 
         public void NextLevel() {
+            // TODO store score to score scriptableobject
+            
+            
             _currentLevel = GetNameNextLevel();
             scenesScriptableObject.currentLevel = _currentLevel;
             SceneManager.LoadScene(scenesScriptableObject.currentLevel);

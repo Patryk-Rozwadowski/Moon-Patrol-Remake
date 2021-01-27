@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ScriptableObjects.Score {
     [CreateAssetMenu(menuName = "ScriptableObjects/ScoreStore")]
     public class ScoreStoreSO : ScriptableObject {
-        [SerializeField] public int playerOverallScore;
-        [SerializeField] public int playerStageScore;
+        [SerializeField] public int playerOverallScore, playerStageScore, stageTime, topRecord, avgTime, goodBonus;
+        [SerializeField] public string currentStage;
     }
 }
