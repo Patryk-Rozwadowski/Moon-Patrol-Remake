@@ -157,7 +157,7 @@ MonoBehaviour:
     type: 3}
   firepoint: {fileID: 7371581154995562156}
   playerPos: {fileID: 0}
-  enemyParams: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
+  enemyParamsSO: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
   enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
