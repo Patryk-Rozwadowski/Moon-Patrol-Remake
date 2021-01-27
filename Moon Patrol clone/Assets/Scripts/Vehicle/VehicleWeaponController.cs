@@ -34,6 +34,8 @@ namespace Vehicle {
         private void Update() {
             if (_blockShooting) return;
             Shoot();
+            
+            if(Input.GetKey("escape")) Application.Quit();
         }
 
         private void Shoot() {

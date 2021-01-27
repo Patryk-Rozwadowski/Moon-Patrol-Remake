@@ -1,6 +1,5 @@
 ﻿using ScriptableObjects.Keyboard;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Vehicle;
 
 namespace Scenes {
