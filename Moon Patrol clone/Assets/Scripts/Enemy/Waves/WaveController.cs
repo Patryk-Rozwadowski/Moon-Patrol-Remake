@@ -1,6 +1,5 @@
 ﻿#pragma warning disable 649
 using System.Collections.Generic;
-using Enemy.Waves;
 using UnityEngine;
 
 namespace Enemy.WaveS {
