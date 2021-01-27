@@ -1,5 +1,6 @@
 ﻿#pragma warning disable 649
 using Projectiles;
+using Projectiles.Player;
 using Score;
 using ScriptableObjects.Obstacles;
 using UnityEngine;

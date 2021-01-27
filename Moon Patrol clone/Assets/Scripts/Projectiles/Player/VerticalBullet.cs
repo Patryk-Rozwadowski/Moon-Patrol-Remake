@@ -9,11 +9,20 @@ namespace Projectiles.Player {
         [SerializeField] public ProjectileSpeedSO projectileSpeed;
 
         private void Start() {
-            bulletRigidBody.velocity = new Vector2(firePointVertical.transform.position.x, projectileSpeed.projectileSpeed);
+            BulletFired();
             FindObjectOfType<AudioManager>().Play("Blaster");
         }
 
         private void Update() {
+            MoveBulletVertically();
+        }
+
+        private void BulletFired() {
+            bulletRigidBody.velocity =
+                new Vector2(firePointVertical.transform.position.x, projectileSpeed.projectileSpeed);
+        }
+
+        private void MoveBulletVertically() {
             bulletRigidBody.position = new Vector2(firePointVertical.position.x,
                 bulletRigidBody.position.y + projectileSpeed.projectileSpeed);
         }

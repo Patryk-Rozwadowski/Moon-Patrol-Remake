@@ -4,7 +4,7 @@ using Obstacles;
 using ScriptableObjects.Projectile;
 using UnityEngine;
 
-namespace Projectiles {
+namespace Projectiles.Player {
     public class HorizonBullet : MonoBehaviour {
         [SerializeField] private Rigidbody2D bulletRigidBody;
         [SerializeField] private ProjectileSpeedSO projectileSpeed;
@@ -19,8 +19,9 @@ namespace Projectiles {
 
         private void OnTriggerEnter2D(Collider2D obj) {
             EnemyController enemy = obj.GetComponent<EnemyController>();
-            StoneController stone = obj.GetComponent<StoneController>();
             if (enemy != null) enemy.EnemyDeath();
+
+            StoneController stone = obj.GetComponent<StoneController>();
             if (stone != null) stone.Destroy();
 
             Debug.Log($"Vertical Bullet hit: {obj.name}");
