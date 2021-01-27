@@ -14,7 +14,7 @@ namespace Vehicle {
             gameObject.SetActive(false);
             _levelController.SetCurrentLevel();
 
-            _levelController.GameOver();
+            _levelController.GameOverHandler();
             // TODO better animation
             // https://trello.com/c/VqNCDMnx/118-p-lepsza-animacja-%C5%9Bmierci-gracza
         }

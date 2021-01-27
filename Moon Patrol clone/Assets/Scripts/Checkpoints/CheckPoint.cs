@@ -9,7 +9,7 @@ namespace Checkpoints {
             if (vehicle != null) {
                 var sceneController = GameObject.Find("LevelController").GetComponent<LevelController>();
                 Debug.Log("next level");
-                sceneController.NextLevel();
+                sceneController.NextLevelHandler();
             }
         }
     }

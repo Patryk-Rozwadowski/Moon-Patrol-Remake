@@ -10,16 +10,18 @@ namespace UI {
         [SerializeField] private UnityEngine.UI.Text stageTimer;
 
         private float _timer;
-
+        private string _secondsString;
+        private int _seconds;
+        
         private void Start() {
             _timer = 0;
         }
 
         void Update() {
             _timer += Time.deltaTime;
-            int seconds = Mathf.FloorToInt(_timer);
-            stageTimer.text = seconds.ToString("000");
+            _seconds = Mathf.FloorToInt(_timer);
+            scoreStore.stageTime = _seconds;
+            stageTimer.text =  _seconds.ToString("000");
         }
-
     }
 }

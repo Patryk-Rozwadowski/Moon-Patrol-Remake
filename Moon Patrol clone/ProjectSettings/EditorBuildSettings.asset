@@ -21,6 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StageSummary/DeadPlayerMenu.unity
     guid: e49a5d7ff3ea1442190eac2fadc5e999
   - enabled: 1
-    path: Assets/Scenes/StageSummary/PointEMenu.unity
+    path: Assets/Scenes/StageSummary/StageSummary.unity
     guid: 4eac2e9a96991164b886b8811cb17c21
   m_configObjects: {}

@@ -1,18 +1,16 @@
 ﻿using ScriptableObjects.Keyboard;
+using ScriptableObjects.Scenes;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Scenes {
     public class GameOverSceneController : MonoBehaviour {
+        [SerializeField] private ScenesSO scenesSO;
         private LevelController _levelController;
         
-        private void Start() {
-            _levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
-        }
-
-        // Update is called once per frame
         void Update() {
             if (Input.anyKeyDown) {
-                _levelController.RestartLevel();
+                SceneManager.LoadScene($"{scenesSO.currentLevel}");
             }
         }
     }
