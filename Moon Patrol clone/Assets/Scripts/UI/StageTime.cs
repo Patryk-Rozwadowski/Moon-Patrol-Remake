@@ -17,7 +17,7 @@ namespace UI {
 
         void Update() {
             _timer += Time.deltaTime;
-            int seconds = Mathf.FloorToInt(_timer % 60F);
+            int seconds = Mathf.FloorToInt(_timer);
             stageTimer.text = seconds.ToString("000");
         }
 
