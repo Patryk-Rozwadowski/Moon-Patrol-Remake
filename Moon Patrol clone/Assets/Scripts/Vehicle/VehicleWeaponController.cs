@@ -1,4 +1,5 @@
 ﻿#pragma warning disable 649
+using System;
 using ScriptableObjects.Keyboard;
 using ScriptableObjects.Projectile;
 using UnityEngine;
@@ -17,16 +18,18 @@ namespace Vehicle {
             horizonDistanceRange,
             verticalDistanceRange;
 
-        [SerializeField] private KeyboardActionKeyCode keyboardControl;
+        [SerializeField] private KeyboardActionKeyCodeSO keyboardControl;
 
         private bool _blockShooting = false;
-        
+        private KeyboardActionKeyCodeSO _keboardControl;
         public void VehicleInMenu() {
             _blockShooting = true;
             Debug.Log("Vehicle shooting blocked.");
         }
 
-
+        private void Start() {
+            _keboardControl = keyboardControl;
+        }
 
         private void Update() {
             if (_blockShooting) return;
@@ -34,7 +37,7 @@ namespace Vehicle {
         }
 
         private void Shoot() {
-            if (!Input.GetKeyDown(keyboardControl.shoot)) return;
+            if (!Input.GetKeyDown(_keboardControl.shoot)) return;
             HorizontalShoot();
             VerticalShoot();
         }

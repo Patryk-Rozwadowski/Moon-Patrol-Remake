@@ -19,7 +19,7 @@ public class LevelController : MonoBehaviour {
         _currentLevel = SceneManager.GetSceneByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1).name;
         scenesScriptableObject.currentLevel = _currentLevel;
         Debug.Log($"NEXT LEVEL: {scenesScriptableObject.currentLevel}");
-        SceneManager.LoadScene(_currentLevel);
+        SceneManager.LoadScene(scenesScriptableObject.currentLevel);
     }
 
     public void RestartLevel() {
@@ -32,5 +32,7 @@ public class LevelController : MonoBehaviour {
 
     private void Start() {
         _stageSummaryScene = SceneManager.GetSceneByBuildIndex(4);
+        if(_currentLevel == null) SetCurrentLevel();
+        Debug.Log($"sdgwsgasdg sadg sdg{scenesScriptableObject.currentLevel}");
     }
 }

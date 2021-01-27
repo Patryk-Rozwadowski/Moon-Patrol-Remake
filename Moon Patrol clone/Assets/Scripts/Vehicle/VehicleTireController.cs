@@ -8,7 +8,7 @@ namespace Vehicle {
     public class VehicleTireController : MonoBehaviour {
         [SerializeField] private Rigidbody2D tireRigidbody2D;
         [SerializeField] private PlayerParamsSO playerParams;
-        [SerializeField] private KeyboardActionKeyCode keyboardActionKeyCode;
+        [SerializeField] private KeyboardActionKeyCodeSO keyboardActionKeyCodeSo;
 
         private float
             _jumpTime,
@@ -28,9 +28,9 @@ namespace Vehicle {
         private bool _isAnyButtonPressed;
     
         private void Start() {
-            _slowDownKey = keyboardActionKeyCode.slowDown;
-            _speedUpKey = keyboardActionKeyCode.speedUp;
-            _jumpKey = keyboardActionKeyCode.jump;
+            _slowDownKey = keyboardActionKeyCodeSo.slowDown;
+            _speedUpKey = keyboardActionKeyCodeSo.speedUp;
+            _jumpKey = keyboardActionKeyCodeSo.jump;
             _playerSpeed = playerParams.playerSpeed;
             _minSpeed = playerParams.minimalSpeed;
             _maxSpeed = playerParams.maxSpeed;

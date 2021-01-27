@@ -2,7 +2,7 @@
 
 namespace ScriptableObjects.Keyboard {
     [CreateAssetMenu(menuName = "ScriptableObjects/KeyboardActionKeyCodeList")]
-    public class KeyboardActionKeyCode : ScriptableObject {
+    public class KeyboardActionKeyCodeSO : ScriptableObject {
         [SerializeField] public KeyCode
             jump = KeyCode.UpArrow,
             shoot = KeyCode.Space,
