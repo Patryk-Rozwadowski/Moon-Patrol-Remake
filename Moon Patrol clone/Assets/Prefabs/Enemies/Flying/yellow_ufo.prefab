@@ -33,7 +33,7 @@ Transform:
   m_GameObject: {fileID: 997524567895117773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 4396688436269967605}
   m_Father: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
     type: 3}
   firepoint: {fileID: 4396688436269967605}
   playerPos: {fileID: 0}
-  enemyParams: {fileID: 11400000, guid: 0fdb69652eed1444084455ac7aa8637e, type: 2}
+  enemyParamsSO: {fileID: 0}
   enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
