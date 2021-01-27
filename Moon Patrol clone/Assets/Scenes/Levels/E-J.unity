@@ -3127,6 +3127,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 423350836428127502, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
+        type: 3}
+      propertyPath: m_MaskInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 423350837324172888, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
         type: 3}
       propertyPath: m_TagString

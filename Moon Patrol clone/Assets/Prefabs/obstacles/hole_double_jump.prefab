@@ -73,7 +73,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f172b28cfaa4a04b8a87a0708de5ae0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30e017d4330a7f043bd1eb2d3981ff9f, type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
   m_BackSortingLayerID: 0
@@ -95,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d8b522b6bcf9a438f2316bb530ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleCollider2D: {fileID: 0}
 --- !u!68 &917496604
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -112,8 +111,10 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -6.280603, y: 2.457915}
-  - {x: 5.301748, y: 2.49693}
+  - {x: -6.619282, y: 1.9487013}
+  - {x: -2.9232354, y: 0.39642498}
+  - {x: 0.97152615, y: 0.33277372}
+  - {x: 5.567854, y: 1.8604139}
 --- !u!114 &7666393657471754313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,4 +127,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d8b522b6bcf9a438f2316bb530ac04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleCollider2D: {fileID: 917496604}
