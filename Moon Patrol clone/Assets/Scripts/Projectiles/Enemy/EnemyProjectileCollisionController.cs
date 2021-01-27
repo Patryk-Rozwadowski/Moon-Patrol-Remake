@@ -17,8 +17,10 @@ namespace Projectiles.Enemy {
                 Destroy(explosionEffectObject, 0.2f);
             }
 
-            var playerVehicle = other.GetComponent<VehicleController>();
-            if (playerVehicle != null) playerVehicle.PlayerDeath();
+            if (other.CompareTag("Player")) {
+                var playerVehicle = other.GetComponentInParent<VehicleController>();
+                playerVehicle.PlayerDeath();
+            }
 
             var playerVerticalBullet = other.GetComponent<VerticalBullet>();
             if (playerVerticalBullet != null) {
