@@ -787,7 +787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be069f31c123664c87957f7d0fcd293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyboardActionKeyCodes: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871,
+  keyboardActionKeyCodesSo: {fileID: 11400000, guid: 195621647fcb11f4cadec4f74265d871,
     type: 2}
 --- !u!4 &787356213
 Transform:
@@ -1373,7 +1373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9825d67d99c74c3469570a3bc0563cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1895437745}
   parallaxEffect: 0
 --- !u!68 &1864183853
 EdgeCollider2D:
