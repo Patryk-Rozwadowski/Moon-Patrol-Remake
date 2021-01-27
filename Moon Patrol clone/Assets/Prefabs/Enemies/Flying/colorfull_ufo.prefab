@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5124083997699483533}
   - component: {fileID: 288030415832715035}
-  - component: {fileID: 5353777614377167182}
   - component: {fileID: 1521184102}
   - component: {fileID: 1585470933}
   - component: {fileID: 1728946423010840444}
   - component: {fileID: 1521184097}
   - component: {fileID: 3327034149760743338}
   - component: {fileID: 850879745995757548}
+  - component: {fileID: 34426216}
   m_Layer: 0
   m_Name: colorfull_ufo
   m_TagString: Enemy
@@ -94,32 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5353777614377167182
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9069692674709502549}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.007385254, y: -0.05906868}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.18069, y: 3.1200001}
-    newSize: {x: 1.31, y: 0.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9.388306, y: 3.5527}
-  m_EdgeRadius: 0
 --- !u!50 &1521184102
 Rigidbody2D:
   serializedVersion: 4
@@ -226,6 +200,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!60 &34426216
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069692674709502549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 9.18069, y: 3.1200001}
+    newSize: {x: 1.31, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 4.124138, y: -1.3806896}
+      - {x: 4.590345, y: -0.69931036}
+      - {x: 4.590345, y: 0.23310345}
+      - {x: 2.6179311, y: 1.5600001}
+      - {x: -1.7931035, y: 1.5600001}
+      - {x: -3.8731036, y: 0.52}
+      - {x: -4.590345, y: -0.16137931}
+      - {x: -4.590345, y: -0.55586207}
+      - {x: -3.3710346, y: -1.5600001}
+      - {x: -1.5062069, y: -1.5600001}
+      - {x: -0.8248276, y: -1.0579311}
+      - {x: 0.43034482, y: -1.5600001}
+      - {x: 3.2993104, y: -1.5600001}
 --- !u!1001 &4974640524283527108
 PrefabInstance:
   m_ObjectHideFlags: 0

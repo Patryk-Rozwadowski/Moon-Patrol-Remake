@@ -47,7 +47,6 @@ namespace Scenes {
 
         private IEnumerator LoadGameOverSceneWithDelay() {
             yield return new WaitForSeconds(_loadSceneTime);
-            Debug.Log("ASDAS");
             SceneManager.LoadScene($"DeadPlayerMenu");
         }
     }

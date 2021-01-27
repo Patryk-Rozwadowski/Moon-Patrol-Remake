@@ -1,6 +1,5 @@
 ﻿using Projectiles.Player;
 using UnityEngine;
-using UnityEngine.U2D;
 using Vehicle;
 
 namespace Projectiles.Enemy {
@@ -9,13 +8,11 @@ namespace Projectiles.Enemy {
         [SerializeField] private GameObject holeGameObject;
 
         private void OnTriggerEnter2D(Collider2D other) {
-            var ground = other.GetComponent<SpriteShapeController>();
-            Debug.Log($"HIT {other.name}");
             if (other.CompareTag("Ground")) {
                 var explosionPosition = transform.position;
                 var explosionEffectObject = Instantiate(explosionEffect, explosionPosition, Quaternion.identity);
                 
-                Instantiate(holeGameObject, explosionPosition, Quaternion.identity);
+                if(holeGameObject != null) Instantiate(holeGameObject, explosionPosition, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(explosionEffectObject, 0.2f);
             }

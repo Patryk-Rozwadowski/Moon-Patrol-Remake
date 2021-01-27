@@ -2,7 +2,7 @@
 using Random = UnityEngine.Random;
 
 namespace Enemy {
-    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(PolygonCollider2D))]
     public class EnemyAI : MonoBehaviour {
         
         // TODO refactor
