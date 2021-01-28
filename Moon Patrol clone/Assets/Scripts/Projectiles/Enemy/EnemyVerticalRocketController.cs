@@ -3,7 +3,7 @@
 namespace Projectiles.Enemy {
     public class EnemyVerticalRocketController : MonoBehaviour {
         private Rigidbody2D _rb2D;
-        private float thrust = 2;
+        private float thrust = 1f;
 
         void Start() {
             _rb2D = gameObject.GetComponent<Rigidbody2D>();

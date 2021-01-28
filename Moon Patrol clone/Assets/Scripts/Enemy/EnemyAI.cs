@@ -30,7 +30,7 @@ namespace Enemy {
 
         private void CalcuateNewMovementVector() {
             _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y / 2);
+            _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
         }
 
 
@@ -43,8 +43,6 @@ namespace Enemy {
                 _latestDirectionChangeTime = Time.time;
                 CalcuateNewMovementVector();
             }
-
-           
         }
 
         private void OnCollisionEnter2D(Collision2D collision) {

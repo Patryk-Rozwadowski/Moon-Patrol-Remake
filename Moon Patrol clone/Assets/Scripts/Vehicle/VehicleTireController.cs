@@ -106,10 +106,8 @@ namespace Vehicle {
             if (Math.Abs(_playerSpeed - playerParams.playerSpeed) < _speedTolerance && _isAnyButtonPressed) {
                 if (_playerSpeed < playerParams.playerSpeed) {
                     _playerSpeed += Time.deltaTime * _speedStep;
-                    Debug.Log($"Speeding up {_playerSpeed}");
                 } else if (_playerSpeed > playerParams.playerSpeed) {
                     _playerSpeed -= Time.deltaTime * _speedStep;
-                    Debug.Log($"Speeding up {_playerSpeed}");
                 }
             }
         }

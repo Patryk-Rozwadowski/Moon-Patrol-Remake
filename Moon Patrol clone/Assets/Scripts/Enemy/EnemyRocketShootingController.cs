@@ -52,7 +52,7 @@ namespace Enemy {
             if (blue) _randomTime = Random.Range(_attackSpdTimeMinBlue, _attackSpdTimeMaxBlue);
             
             var chancesInfo =
-                $"Treshold for type {gameObject.name} shoot chance {_rocketShootTreshold}% Shoot chance: {_rocketShootChance}%. " +
+                $"Treshold for type {gameObject.name} shoot chance treshold {_rocketShootTreshold}% Shoot chance: {_rocketShootChance}%. " +
                 $"{(_rocketShootTreshold < _rocketShootChance ? $"Rocket will be launch in {_randomTime}" : "Rocket will be not launched.")}";
 
             Debug.Log(chancesInfo);

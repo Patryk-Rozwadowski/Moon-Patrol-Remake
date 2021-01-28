@@ -17,14 +17,13 @@ namespace Obstacles {
         }
 
         private void OnTriggerEnter2D(Collider2D obj) {
-            Debug.LogWarning(obj.name);
-            VehicleController horizonBullet = obj.GetComponent<VehicleController>();
-            if (horizonBullet == true) return;
-            if (isColliderIsUntouched) {
+            Debug.LogWarning($"HOLE HIT {obj.name}");
+            VehicleController vehicle = obj.GetComponent<VehicleController>();
+            if (vehicle != null) {
                 Debug.Log($"Score jump over: {obstacleParamsScriptableObject.jumpOverScore}");
                 _scoreManager.AddOverallPlayerScore(obstacleParamsScriptableObject.jumpOverScore);
                 isColliderIsUntouched = false;
-            }
+            };
         }
     }
 }

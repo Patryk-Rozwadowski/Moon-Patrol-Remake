@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2096243db3121646b423081ec9180de, type: 3}
   m_Name: HoleParamsSO
   m_EditorClassIdentifier: 
-  jumpOverScore: 0
+  jumpOverScore: 50
   destroyScore: 0
+  obstacleSprite: {fileID: 0}

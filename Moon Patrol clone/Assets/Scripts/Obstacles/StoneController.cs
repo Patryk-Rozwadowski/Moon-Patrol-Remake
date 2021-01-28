@@ -21,14 +21,17 @@ namespace Obstacles {
                 var explosionEffectGameObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                 // TODO Global time manager
                 Destroy(explosionEffectGameObject, 0.2f);
-            } 
+            }
             else Debug.LogWarning($"{gameObject.name} missing explosion effect");
+
             Destroy(gameObject);
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
             var vehicleController = other.GetComponent<BoxCollider2D>().GetComponentInParent<VehicleController>();
-            if(vehicleController != null) vehicleController.PlayerDeath();
+            var vehicleTire = other.GetComponent<VehicleTireController>();
+
+            if (vehicleController != null || vehicleTire) vehicleController.PlayerDeath();
         }
     }
 }

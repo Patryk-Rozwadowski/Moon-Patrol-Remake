@@ -1,6 +1,5 @@
 ﻿#pragma warning disable 649
 
-using System;
 using ScriptableObjects.Score;
 using UnityEngine;
 
@@ -12,7 +11,6 @@ namespace Score {
 
         private void Start() {
             scoreStore.playerOverallScore = 0;
-            Debug.Log("SCORE MANAGEr");
         }
 
         public void AddOverallPlayerScore(int val) {

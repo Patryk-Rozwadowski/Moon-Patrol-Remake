@@ -64,6 +64,8 @@ namespace Enemy {
             var waveController = obj.GetComponent<WaveController>();
             if (waveController != null) return;
             
+            
+            
             RenderExplosionAndDestroy();
         }
         
