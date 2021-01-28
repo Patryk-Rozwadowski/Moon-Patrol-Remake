@@ -88,6 +88,8 @@ GameObject:
   - component: {fileID: 4035830006526118645}
   - component: {fileID: 4035830006526118408}
   - component: {fileID: 4035830006526118410}
+  - component: {fileID: 1771487314234384401}
+  - component: {fileID: 6774843180939403644}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -103,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4035830006526118647}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.74, y: -0.7331724, z: -10}
+  m_LocalPosition: {x: -22.43, y: -0.9000001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4035830006449030202}
@@ -138,7 +140,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.23
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -229,6 +231,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c341a504dabec84188e33330b9b998a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1771487314234384401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035830006526118647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23356f494faf4703bf771f7ebc5708d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 5
+  shift: 0.3
+--- !u!114 &6774843180939403644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4035830006526118647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59700678e0092463cb106a3995cd22a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scanlineIntensity: 25
+  scanlineWidth: 1
 --- !u!1 &4035830006860377326
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +320,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.334091, y: 1}
+    m_SensorSize: {x: 1.3336673, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
