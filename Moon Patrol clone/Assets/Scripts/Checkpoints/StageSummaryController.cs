@@ -16,7 +16,10 @@ public class StageSummaryController : MonoBehaviour {
         brokenRecordTextField;
 
     void Start() {
-        stagePoint.text = scenesSO.currentLevel;
+        string[] levelStrArr = scenesSO.currentLevel.Split(' ');
+        string levelStr = levelStrArr[1];
+        stagePoint.text = levelStr;
+    
         timeTextField.text = scoreStore.stageTime.ToString();
         avgTimeTextField.text = scoreStore.avgTime.ToString();
         // goodBonusPointsField.text = scoreStore
