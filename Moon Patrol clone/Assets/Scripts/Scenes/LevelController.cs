@@ -9,10 +9,13 @@ namespace Scenes {
         private string _gameOverScene, _currentLevel;
         private float _currentIndex;
         private string _stageSummaryScene;
-        private float _loadSceneTime = 3f, _loadNextSceneTime = 10f;
+        private float _loadSceneTime = 3f, _loadNextSceneTime = 5f;
         private bool _showStageSummary;
 
-        private string _stageSummary = "StageSummary";
+        private string _stageSummaryAE = "StageSummary A-E";
+        private string _stageSummaryEJ = "StageSummary E-J";
+        private string _stageSummaryJO = "StageSummary J-O";
+        private string _gameFinished = "GameFinished";
 
         public void StartGame() {
             LoadNextLevel();
@@ -21,19 +24,18 @@ namespace Scenes {
         public void GameOverHandler() {
             Invoke($"GameOver", 3f);
         }
-        
+
         public void GameOver() {
             SceneManager.LoadScene($"DeadPlayerMenu");
-
         }
-        
+
         private void LoadNextLevel() {
-            if (scenesScriptableObject.currentScene == _stageSummary) {
-                SceneManager.LoadScene(scenesScriptableObject.currentSceneIndex + 1);
-                return;
-            }
             scenesScriptableObject.currentLevel = GetNameNextLevel();
             SceneManager.LoadScene($"{scenesScriptableObject.currentLevel}");
+        }
+
+        private void GameFinished() {
+            SceneManager.LoadScene($"{_gameFinished}");
         }
 
         private void Start() {
@@ -42,16 +44,24 @@ namespace Scenes {
 
             Debug.LogWarning($"{nameof(LevelController)}: Current scene {scenesScriptableObject.currentScene}");
             Debug.LogWarning($"{nameof(LevelController)}: Current Level {scenesScriptableObject.currentLevel}");
-            if (scenesScriptableObject.currentScene == _stageSummary) {
+
+            if (
+                scenesScriptableObject.currentScene == _stageSummaryAE ||
+                scenesScriptableObject.currentScene == _stageSummaryEJ) {
                 Invoke($"LoadNextLevel", _loadNextSceneTime);
-                return;
             }
+
+            if (scenesScriptableObject.currentScene == _stageSummaryJO) {
+                Debug.Log("GAME FINISHED");
+                Invoke("GameFinished", _loadNextSceneTime);
+            }
+
             scenesScriptableObject.currentLevel = SceneManager.GetActiveScene().name;
             scenesScriptableObject.currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         }
 
         public void LoadStageSummary() {
-            SceneManager.LoadScene("StageSummary");
+            LoadNextLevel();
         }
 
 
