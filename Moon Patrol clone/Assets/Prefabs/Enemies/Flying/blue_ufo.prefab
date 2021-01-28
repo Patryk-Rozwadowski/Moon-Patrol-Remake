@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb400e617745eb4b83781d4b4ab92b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
+  explosionEffect: {fileID: 7129360452310556015, guid: dbc287e6683027441b90055920ad7a8a,
     type: 3}
   firepoint: {fileID: 3029493248060139450}
   playerPos: {fileID: 0}

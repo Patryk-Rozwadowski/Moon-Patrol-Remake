@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb400e617745eb4b83781d4b4ab92b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
+  explosionEffect: {fileID: 5367097307691585765, guid: 4b6da1f779780bd4887e8fb5ccdfd5a5,
     type: 3}
   firepoint: {fileID: 7371581154995562156}
   playerPos: {fileID: 0}
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116b65fed788f5e46a5bcdddbc4a24a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletRocket: {fileID: 1230540237286939342, guid: d13d106d30679f34da4af4cf70b39262,
+  enemyBulletRocket: {fileID: 3466955665583854342, guid: cc77c2645d4b66041b78e9ff92e06844,
     type: 3}
   firepoint: {fileID: 7371581154995562157}
   rocket: 1

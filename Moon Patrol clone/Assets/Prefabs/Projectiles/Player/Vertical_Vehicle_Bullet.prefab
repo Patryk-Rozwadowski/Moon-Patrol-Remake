@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5231569339893180625}
   - component: {fileID: 5231569339893180627}
   - component: {fileID: 5231569339893180628}
+  - component: {fileID: -8646476967248082086}
+  - component: {fileID: -3919974637387387154}
   m_Layer: 0
   m_Name: Vertical_Vehicle_Bullet
   m_TagString: Untagged
@@ -4829,3 +4831,39 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!50 &-8646476967248082086
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231569339893180629}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 5
+--- !u!114 &-3919974637387387154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231569339893180629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baff5f43b70d9cd4faa1a7a6428ea4b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePointVertical: {fileID: 0}
+  bulletRigidBody: {fileID: 0}
+  projectileSpeed: {fileID: 0}
