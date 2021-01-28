@@ -10,7 +10,7 @@ public class StageSummaryController : MonoBehaviour {
     [SerializeField] private UnityEngine.UI.Text
         stagePoint,
         timeTextField,
-        avgTimeTextField,
+        totalScoreOverall,
         topRecordTextField,
         goodBonusPointsField,
         brokenRecordTextField;
@@ -21,7 +21,7 @@ public class StageSummaryController : MonoBehaviour {
         stagePoint.text = levelStr;
     
         timeTextField.text = scoreStore.stageTime.ToString();
-        avgTimeTextField.text = scoreStore.avgTime.ToString();
+        totalScoreOverall.text = scoreStore.playerOverallScore.ToString();
         // goodBonusPointsField.text = scoreStore
     }
 }
