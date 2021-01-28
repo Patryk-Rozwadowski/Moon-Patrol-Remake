@@ -33,9 +33,10 @@ namespace Projectiles.Player {
 
         private void OnTriggerEnter2D(Collider2D obj) {
             var enemy = obj.GetComponent<EnemyController>();
-            if (enemy == null) return;
-            enemy.EnemyDeath();
-            Destroy(gameObject);
+            if (enemy != null) {
+                enemy.EnemyDeath();
+                Destroy(gameObject);
+            }
         }
     }
 }

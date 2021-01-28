@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 947061780501482581}
   - component: {fileID: 5274981521185118030}
   - component: {fileID: 1543075481}
-  - component: {fileID: 139015030}
   - component: {fileID: 527922703292381389}
   - component: {fileID: 6353717052363778853}
   - component: {fileID: 571303114}
@@ -174,19 +173,6 @@ MonoBehaviour:
   enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
---- !u!114 &139015030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6969824601966314449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacb58ac08fc46748ba2c94e1b2acbd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreStore: {fileID: 11400000, guid: 4026d467acb14fd48bbc4166585ffde2, type: 2}
 --- !u!114 &527922703292381389
 MonoBehaviour:
   m_ObjectHideFlags: 0

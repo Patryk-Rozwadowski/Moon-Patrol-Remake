@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9c60ed9c0cc1045b5f5ea6cd0a87ae, type: 3}
   m_Name: ScoreStoreSO
   m_EditorClassIdentifier: 
-  playerOverallScore: 100
-  playerStageScore: 49
-  stageTime: 78
-  topRecord: 49
+  playerOverallScore: 0
+  playerStageScore: 0
+  stageTime: 0
+  topRecord: 0
   avgTime: 48
-  goodBonus: 38
+  goodBonus: 0
   currentStage: 

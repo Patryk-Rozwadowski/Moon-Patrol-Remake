@@ -30,8 +30,8 @@ namespace Enemy {
         }
         
         private void Start() {
+            _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
             _enemyAi = gameObject.GetComponent<EnemyAI>();
-            _scoreManager = GetComponent<ScoreManager>();
             _timeToFlee = enemyParamsSO.timeToFlee;
             _isplayerPosNull = playerPos == null;
             
