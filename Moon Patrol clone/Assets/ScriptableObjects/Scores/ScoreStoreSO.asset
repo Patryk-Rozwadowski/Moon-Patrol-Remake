@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ScoreStoreSO
   m_EditorClassIdentifier: 
   playerOverallScore: 0
-  playerStageScore: 0
-  stageTime: 0
-  topRecord: 0
+  playerStageScore: 49
+  stageTime: 5
+  topRecord: 49
   avgTime: 48
-  goodBonus: 0
+  goodBonus: 38
   currentStage: 
