@@ -25,7 +25,6 @@ namespace Obstacles {
                 _scoreManager.AddOverallPlayerScore(obstacleParamsScriptableObject.jumpOverScore);
                 isColliderIsUntouched = false;
             }
-
         }
     }
 }

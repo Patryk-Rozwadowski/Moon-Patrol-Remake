@@ -23,6 +23,7 @@ namespace Enemy {
         
         private bool _isplayerPosNull, _fleeing;
         private float _spawnedTime, _timeToFlee;
+        private float _respawnTime;
         
         public void EnemyDeath() {
             SetScoreAndShowScorePopup();
@@ -33,17 +34,17 @@ namespace Enemy {
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
             _enemyAi = gameObject.GetComponent<EnemyAI>();
             _timeToFlee = enemyParamsSO.timeToFlee;
+            _respawnTime = Time.time;
             _isplayerPosNull = playerPos == null;
             
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
         private void Update() {
-            if (Time.time > _timeToFlee && _fleeing == false) {
-                _fleeing = true;
-                _enemyAi.EnemyFlee();
-                Debug.Log($"{gameObject.name} is fleeing!");
-            }
+            if (!(_respawnTime > _timeToFlee) || _fleeing) return;
+            _fleeing = true;
+            _enemyAi.EnemyFlee();
+            Debug.Log($"{gameObject.name} is fleeing!");
         }
 
         private void SetScoreAndShowScorePopup() {
