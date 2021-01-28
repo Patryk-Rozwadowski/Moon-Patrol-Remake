@@ -46,33 +46,33 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: 02e43a5a874c4324fa733740f9faba12, type: 3}
-    volume: 0.34
+    volume: 0.208
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Jump
     clip: {fileID: 8300000, guid: 87c631883adc46d41955474a452bb713, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Blaster
     clip: {fileID: 8300000, guid: 493d20cc638e25040baf6838892d1d29, type: 3}
-    volume: 1
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Hit
     clip: {fileID: 8300000, guid: 9863192979ffd714480c952611b41de2, type: 3}
-    volume: 1
+    volume: 0.7
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Enemy
     clip: {fileID: 8300000, guid: 83d1c2499f0704b498c52cf9f94098ea, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Checkpoint
     clip: {fileID: 8300000, guid: 33e9d580a812fa442bb4909dbbfe42fa, type: 3}

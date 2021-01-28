@@ -17,8 +17,10 @@ namespace Enemy.WaveS {
     
         void Start() {
             // TODO START MUSIC
+            
             _randomSpawnIndex = Random.Range(0, respawnPointsList.Count);
             Debug.Log(respawnPointsList);
+            FindObjectOfType<AudioManager>().Play("Enemy");
         }
     }
 }

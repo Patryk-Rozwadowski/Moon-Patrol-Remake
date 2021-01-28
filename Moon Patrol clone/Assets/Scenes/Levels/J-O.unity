@@ -389,6 +389,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1715054889623188308, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
+        type: 3}
+      propertyPath: scoreStore
+      value: 
+      objectReference: {fileID: 11400000, guid: 4026d467acb14fd48bbc4166585ffde2,
+        type: 2}
     - target: {fileID: 6459083157930956034, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2429,12 +2435,12 @@ PrefabInstance:
     - target: {fileID: 4035830006526118644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4035830006526118644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: near clip plane
-      value: 0.3
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 4035830006526118646, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
