@@ -22,7 +22,10 @@ namespace Projectiles.Player {
             if (enemy != null) enemy.EnemyDeath();
 
             StoneController stone = obj.GetComponent<StoneController>();
-            if (stone != null) stone.Destroy();
+            if (stone != null) {
+                stone.Destroy();
+                Destroy(gameObject);
+            }
 
             Debug.Log($"Vertical Bullet hit: {obj.name}");
         }
