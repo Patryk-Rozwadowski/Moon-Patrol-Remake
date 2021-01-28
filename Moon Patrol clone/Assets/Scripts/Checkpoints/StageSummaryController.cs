@@ -21,8 +21,4 @@ public class StageSummaryController : MonoBehaviour {
         avgTimeTextField.text = scoreStore.avgTime.ToString();
         // goodBonusPointsField.text = scoreStore
     }
-
-    // Update is called once per frame
-    void Update() {
-    }
 }
