@@ -12,6 +12,7 @@ namespace Vehicle {
         }
 
         public void PlayerDeath() {
+            FindObjectOfType<AudioManager>().Play("Crash");
             // @ TODO add bonus for first run
             gameObject.SetActive(false);
             var explosionEffectObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
