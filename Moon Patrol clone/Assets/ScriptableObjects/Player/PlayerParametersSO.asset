@@ -15,6 +15,6 @@ MonoBehaviour:
   playerSpeed: 4.5
   jumpTimeInAir: 0.45
   jumpHeightAccelerate: 3
-  minimalSpeed: 3
+  minimalSpeed: 2
   maxSpeed: 6
-  speedStep: 2
+  speedStep: 5
