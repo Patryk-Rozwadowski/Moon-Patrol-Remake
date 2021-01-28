@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 2338237513012446354, guid: 9539e168a3b34ba488df7187b3957bbf,
     type: 3}
-  holeGameObject: {fileID: 5536841097560272326, guid: 3206192ffd60d7044a6dc78e9bd81c2c,
+  holeGameObject: {fileID: 6146700907840957741, guid: fe665922781d46241b07c077cde08d36,
     type: 3}
 --- !u!114 &3474985246887007336
 MonoBehaviour:

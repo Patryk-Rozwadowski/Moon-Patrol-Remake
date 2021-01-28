@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/J-O.unity
     guid: dba917f0ac304f144902ca597bab6344
   - enabled: 1
-    path: Assets/Scenes/StageSummary/StageSummar J-O.unity
+    path: Assets/Scenes/StageSummary/StageSummary J-O.unity
     guid: 4eac2e9a96991164b886b8811cb17c21
   - enabled: 1
-    path: Assets/Scenes/StageSummary/YouWin!.unity
+    path: Assets/Scenes/StageSummary/GameFinished.unity
     guid: 59f8fe8dceb11274797a0635afd7614b
   - enabled: 1
     path: Assets/Scenes/StageSummary/DeadPlayerMenu.unity
