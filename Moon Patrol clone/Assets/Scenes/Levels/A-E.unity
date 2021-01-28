@@ -852,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 1343614656310788866, guid: fc3e7ca4d76d57141ae5d11f1b31547f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.08
+      value: 8.04
       objectReference: {fileID: 0}
     - target: {fileID: 1343614656310788866, guid: fc3e7ca4d76d57141ae5d11f1b31547f,
         type: 3}
@@ -2411,7 +2411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994399727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.604538, y: -12.698219, z: -30.00544}
+  m_LocalPosition: {x: -4.604538, y: -12.698219, z: 41.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 621000573}
@@ -3718,7 +3718,7 @@ PrefabInstance:
     - target: {fileID: 1343614656310788866, guid: fc3e7ca4d76d57141ae5d11f1b31547f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.120001
+      value: 8.04
       objectReference: {fileID: 0}
     - target: {fileID: 1343614656310788866, guid: fc3e7ca4d76d57141ae5d11f1b31547f,
         type: 3}
@@ -4089,7 +4089,7 @@ PrefabInstance:
     - target: {fileID: 4035830006526118644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: orthographic size
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 4035830006526118644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
@@ -4109,7 +4109,7 @@ PrefabInstance:
     - target: {fileID: 4035830006526118644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: near clip plane
-      value: 0.3
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 4035830006526118647, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
