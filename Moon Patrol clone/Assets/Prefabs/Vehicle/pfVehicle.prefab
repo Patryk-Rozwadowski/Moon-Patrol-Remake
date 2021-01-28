@@ -78,7 +78,7 @@ MonoBehaviour:
   firePointHorizon: {fileID: 3026630540239808739}
   firePointVertical: {fileID: 6670653756850915319}
   bulletVertical: {fileID: 8495263545604352594}
-  bulletHorizon: {fileID: 8691790367499978655, guid: 0e8affd2396a3e24fa9d0414d54498c4,
+  bulletHorizon: {fileID: 6669357145383317162, guid: fd3bd5fcad9a01044a3565f58a657a6b,
     type: 3}
   horizonDistanceRange: {fileID: 11400000, guid: 7b23d4377f1867d4ab66a52397891a34,
     type: 2}
