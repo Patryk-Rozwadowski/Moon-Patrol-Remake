@@ -9,6 +9,7 @@ namespace Enemy.WaveS {
         private int _randomSpawnIndex;
         public void WaveRespawn(List<GameObject> ufoWave) {
             var aiWalls = GameObject.Find("AiWalls").transform;
+            FindObjectOfType<AudioManager>().Play("Enemy");
             foreach (var o in ufoWave) {
                 var ufo = Instantiate(o, respawnPointsList[_randomSpawnIndex].transform.position, Quaternion.identity) ;
                 ufo.transform.parent = aiWalls;
@@ -20,7 +21,7 @@ namespace Enemy.WaveS {
             
             _randomSpawnIndex = Random.Range(0, respawnPointsList.Count);
             Debug.Log(respawnPointsList);
-            FindObjectOfType<AudioManager>().Play("Enemy");
+            
         }
     }
 }
