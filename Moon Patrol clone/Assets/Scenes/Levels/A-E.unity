@@ -8818,6 +8818,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1771487314234384401, guid: 231d525ad6e7c8a4d95b221a8162fd73,
+        type: 3}
+      propertyPath: shift
+      value: 0.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 1771487314234384401, guid: 231d525ad6e7c8a4d95b221a8162fd73,
+        type: 3}
+      propertyPath: intensity
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4035830006449030180, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: m_TagString
@@ -9242,6 +9252,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_XDamping
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774843180939403644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
+        type: 3}
+      propertyPath: scanlineIntensity
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6774843180939403644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
+        type: 3}
+      propertyPath: scanlineWidth
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 231d525ad6e7c8a4d95b221a8162fd73, type: 3}
