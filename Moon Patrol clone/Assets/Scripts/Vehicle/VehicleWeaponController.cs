@@ -2,6 +2,7 @@
 using System;
 using ScriptableObjects.Keyboard;
 using ScriptableObjects.Projectile;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace Vehicle {
@@ -12,16 +13,20 @@ namespace Vehicle {
 
         [SerializeField] private GameObject
             bulletVertical,
-            bulletHorizon;
+            bulletHorizon,
+            bulletExplisionEffect;
 
         [SerializeField] private ProjectileDistanceSO
             horizonDistanceRange,
             verticalDistanceRange;
 
+        // TODO wybuch pocisku
+
         [SerializeField] private KeyboardActionKeyCodeSO keyboardControl;
 
         private bool _blockShooting = false;
         private KeyboardActionKeyCodeSO _keboardControl;
+
         public void VehicleInMenu() {
             _blockShooting = true;
             Debug.Log("Vehicle shooting blocked.");
@@ -34,8 +39,8 @@ namespace Vehicle {
         private void Update() {
             if (_blockShooting) return;
             Shoot();
-            
-            if(Input.GetKey("escape")) Application.Quit();
+
+            if (Input.GetKey("escape")) Application.Quit();
         }
 
         private void Shoot() {
@@ -51,8 +56,9 @@ namespace Vehicle {
 
         private void HorizontalShoot() {
             GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
-            
+
             // TODO bullet explosion
+            Instantiate(bulletExplisionEffect, bullet.transform.position, quaternion.identity);
             Destroy(bullet, horizonDistanceRange.projectileDistance);
         }
     }
