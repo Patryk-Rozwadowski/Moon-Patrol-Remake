@@ -12,17 +12,10 @@ namespace Enemy.WaveS {
             FindObjectOfType<AudioManager>().Play("Enemy");
             foreach (var o in ufoWave) {
                 // TODO ufo from diff respawns
-                var ufo = Instantiate(o, respawnPointsList[_randomSpawnIndex].transform.position, Quaternion.identity) ;
+                
+                var ufo = Instantiate(o, respawnPointsList[Random.Range(0, respawnPointsList.Count)].transform.position, Quaternion.identity) ;
                 ufo.transform.parent = aiWalls;
             }
-        }
-    
-        void Start() {
-            // TODO START MUSIC
-            
-            _randomSpawnIndex = Random.Range(0, respawnPointsList.Count);
-            Debug.Log(respawnPointsList);
-            
         }
     }
 }
