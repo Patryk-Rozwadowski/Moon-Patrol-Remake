@@ -461,7 +461,7 @@ PrefabInstance:
     - target: {fileID: 5799261185691537401, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}
       propertyPath: m_Mass
-      value: 0.102453224
+      value: 0.12037114
       objectReference: {fileID: 0}
     - target: {fileID: 5799261185691537407, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}
@@ -9191,7 +9191,7 @@ PrefabInstance:
     - target: {fileID: 4035830006860377324, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -401.1
       objectReference: {fileID: 0}
     - target: {fileID: 4035830006860377324, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
@@ -10102,41 +10102,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691521297985957063, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691521297985957063, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 1691521297985957063, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3.333333
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890518389756417016, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.8677833
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890518389756417016, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 4.4918556
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890518389756417016, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.29481992
-      objectReference: {fileID: 0}
-    - target: {fileID: 4890518389756417016, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.41036016
       objectReference: {fileID: 0}
     - target: {fileID: 7845613977241948906, guid: 6c0a2b815e04ec546b99133c38c1a8ea,
         type: 3}
