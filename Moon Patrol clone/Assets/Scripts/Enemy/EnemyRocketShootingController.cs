@@ -40,8 +40,9 @@ namespace Enemy {
 
         private bool _rocketLaunched = false;
         private float _timeToFlee;
-        
+        private float _respawnTime;
         void Start() {
+            _respawnTime = 0;
             _scoreManager = GetComponent<ScoreManager>();
             _rocketShootChance = Random.Range(0, 1f);
             _rocketShootChance = Mathf.Round(_rocketShootChance * 100);
@@ -62,8 +63,9 @@ namespace Enemy {
         }
 
         void Update() {
+            _respawnTime += Time.deltaTime;
             if (!(_rocketShootTreshold < _rocketShootChance) || _rocketLaunched) return;
-            if (!(Time.time > _randomTime) || _rocketLaunched) return;
+            if (!(_respawnTime > _randomTime) || _rocketLaunched) return;
             _rocketLaunched = true;
             Debug.Log($"{gameObject.name} launched rocket.");
             Instantiate(enemyBulletRocket, firepoint.transform.position, Quaternion.identity);
