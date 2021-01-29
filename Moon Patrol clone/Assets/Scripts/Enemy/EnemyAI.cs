@@ -16,7 +16,7 @@ namespace Enemy {
         private Vector2 _movementPerSecond;
 
         private bool _reverse, _flee;
-
+        private bool _moveDownAtStart = true;
         public void EnemyFlee() {
             _flee = true;
             _characterVelocity = 10f;
@@ -29,6 +29,13 @@ namespace Enemy {
         }
 
         private void CalcuateNewMovementVector() {
+            if (_moveDownAtStart) {
+                _movementDirection = new Vector2(0, -1f);
+                _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
+                _moveDownAtStart = false;
+                _latestDirectionChangeTime = Time.time;
+                return;
+            }
             _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
         }
