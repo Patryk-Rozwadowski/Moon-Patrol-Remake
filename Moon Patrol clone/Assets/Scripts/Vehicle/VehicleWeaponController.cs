@@ -12,7 +12,7 @@ namespace Vehicle {
 
         [SerializeField] private GameObject
             bulletVertical,
-            bulletHorizon,
+            bulletHorizon;
 
         [SerializeField] private ProjectileDistanceSO
             horizonDistanceRange,
