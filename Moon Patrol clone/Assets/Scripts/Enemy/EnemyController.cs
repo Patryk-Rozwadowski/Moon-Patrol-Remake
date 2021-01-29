@@ -2,6 +2,7 @@
 
 using Enemy.Waves;
 using Enemy.WaveS;
+using Prefabs.ScorePopup;
 using Score;
 using ScriptableObjects.Enemies;
 using UnityEngine;
@@ -16,7 +17,7 @@ namespace Enemy {
 
         [SerializeField] private Transform pfScorePopup;
 
-        private const float ExplosionEffectLifeTime = 0.2f;
+        private const float ExplosionEffectLifeTime = 2f;
         
         private ScoreManager _scoreManager;
         private EnemyAI _enemyAi;
@@ -70,7 +71,10 @@ namespace Enemy {
         
         private void RenderExplosionAndDestroy() {
             GameObject explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            var aiWalls = GameObject.Find("AiWalls").transform;
+            explosionEffectGO.transform.parent = aiWalls;
             FindObjectOfType<AudioManager>().Play("Hit");
+            
             Destroy(explosionEffectGO, ExplosionEffectLifeTime);
             Destroy(gameObject);
         }

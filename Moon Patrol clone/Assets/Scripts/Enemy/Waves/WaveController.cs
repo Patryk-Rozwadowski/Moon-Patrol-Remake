@@ -11,6 +11,7 @@ namespace Enemy.WaveS {
             var aiWalls = GameObject.Find("AiWalls").transform;
             FindObjectOfType<AudioManager>().Play("Enemy");
             foreach (var o in ufoWave) {
+                // TODO ufo from diff respawns
                 var ufo = Instantiate(o, respawnPointsList[_randomSpawnIndex].transform.position, Quaternion.identity) ;
                 ufo.transform.parent = aiWalls;
             }
