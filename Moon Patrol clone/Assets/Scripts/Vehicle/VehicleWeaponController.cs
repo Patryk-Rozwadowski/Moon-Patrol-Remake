@@ -1,8 +1,7 @@
 ﻿#pragma warning disable 649
-using System;
+
 using ScriptableObjects.Keyboard;
 using ScriptableObjects.Projectile;
-using Unity.Mathematics;
 using UnityEngine;
 
 namespace Vehicle {
@@ -14,13 +13,10 @@ namespace Vehicle {
         [SerializeField] private GameObject
             bulletVertical,
             bulletHorizon,
-            bulletExplisionEffect;
 
         [SerializeField] private ProjectileDistanceSO
             horizonDistanceRange,
             verticalDistanceRange;
-
-        // TODO wybuch pocisku
 
         [SerializeField] private KeyboardActionKeyCodeSO keyboardControl;
 
@@ -56,9 +52,6 @@ namespace Vehicle {
 
         private void HorizontalShoot() {
             GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
-
-            // TODO bullet explosion
-            Instantiate(bulletExplisionEffect, bullet.transform.position, quaternion.identity);
             Destroy(bullet, horizonDistanceRange.projectileDistance);
         }
     }
