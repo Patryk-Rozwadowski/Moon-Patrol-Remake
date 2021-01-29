@@ -34,13 +34,14 @@ namespace Enemy {
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
             _enemyAi = gameObject.GetComponent<EnemyAI>();
             _timeToFlee = enemyParamsSO.timeToFlee;
-            _respawnTime = Time.time;
+            _respawnTime = 0;
             _isplayerPosNull = playerPos == null;
             
             if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
         private void Update() {
+            _respawnTime += Time.deltaTime;
             if (!(_respawnTime > _timeToFlee) || _fleeing) return;
             _fleeing = true;
             _enemyAi.EnemyFlee();

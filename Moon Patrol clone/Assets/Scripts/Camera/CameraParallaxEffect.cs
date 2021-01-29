@@ -13,7 +13,7 @@ namespace Camera {
             length = GetComponent<SpriteRenderer>().bounds.size.x;
         }
     
-        private void FixedUpdate() {
+        private void Update() {
             var temp = _cam.transform.position.x * (1 - parallaxEffect);
             var dist = _cam.transform.position.x * parallaxEffect;
 
