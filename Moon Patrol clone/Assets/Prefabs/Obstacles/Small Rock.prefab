@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockParams: {fileID: 11400000, guid: fa9e519cfdc23104fbe1a6d831f1f2a8, type: 2}
-  explosionEffect: {fileID: 3687483799019233907, guid: 71aa57c6f83ec5049adb6f480b859015,
+  explosionEffect: {fileID: 3482502096662301896, guid: d64e9e14198e29e4dad8b30f808e048d,
     type: 3}
 --- !u!114 &1957209338264999440
 MonoBehaviour:
