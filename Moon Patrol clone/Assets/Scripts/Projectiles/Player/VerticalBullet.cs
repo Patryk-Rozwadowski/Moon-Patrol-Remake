@@ -24,7 +24,7 @@ namespace Projectiles.Player {
 
         private void MoveBulletVertically() {
             bulletRigidBody.position = new Vector2(firePointVertical.position.x,
-                bulletRigidBody.position.y + projectileSpeed.projectileSpeed);
+                bulletRigidBody.position.y + (projectileSpeed.projectileSpeed * Time.deltaTime ));
         }
 
         private void OnDestroy() {

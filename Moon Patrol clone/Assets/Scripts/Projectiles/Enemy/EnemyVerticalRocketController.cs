@@ -9,8 +9,8 @@ namespace Projectiles.Enemy {
             _rb2D = gameObject.GetComponent<Rigidbody2D>();
         }
 
-        private void Update() {
-            _rb2D.AddForce(transform.right * thrust);
+        private void FixedUpdate() {
+            _rb2D.AddForce(transform.right * (thrust * Time.deltaTime));
         }
     }
 }
