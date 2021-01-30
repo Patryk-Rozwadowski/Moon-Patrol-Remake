@@ -1,4 +1,5 @@
 ﻿#pragma warning disable 649
+
 using Score;
 using ScriptableObjects.Obstacles;
 using UnityEngine;
@@ -19,7 +20,6 @@ namespace Obstacles {
 
             if (explosionEffect != null) {
                 var explosionEffectGameObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-                // TODO Global time manager
                 Destroy(explosionEffectGameObject, 0.2f);
             }
             else Debug.LogWarning($"{gameObject.name} missing explosion effect");

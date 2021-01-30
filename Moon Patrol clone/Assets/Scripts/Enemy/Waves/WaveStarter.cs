@@ -10,12 +10,8 @@ namespace Enemy.Waves {
         private Transform _aiWalls;
         private bool _started;
 
-       
-
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.name != "WaveController") return;
-            Debug.Log($"WAVE MANAGER HIT : {other.name}");
-
             if (_started == false) {
                 _started = true;
                 _waveController = other.GetComponent<WaveController>();

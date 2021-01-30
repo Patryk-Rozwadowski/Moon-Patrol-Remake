@@ -1,20 +1,13 @@
-﻿using Vehicle;
-using UnityEngine;
-using ScriptableObjects.Obstacles;
-using Score;
+﻿using UnityEngine;
+using Vehicle;
 
-public class FinalCheckpointSound : MonoBehaviour
-{
-    public Collider2D jumpOverCollider2D;
-    private bool isColliderIsUntouched = true;
-
-    private void OnTriggerEnter2D(Collider2D obj)
-    {
-        VehicleController vehicle = obj.GetComponent<VehicleController>();
-        if (vehicle != null)
-        {
-            FindObjectOfType<AudioManager>().Play("LastPoint");
-            isColliderIsUntouched = false;
+namespace Checkpoints {
+    public class FinalCheckpointSound : MonoBehaviour {
+        private void OnTriggerEnter2D(Collider2D obj) {
+            VehicleController vehicle = obj.GetComponent<VehicleController>();
+            if (vehicle != null) {
+                FindObjectOfType<AudioManager>().Play("LastPoint");
+            }
         }
     }
 }

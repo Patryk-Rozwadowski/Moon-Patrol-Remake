@@ -17,6 +17,5 @@ namespace Score {
             scoreStore.playerOverallScore += val;
             Debug.Log($"Score manager: {scoreStore.playerOverallScore}");
         }
-        // TODO stage score
     }
 }

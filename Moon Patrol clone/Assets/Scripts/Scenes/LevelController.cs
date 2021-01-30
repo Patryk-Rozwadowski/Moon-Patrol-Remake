@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#pragma warning disable 649
+
 using ScriptableObjects.Scenes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,16 +7,16 @@ using UnityEngine.SceneManagement;
 namespace Scenes {
     public class LevelController : MonoBehaviour {
         [SerializeField] private ScenesSO scenesScriptableObject;
-        private string _gameOverScene, _currentLevel;
-        private float _currentIndex;
-        private string _stageSummaryScene;
-        private float _loadSceneTime = 3f, _loadNextSceneTime = 5f;
-        private bool _showStageSummary;
 
-        private string _stageSummaryAE = "StageSummary A-E";
-        private string _stageSummaryEJ = "StageSummary E-J";
-        private string _stageSummaryJO = "StageSummary J-O";
-        private string _gameFinished = "GameFinished";
+        private string _gameOverScene, _currentLevel;
+        private bool _showStageSummary;
+        private readonly float _loadNextSceneTime = 5f;
+
+        private readonly string
+            _stageSummaryAE = "StageSummary A-E",
+            _stageSummaryEJ = "StageSummary E-J",
+            _stageSummaryJO = "StageSummary J-O",
+            _gameFinished = "GameFinished";
 
         public void StartGame() {
             LoadNextLevel();
@@ -39,7 +40,6 @@ namespace Scenes {
         }
 
         private void Start() {
-            _stageSummaryScene = SceneManager.GetSceneByBuildIndex(5).name;
             scenesScriptableObject.currentScene = SceneManager.GetActiveScene().name;
 
             Debug.LogWarning($"{nameof(LevelController)}: Current scene {scenesScriptableObject.currentScene}");
@@ -64,7 +64,6 @@ namespace Scenes {
             LoadNextLevel();
         }
 
-
         private string GetNameNextLevel() {
             var path = SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
             var slash = path.LastIndexOf('/');
@@ -72,8 +71,6 @@ namespace Scenes {
             var dot = name.LastIndexOf('.');
             return name.Substring(0, dot);
         }
-
-        // TODO GAME END
 
         public void SetCurrentLevel() {
             _currentLevel = SceneManager.GetActiveScene().name;

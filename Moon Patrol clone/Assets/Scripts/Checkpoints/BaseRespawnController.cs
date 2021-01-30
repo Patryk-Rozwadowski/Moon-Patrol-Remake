@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#pragma warning disable 649
+using UnityEngine;
 
 namespace Checkpoints {
     public class BaseRespawnController : MonoBehaviour {

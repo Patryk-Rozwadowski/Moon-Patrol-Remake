@@ -1,4 +1,6 @@
-﻿using Projectiles.Player;
+﻿#pragma warning disable 649
+
+using Projectiles.Player;
 using UnityEngine;
 using Vehicle;
 

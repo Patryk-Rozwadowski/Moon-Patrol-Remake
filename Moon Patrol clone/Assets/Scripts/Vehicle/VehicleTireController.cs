@@ -26,7 +26,7 @@ namespace Vehicle {
 
         private bool _isJumping;
         private bool _isAnyButtonPressed;
-    
+
         private void Start() {
             _slowDownKey = keyboardActionKeyCodeSo.slowDown;
             _speedUpKey = keyboardActionKeyCodeSo.speedUp;
@@ -36,7 +36,7 @@ namespace Vehicle {
             _maxSpeed = playerParams.maxSpeed;
             _speedStep = playerParams.speedStep;
             _speedTolerance = playerParams.maxSpeed - playerParams.minimalSpeed;
-        
+
             _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform
                 .position.y;
         }
@@ -57,9 +57,9 @@ namespace Vehicle {
             bool ifPressedJumpAndReadyToJump =
                 Input.GetKeyDown(_jumpKey) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
 
-            if (ifPressedJumpAndReadyToJump) { 
+            if (ifPressedJumpAndReadyToJump) {
                 _jumpTime = Time.time + playerParams.jumpTimeInAir;
-                FindObjectOfType<AudioManager>().Play("Jump"); //nie jestem pewien czy w tym miejscu jest wywoływany skok, dźwięk ma odrobine opóźnienia
+                FindObjectOfType<AudioManager>().Play("Jump");
             }
 
             CheckIfVehicleIsStillInAir();
@@ -67,7 +67,7 @@ namespace Vehicle {
 
         private void CheckIfVehicleIsStillInAir() {
             bool ifVehicleIsStillInAir = Time.time < _jumpTime;
-        
+
             if (ifVehicleIsStillInAir) {
                 _isJumping = true;
                 tireRigidbody2D.velocity = new Vector2(_playerSpeed, playerParams.jumpHeightAccelerate);
@@ -82,7 +82,7 @@ namespace Vehicle {
                 _playerSpeed += Time.deltaTime * _speedStep;
                 _isAnyButtonPressed = false;
             }
-        
+
             if (Input.GetKeyUp(_speedUpKey)) _isAnyButtonPressed = true;
         }
 
@@ -106,7 +106,8 @@ namespace Vehicle {
             if (Math.Abs(_playerSpeed - playerParams.playerSpeed) < _speedTolerance && _isAnyButtonPressed) {
                 if (_playerSpeed < playerParams.playerSpeed) {
                     _playerSpeed += Time.deltaTime * _speedStep;
-                } else if (_playerSpeed > playerParams.playerSpeed) {
+                }
+                else if (_playerSpeed > playerParams.playerSpeed) {
                     _playerSpeed -= Time.deltaTime * _speedStep;
                 }
             }

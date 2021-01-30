@@ -4,25 +4,25 @@ using Random = UnityEngine.Random;
 namespace Enemy {
     [RequireComponent(typeof(PolygonCollider2D))]
     public class EnemyAI : MonoBehaviour {
-        
         // TODO refactor
         private float _latestDirectionChangeTime;
         private float _directionChangeTime = 2f;
-        
+
         // TODO take from enemyParamsSO
         private float _characterVelocity = 5f;
-    
+
         private Vector2 _movementDirection;
         private Vector2 _movementPerSecond;
 
         private bool _reverse, _flee;
         private bool _moveDownAtStart = true;
+
         public void EnemyFlee() {
             _flee = true;
             _characterVelocity = 10f;
             _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(0, 1f));
         }
-        
+
         private void Start() {
             _latestDirectionChangeTime = 0f;
             CalcuateNewMovementVector();
@@ -36,6 +36,7 @@ namespace Enemy {
                 _latestDirectionChangeTime = Time.time;
                 return;
             }
+
             _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
         }
@@ -53,7 +54,7 @@ namespace Enemy {
         }
 
         private void OnCollisionEnter2D(Collision2D collision) {
-            if (collision.gameObject.name == "AiWalls" && _flee) Destroy(gameObject, 2f); 
+            if (collision.gameObject.name == "AiWalls" && _flee) Destroy(gameObject, 2f);
             if (collision.gameObject.name == "AiWalls" && _flee == false) {
                 _movementDirection = -_movementDirection;
                 _movementPerSecond = new Vector2(_movementDirection.x * 4, _movementDirection.y);

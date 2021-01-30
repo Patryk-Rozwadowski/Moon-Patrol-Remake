@@ -45,11 +45,11 @@ namespace Enemy {
             _respawnTime = 0;
             _scoreManager = GetComponent<ScoreManager>();
             _rocketShootChance = Random.Range(0, 1f);
-            _rocketShootChance = Mathf.Round(_rocketShootChance * 100);
-            _timeToFlee = enemyParamsSO.timeToFlee;    
-        
             _randomTime = Random.Range(_minTime, _maxTime);
+
+            _rocketShootChance = Mathf.Round(_rocketShootChance * 100);
             _randomTime = Mathf.Round(_randomTime);
+            _timeToFlee = enemyParamsSO.timeToFlee;
             
             if (yellow) _randomTime = Random.Range(_attackSpdTimeMinYellow, _attackSpdTimeMaxYellow);
             if (color) _randomTime = Random.Range(_attackSpdTimeMinColor, _attackSpdTimeMaxColor);

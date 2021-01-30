@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿#pragma warning disable 649
 using ScriptableObjects.Scenes;
-using ScriptableObjects.Score;
 using UnityEngine;
 
-public class StageControllerUI : MonoBehaviour {
-    [SerializeField] private ScenesSO scenesSO;
-    [SerializeField] private UnityEngine.UI.Text stageHudText;
+namespace UI {
+    public class StageControllerUI : MonoBehaviour {
+        [SerializeField] private ScenesSO scenesSO;
+        [SerializeField] private UnityEngine.UI.Text stageHudText;
 
-    private void Start() {
-        stageHudText.text = scenesSO.currentLevel;
+        private void Start() {
+            stageHudText.text = scenesSO.currentLevel;
+        }
     }
 }

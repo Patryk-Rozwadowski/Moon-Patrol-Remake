@@ -1,4 +1,6 @@
-﻿using ScriptableObjects.Keyboard;
+﻿#pragma warning disable 649
+
+using ScriptableObjects.Keyboard;
 using UnityEngine;
 using Vehicle;
 

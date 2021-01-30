@@ -1,4 +1,5 @@
 ﻿#pragma warning disable 649
+
 using Enemy;
 using Obstacles;
 using ScriptableObjects.Projectile;

@@ -2,7 +2,6 @@
 
 using ScriptableObjects.Score;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI {
     public class StageTime : MonoBehaviour {
@@ -12,7 +11,7 @@ namespace UI {
         private float _timer;
         private string _secondsString;
         private int _seconds;
-        
+
         private void Start() {
             _timer = 0;
         }
@@ -21,7 +20,7 @@ namespace UI {
             _timer += Time.deltaTime;
             _seconds = Mathf.FloorToInt(_timer);
             scoreStore.stageTime = _seconds;
-            stageTimer.text =  _seconds.ToString("000");
+            stageTimer.text = _seconds.ToString("000");
         }
     }
 }

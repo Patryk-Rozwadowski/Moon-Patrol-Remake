@@ -9,13 +9,9 @@ using UnityEngine;
 
 namespace Enemy {
     public class EnemyController : MonoBehaviour {
-        [SerializeField] private GameObject explosionEffect;
-        [SerializeField] private Transform firepoint;
-        [SerializeField] private Transform playerPos;
+        [SerializeField] private GameObject explosionEffect, enemyHorizontalBullet;
+        [SerializeField] private Transform firepoint, pfScorePopup, playerPos;
         [SerializeField] private EnemyParamsSO enemyParamsSO;
-        [SerializeField] private GameObject enemyHorizontalBullet;
-
-        [SerializeField] private Transform pfScorePopup;
 
         private const float ExplosionEffectLifeTime = 2f;
         
@@ -23,8 +19,7 @@ namespace Enemy {
         private EnemyAI _enemyAi;
         
         private bool _isplayerPosNull, _fleeing;
-        private float _spawnedTime, _timeToFlee;
-        private float _respawnTime;
+        private float _spawnedTime, _timeToFlee, _respawnTime;
         
         public void EnemyDeath() {
             SetScoreAndShowScorePopup();

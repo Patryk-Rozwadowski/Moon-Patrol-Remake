@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+// TODO need fix nested class
 namespace Projectiles.Enemy {
     public class EnemyVerticalBombController : MonoBehaviour {
         public class EnemyVerticalRocketController : MonoBehaviour {

@@ -8,21 +8,20 @@ using Vehicle;
 namespace Obstacles {
     public class ScoreJumpOverController : MonoBehaviour {
         [SerializeField] private ObstaclesParamsSO obstacleParamsScriptableObject;
-        [SerializeField] private Collider2D jumpOverCollider2D;
-    
+
+        private bool _isColliderIsUntouched = true;
         private ScoreManager _scoreManager;
-        private bool isColliderIsUntouched = true;
+
         private void Start() {
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         }
 
         private void OnTriggerEnter2D(Collider2D obj) {
-            Debug.LogWarning($"HOLE HIT {obj.name}");
-            VehicleController vehicle = obj.GetComponent<VehicleController>();
+            var vehicle = obj.GetComponent<VehicleController>();
             if (vehicle != null) {
+                _isColliderIsUntouched = false;
                 Debug.Log($"Score jump over: {obstacleParamsScriptableObject.jumpOverScore}");
                 _scoreManager.AddOverallPlayerScore(obstacleParamsScriptableObject.jumpOverScore);
-                isColliderIsUntouched = false;
             };
         }
     }

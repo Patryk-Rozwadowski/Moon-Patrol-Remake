@@ -1,4 +1,6 @@
-﻿using Enemy;
+﻿#pragma warning disable 649
+
+using Enemy;
 using ScriptableObjects.Projectile;
 using UnityEngine;
 
@@ -24,7 +26,7 @@ namespace Projectiles.Player {
 
         private void MoveBulletVertically() {
             bulletRigidBody.position = new Vector2(firePointVertical.position.x,
-                bulletRigidBody.position.y + (projectileSpeed.projectileSpeed * Time.deltaTime ));
+                bulletRigidBody.position.y + (projectileSpeed.projectileSpeed * Time.deltaTime));
         }
 
         private void OnDestroy() {

@@ -1,27 +1,26 @@
-﻿using ScriptableObjects.Scenes;
+﻿#pragma warning disable 649
+
+using ScriptableObjects.Scenes;
 using ScriptableObjects.Score;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class StageSummaryController : MonoBehaviour {
-    [SerializeField] private ScoreStoreSO scoreStore;
-    [SerializeField] private ScenesSO scenesSO;
+namespace Checkpoints {
+    public class StageSummaryController : MonoBehaviour {
+        [SerializeField] private ScoreStoreSO scoreStore;
+        [SerializeField] private ScenesSO scenesSO;
 
-    [SerializeField] private UnityEngine.UI.Text
-        stagePoint,
-        timeTextField,
-        totalScoreOverall,
-        topRecordTextField,
-        goodBonusPointsField,
-        brokenRecordTextField;
-
-    void Start() {
-        string[] levelStrArr = scenesSO.currentLevel.Split(' ');
-        string levelStr = levelStrArr[1];
-        stagePoint.text = levelStr;
-    
-        timeTextField.text = scoreStore.stageTime.ToString();
-        totalScoreOverall.text = scoreStore.playerOverallScore.ToString();
-        // goodBonusPointsField.text = scoreStore
+        [SerializeField] private UnityEngine.UI.Text
+            stagePoint,
+            timeTextField,
+            totalScoreOverall;
+        
+        void Start() {
+            string[] levelStrArr = scenesSO.currentLevel.Split(' ');
+            string levelStr = levelStrArr[1];
+            
+            stagePoint.text = levelStr;
+            timeTextField.text = scoreStore.stageTime.ToString();
+            totalScoreOverall.text = scoreStore.playerOverallScore.ToString();
+        }
     }
 }

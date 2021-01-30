@@ -1,7 +1,6 @@
 ﻿#pragma warning disable 649
 using ScriptableObjects.Score;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI {
     public class ScoreUIController : MonoBehaviour {

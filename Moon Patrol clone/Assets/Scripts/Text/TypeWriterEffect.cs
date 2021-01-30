@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+// TODO REMOVE
 namespace Text {
 	public class TypeWriterEffect : MonoBehaviour {
 

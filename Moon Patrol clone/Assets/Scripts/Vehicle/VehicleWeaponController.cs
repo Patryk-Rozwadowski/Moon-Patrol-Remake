@@ -20,7 +20,7 @@ namespace Vehicle {
 
         [SerializeField] private KeyboardActionKeyCodeSO keyboardControl;
 
-        private bool _blockShooting = false;
+        private bool _blockShooting;
         private KeyboardActionKeyCodeSO _keboardControl;
 
         public void VehicleInMenu() {
