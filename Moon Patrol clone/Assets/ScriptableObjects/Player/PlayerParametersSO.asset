@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf177a054cf73e42a22bb08b949b3c2, type: 3}
   m_Name: PlayerParametersSO
   m_EditorClassIdentifier: 
-  playerSpeed: 4
+  playerSpeed: 400
   jumpTimeInAir: 0.45
   jumpHeightAccelerate: 3
+  jumpHorizontalSpeed: 4
   minimalSpeed: 2
   maxSpeed: 6
   speedStep: 5

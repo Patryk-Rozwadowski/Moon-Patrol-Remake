@@ -16,7 +16,8 @@ namespace Vehicle {
             _playerSpeed,
             _minSpeed,
             _maxSpeed,
-            _speedStep;
+            _speedStep,
+            _playerHorizontalJumpSpeed;
 
         // SpeedTolerance is for tolerance which is used to calculate differences
         // between normal vehicle speed and deviation min / max speed
@@ -24,14 +25,14 @@ namespace Vehicle {
 
         private KeyCode _slowDownKey, _speedUpKey, _jumpKey;
 
-        private bool _isJumping;
-        private bool _isAnyButtonPressed;
+        private bool _isJumping, _isAnyButtonPressed;
 
         private void Start() {
             _slowDownKey = keyboardActionKeyCodeSo.slowDown;
             _speedUpKey = keyboardActionKeyCodeSo.speedUp;
             _jumpKey = keyboardActionKeyCodeSo.jump;
             _playerSpeed = playerParams.playerSpeed;
+            _playerHorizontalJumpSpeed = playerParams.jumpHorizontalSpeed;
             _minSpeed = playerParams.minimalSpeed;
             _maxSpeed = playerParams.maxSpeed;
             _speedStep = playerParams.speedStep;
@@ -70,7 +71,7 @@ namespace Vehicle {
 
             if (ifVehicleIsStillInAir) {
                 _isJumping = true;
-                tireRigidbody2D.velocity = new Vector2(_playerSpeed, playerParams.jumpHeightAccelerate);
+                tireRigidbody2D.velocity = new Vector2(_playerHorizontalJumpSpeed, playerParams.jumpHeightAccelerate);
             }
             else _isJumping = false;
         }
@@ -99,7 +100,7 @@ namespace Vehicle {
         }
 
         private void MoveForward() {
-            if (_isJumping == false) tireRigidbody2D.velocity = new Vector2(_playerSpeed, _pos);
+            if (_isJumping == false) tireRigidbody2D.velocity = new Vector2(_playerSpeed * Time.deltaTime, _pos);
         }
 
         private void BackToNormalSpeed() {
