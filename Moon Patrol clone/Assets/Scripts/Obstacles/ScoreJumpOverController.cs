@@ -1,4 +1,5 @@
 ﻿#pragma warning disable 649
+#pragma warning disable 414
 
 using Score;
 using ScriptableObjects.Obstacles;
