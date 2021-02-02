@@ -114,7 +114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261185466914943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.301, y: -0.37199995, z: -0.15}
+  m_LocalPosition: {x: -0.317, y: -0.12, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -135,6 +135,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -222,10 +223,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.3089218, y: -0.024150252}
+  m_ConnectedAnchor: {x: -0.3166542, y: -0.12587976}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 4.26
+    m_DampingRatio: 1
+    m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -298,7 +299,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.121803306
+  m_Mass: 0.114889584
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -320,7 +321,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.510657, y: 0.09472662}
+  m_Offset: {x: -0.510657, y: 0.12120205}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -331,7 +332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.021510482, y: 0.9328681}
+  m_Size: {x: 0.021510482, y: 0.87991726}
   m_EdgeRadius: 0
 --- !u!114 &5799261185691537402
 MonoBehaviour:
@@ -376,7 +377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261185751826647}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7640012, y: -0.37, z: -0.15}
+  m_LocalPosition: {x: -0.746, y: -0.102, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -397,6 +398,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -484,10 +486,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.76216316, y: -0.018495798}
+  m_ConnectedAnchor: {x: -0.74842644, y: -0.10179424}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 5.28
+    m_DampingRatio: 1
+    m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -538,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5799261187123936560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.499, y: -0.39299998, z: -0.15}
+  m_LocalPosition: {x: 0.522, y: -0.096, z: -0.15}
   m_LocalScale: {x: 0.93750787, y: 0.88859373, z: 1}
   m_Children: []
   m_Father: {fileID: 5799261185691537400}
@@ -559,6 +561,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -646,10 +649,10 @@ WheelJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.5014572, y: -0.08817601}
+  m_ConnectedAnchor: {x: 0.5259819, y: -0.074379444}
   m_Suspension:
-    m_DampingRatio: 0
-    m_Frequency: 4.26
+    m_DampingRatio: 1
+    m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
   m_Motor:
@@ -715,7 +718,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.031995654, y: 0.118961}
+  m_Offset: {x: -0.048675656, y: 0.03178954}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -726,7 +729,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2063298, y: 0.637505}
+  m_Size: {x: 0.9966433, y: 0.8118479}
   m_EdgeRadius: 0
 --- !u!1 &6670653756850915312
 GameObject:
@@ -805,6 +808,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -889,6 +893,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
