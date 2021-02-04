@@ -1,39 +1,35 @@
 ﻿#pragma warning disable 649
 
-using Enemy.Waves;
-using Enemy.WaveS;
-using Prefabs.ScorePopup;
 using Score;
 using ScriptableObjects.Enemies;
 using UnityEngine;
 
 namespace Enemy {
     public class EnemyController : MonoBehaviour {
-        [SerializeField] private GameObject explosionEffect, enemyHorizontalBullet;
-        [SerializeField] private Transform firepoint, pfScorePopup, playerPos;
+        [SerializeField] private GameObject explosionEffect;
+        [SerializeField] private Transform pfScorePopup;
         [SerializeField] private EnemyParamsSO enemyParamsSO;
 
         private const float ExplosionEffectLifeTime = 2f;
         
         private ScoreManager _scoreManager;
         private EnemyAI _enemyAi;
+        private AudioManager _audioManager;
         
         private bool _isplayerPosNull, _fleeing;
         private float _spawnedTime, _timeToFlee, _respawnTime;
         
         public void EnemyDeath() {
-            SetScoreAndShowScorePopup();
+            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
             RenderExplosionAndDestroy();
         }
         
         private void Start() {
+            _audioManager = FindObjectOfType<AudioManager>();
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
             _enemyAi = gameObject.GetComponent<EnemyAI>();
             _timeToFlee = enemyParamsSO.timeToFlee;
             _respawnTime = 0;
-            _isplayerPosNull = playerPos == null;
-            
-            if(_isplayerPosNull) Debug.LogWarning($"{gameObject.name} player position not set.");
         }
 
         private void Update() {
@@ -44,31 +40,11 @@ namespace Enemy {
             Debug.Log($"{gameObject.name} is fleeing!");
         }
 
-        private void SetScoreAndShowScorePopup() {
-            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
-            Transform scorePopupTransform = Instantiate(pfScorePopup, transform.position, Quaternion.identity);
-            ScorePopupController scorePopupController = scorePopupTransform.GetComponent<ScorePopupController>();
-            scorePopupController.Setup(enemyParamsSO.score);
-        }
-        
-        private void OnTriggerEnter2D(Collider2D obj) {
-            var ufoProjectile = obj.GetComponent<CircleCollider2D>();
-            if (ufoProjectile != null) return;
-
-            var waveManager = obj.GetComponent<WaveManager>();
-            if (waveManager != null) return;
-
-            var waveController = obj.GetComponent<WaveController>();
-            if (waveController != null) return;
-            
-            RenderExplosionAndDestroy();
-        }
-        
         private void RenderExplosionAndDestroy() {
-            GameObject explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            var explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
             var aiWalls = GameObject.Find("AiWalls").transform;
             explosionEffectGO.transform.parent = aiWalls;
-            FindObjectOfType<AudioManager>().Play("Hit");
+            _audioManager.Play("Hit");
             
             Destroy(explosionEffectGO, ExplosionEffectLifeTime);
             Destroy(gameObject);

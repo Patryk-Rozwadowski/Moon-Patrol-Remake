@@ -129,12 +129,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 5367097307691585765, guid: 4b6da1f779780bd4887e8fb5ccdfd5a5,
     type: 3}
-  firepoint: {fileID: 0}
-  playerPos: {fileID: 0}
-  enemyParamsSO: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
-  enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
+  enemyParamsSO: {fileID: 11400000, guid: a4ff946347ac34c49a90a70ea57aac4c, type: 2}
 --- !u!114 &1521184097
 MonoBehaviour:
   m_ObjectHideFlags: 0
