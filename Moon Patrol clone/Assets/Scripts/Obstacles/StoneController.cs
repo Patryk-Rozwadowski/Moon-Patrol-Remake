@@ -28,7 +28,7 @@ namespace Obstacles {
         }
 
         private void OnTriggerEnter2D(Collider2D other) {
-            var vehicleController = other.GetComponent<BoxCollider2D>().GetComponentInParent<VehicleController>();
+            var vehicleController = other.GetComponentInParent<VehicleController>();
             var vehicleTire = other.GetComponent<VehicleTireController>();
 
             if (vehicleController != null || vehicleTire) vehicleController.PlayerDeath();
