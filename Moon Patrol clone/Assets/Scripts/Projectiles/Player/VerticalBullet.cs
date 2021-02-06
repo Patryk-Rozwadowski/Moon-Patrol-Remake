@@ -6,13 +6,17 @@ using UnityEngine;
 
 namespace Projectiles.Player {
     public class VerticalBullet : MonoBehaviour {
-        [SerializeField] public Transform firePointVertical;
-        [SerializeField] public Rigidbody2D bulletRigidBody;
-        [SerializeField] public ProjectileSpeedSO projectileSpeed;
-
+        
+        public Transform firePointVertical;
+        
+        private Rigidbody2D _rigidbody2D;
+        private ProjectileSpeedSO _projectileSpeed;
         private void Start() {
+            gameObject.AddComponent<Rigidbody2D>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+            _projectileSpeed = Resources.Load<ProjectileSpeedSO>("ScriptableObjects/VerticalProjectileSpeed");
+            gameObject.transform.parent = firePointVertical;
             BulletFired();
-            FindObjectOfType<AudioManager>().Play("Blaster");
         }
 
         private void Update() {
@@ -20,13 +24,14 @@ namespace Projectiles.Player {
         }
 
         private void BulletFired() {
-            bulletRigidBody.velocity =
-                new Vector2(firePointVertical.transform.position.x, projectileSpeed.projectileSpeed);
+            FindObjectOfType<AudioManager>().Play("Blaster");
+            _rigidbody2D.position =
+                new Vector2(firePointVertical.transform.position.x, _rigidbody2D.position.y + (_projectileSpeed.projectileSpeed * Time.deltaTime));
         }
 
         private void MoveBulletVertically() {
-            bulletRigidBody.position = new Vector2(firePointVertical.position.x,
-                bulletRigidBody.position.y + (projectileSpeed.projectileSpeed * Time.deltaTime));
+            _rigidbody2D.position = new Vector2(firePointVertical.transform.position.x,
+                _rigidbody2D.position.y + (_projectileSpeed.projectileSpeed * Time.deltaTime));
         }
 
         private void OnDestroy() {

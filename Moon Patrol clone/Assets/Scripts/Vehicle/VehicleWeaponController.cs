@@ -1,8 +1,10 @@
 ﻿#pragma warning disable 649
 
+using Projectiles.Player;
 using ScriptableObjects.Keyboard;
 using ScriptableObjects.Projectile;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace Vehicle {
     public class VehicleWeaponController : MonoBehaviour {
@@ -29,6 +31,7 @@ namespace Vehicle {
         }
 
         private void Start() {
+            Debug.Log(gameObject.name);
             _keboardControl = keyboardControl;
         }
 
@@ -46,13 +49,23 @@ namespace Vehicle {
         }
 
         private void VerticalShoot() {
-            GameObject bullet = Instantiate(bulletVertical, firePointVertical.position, Quaternion.identity);
-            Destroy(bullet, verticalDistanceRange.projectileDistance);
+            var initialPosition = firePointVertical.position;
+            var verticalBullet = Instantiate(Resources.Load("Prefabs/Vertical_Vehicle_Bullet", typeof(GameObject))) as GameObject;
+            if (verticalBullet is null) return;
+            
+            verticalBullet.transform.position = initialPosition;
+            verticalBullet.GetComponent<VerticalBullet>().firePointVertical = firePointVertical;
+            Destroy(verticalBullet, verticalDistanceRange.projectileDistance);
         }
 
         private void HorizontalShoot() {
-            GameObject bullet = Instantiate(bulletHorizon, firePointHorizon.position, Quaternion.identity);
-            Destroy(bullet, horizonDistanceRange.projectileDistance);
+            var initialPosition = firePointHorizon.position;
+            var horizontalBullet = Instantiate(Resources.Load("Prefabs/Horizontal_Vehicle_Bullet", typeof(GameObject))) as GameObject;
+            if (horizontalBullet is null) return;
+            
+            horizontalBullet.transform.position = initialPosition;
+            
+            Destroy(horizontalBullet, horizonDistanceRange.projectileDistance);
         }
     }
 }
