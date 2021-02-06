@@ -18,7 +18,8 @@ namespace Projectiles.Player {
             _rigidbody2D = GetComponent<Rigidbody2D>();
             _rigidbody2D.mass = float.MinValue;
             _rigidbody2D.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-
+            _rigidbody2D.isKinematic = true;
+            
             BulletFired();
         }
 
