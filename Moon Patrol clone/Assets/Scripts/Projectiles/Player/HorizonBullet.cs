@@ -19,10 +19,10 @@ namespace Projectiles.Player {
         }
 
         private void OnTriggerEnter2D(Collider2D obj) {
-            EnemyController enemy = obj.GetComponent<EnemyController>();
+            var enemy = obj.GetComponent<EnemyController>();
             if (enemy != null) enemy.EnemyDeath();
 
-            StoneController stone = obj.GetComponent<StoneController>();
+            var stone = obj.GetComponent<StoneController>();
             if (stone != null) {
                 stone.Destroy();
                 Destroy(gameObject);

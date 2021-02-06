@@ -1,50 +1,31 @@
 ﻿using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace Enemy {
     [RequireComponent(typeof(PolygonCollider2D))]
     public class EnemyAI : MonoBehaviour {
-        // TODO refactor
-        private float _latestDirectionChangeTime;
-        private float _directionChangeTime = 2f;
-
         // TODO take from enemyParamsSO
         private float _characterVelocity = 5f;
+
+        private readonly float _directionChangeTime = 2f;
+
+        // TODO refactor
+        private float _latestDirectionChangeTime;
+        private bool _moveDownAtStart = true;
 
         private Vector2 _movementDirection;
         private Vector2 _movementPerSecond;
 
         private bool _reverse, _flee;
-        private bool _moveDownAtStart = true;
-
-        public void EnemyFlee() {
-            _flee = true;
-            _characterVelocity = 10f;
-            _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(0, 1f));
-        }
 
         private void Start() {
             _latestDirectionChangeTime = 0f;
             CalcuateNewMovementVector();
         }
 
-        private void CalcuateNewMovementVector() {
-            if (_moveDownAtStart) {
-                _movementDirection = new Vector2(Random.Range(-1f, 1f), -1f);
-                _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
-                _moveDownAtStart = false;
-                _latestDirectionChangeTime = Time.time;
-                return;
-            }
 
-            _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
-            _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
-        }
-
-
-        void Update() {
-            transform.position = new Vector2(transform.position.x + (_movementPerSecond.x * Time.deltaTime),
-                transform.position.y + (_movementPerSecond.y * Time.deltaTime));
+        private void Update() {
+            transform.position = new Vector2(transform.position.x + _movementPerSecond.x * Time.deltaTime,
+                transform.position.y + _movementPerSecond.y * Time.deltaTime);
             if (_flee) return;
             if (Time.time - _latestDirectionChangeTime > _directionChangeTime) _reverse = false;
             if (Time.time - _latestDirectionChangeTime > _directionChangeTime && _reverse != true) {
@@ -60,6 +41,25 @@ namespace Enemy {
                 _movementPerSecond = new Vector2(_movementDirection.x * 4, _movementDirection.y);
                 _reverse = true;
             }
+        }
+
+        public void EnemyFlee() {
+            _flee = true;
+            _characterVelocity = 10f;
+            _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(0, 1f));
+        }
+
+        private void CalcuateNewMovementVector() {
+            if (_moveDownAtStart) {
+                _movementDirection = new Vector2(Random.Range(-1f, 1f), -1f);
+                _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
+                _moveDownAtStart = false;
+                _latestDirectionChangeTime = Time.time;
+                return;
+            }
+
+            _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            _movementPerSecond = new Vector2(_movementDirection.x * _characterVelocity, _movementDirection.y);
         }
     }
 }

@@ -23,7 +23,9 @@ namespace Obstacles {
                 _isColliderIsUntouched = false;
                 Debug.Log($"Score jump over: {obstacleParamsScriptableObject.jumpOverScore}");
                 _scoreManager.AddOverallPlayerScore(obstacleParamsScriptableObject.jumpOverScore);
-            };
+            }
+
+            ;
         }
     }
 }

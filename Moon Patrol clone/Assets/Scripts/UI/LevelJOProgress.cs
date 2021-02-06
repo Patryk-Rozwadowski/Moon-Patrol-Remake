@@ -6,8 +6,8 @@ namespace UI {
         public GameObject vehicle;
         public Slider slider;
 
-        void Update() {
-            var calculate = 10 + (vehicle.transform.position.x / 402.9f) * 6;
+        private void Update() {
+            var calculate = 10 + vehicle.transform.position.x / 402.9f * 6;
             slider.value = calculate;
         }
     }

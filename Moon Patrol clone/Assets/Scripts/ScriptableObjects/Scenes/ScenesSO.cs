@@ -7,6 +7,5 @@ namespace ScriptableObjects.Scenes {
         [SerializeField] public Scene stageSummary, gameOverScene;
         [SerializeField] public string currentLevel, currentScene;
         [SerializeField] public int currentSceneIndex;
-
     }
 }

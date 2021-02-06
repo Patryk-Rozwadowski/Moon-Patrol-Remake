@@ -15,7 +15,7 @@ namespace Vehicle {
 
         public void PlayerDeath() {
             FindObjectOfType<AudioManager>().Play("Crash");
-            
+
             gameObject.SetActive(false);
             var explosionEffectObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
             Destroy(explosionEffectObject, 4f);

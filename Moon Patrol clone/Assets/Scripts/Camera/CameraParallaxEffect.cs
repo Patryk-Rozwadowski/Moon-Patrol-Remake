@@ -7,19 +7,19 @@ namespace Camera {
 
         private GameObject _cam;
         private float length, startpos;
-    
+
         private void Start() {
             _cam = GameObject.Find("Main Camera").gameObject;
             startpos = transform.position.x;
             length = GetComponent<SpriteRenderer>().bounds.size.x;
         }
-    
+
         private void Update() {
             var position = transform.position;
 
             var temp = _cam.transform.position.x * (1 - parallaxEffect);
             var dist = _cam.transform.position.x * parallaxEffect;
-            
+
             position = new Vector3(startpos + dist, position.y, position.z);
             transform.position = position;
 

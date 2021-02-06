@@ -14,11 +14,10 @@ namespace Enemy.Waves {
 
             if (_started == false) {
                 _started = true;
-                
+
                 _aiWalls = GameObject.Find("AiWalls").transform;
-                foreach (var ufo in ufoWave.Select(o => Instantiate(o, transform.position, Quaternion.identity))) {
+                foreach (var ufo in ufoWave.Select(o => Instantiate(o, transform.position, Quaternion.identity)))
                     ufo.transform.parent = _aiWalls;
-                }
             }
         }
     }

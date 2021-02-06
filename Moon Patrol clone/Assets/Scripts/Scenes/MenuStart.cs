@@ -7,21 +7,19 @@ using Vehicle;
 namespace Scenes {
     public class MenuStart : MonoBehaviour {
         [SerializeField] private KeyboardActionKeyCodeSO keyboardActionKeyCodesSo;
+        private LevelController _levelController;
 
         private KeyCode _startKey;
-        private LevelController _levelController;
-        
-        void Start() {
+
+        private void Start() {
             _startKey = keyboardActionKeyCodesSo.start;
             _levelController = GameObject.Find("LevelController").GetComponent<LevelController>();
             var vehicleShootingController = GameObject.Find("Weapon").GetComponent<VehicleWeaponController>();
             vehicleShootingController.VehicleInMenu();
         }
 
-        void Update() {
-            if (Input.GetKeyDown(_startKey)) {
-                _levelController.StartGame();
-            }
+        private void Update() {
+            if (Input.GetKeyDown(_startKey)) _levelController.StartGame();
         }
     }
 }

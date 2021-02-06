@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 namespace Scenes {
     public class LevelController : MonoBehaviour {
         [SerializeField] private ScenesSO scenesScriptableObject;
-
-        private string _gameOverScene, _currentLevel;
-        private bool _showStageSummary;
         private readonly float _loadNextSceneTime = 5f;
 
         private readonly string
@@ -18,26 +15,8 @@ namespace Scenes {
             _stageSummaryJO = "StageSummary J-O",
             _gameFinished = "GameFinished";
 
-        public void StartGame() {
-            LoadNextLevel();
-        }
-
-        public void GameOverHandler() {
-            Invoke($"GameOver", 3f);
-        }
-
-        public void GameOver() {
-            SceneManager.LoadScene($"DeadPlayerMenu");
-        }
-
-        private void LoadNextLevel() {
-            scenesScriptableObject.currentLevel = GetNameNextLevel();
-            SceneManager.LoadScene($"{scenesScriptableObject.currentLevel}");
-        }
-
-        private void GameFinished() {
-            SceneManager.LoadScene($"{_gameFinished}");
-        }
+        private string _gameOverScene, _currentLevel;
+        private bool _showStageSummary;
 
         private void Start() {
             scenesScriptableObject.currentScene = SceneManager.GetActiveScene().name;
@@ -47,9 +26,8 @@ namespace Scenes {
 
             if (
                 scenesScriptableObject.currentScene == _stageSummaryAE ||
-                scenesScriptableObject.currentScene == _stageSummaryEJ) {
-                Invoke($"LoadNextLevel", _loadNextSceneTime);
-            }
+                scenesScriptableObject.currentScene == _stageSummaryEJ)
+                Invoke("LoadNextLevel", _loadNextSceneTime);
 
             if (scenesScriptableObject.currentScene == _stageSummaryJO) {
                 Debug.Log("GAME FINISHED");
@@ -58,6 +36,27 @@ namespace Scenes {
 
             scenesScriptableObject.currentLevel = SceneManager.GetActiveScene().name;
             scenesScriptableObject.currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        }
+
+        public void StartGame() {
+            LoadNextLevel();
+        }
+
+        public void GameOverHandler() {
+            Invoke("GameOver", 3f);
+        }
+
+        public void GameOver() {
+            SceneManager.LoadScene("DeadPlayerMenu");
+        }
+
+        private void LoadNextLevel() {
+            scenesScriptableObject.currentLevel = GetNameNextLevel();
+            SceneManager.LoadScene($"{scenesScriptableObject.currentLevel}");
+        }
+
+        private void GameFinished() {
+            SceneManager.LoadScene($"{_gameFinished}");
         }
 
         public void LoadStageSummary() {

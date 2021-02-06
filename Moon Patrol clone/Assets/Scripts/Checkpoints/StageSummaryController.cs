@@ -13,11 +13,11 @@ namespace Checkpoints {
             stagePoint,
             timeTextField,
             totalScoreOverall;
-        
-        void Start() {
-            string[] levelStrArr = scenesSO.currentLevel.Split(' ');
-            string levelStr = levelStrArr[1];
-            
+
+        private void Start() {
+            var levelStrArr = scenesSO.currentLevel.Split(' ');
+            var levelStr = levelStrArr[1];
+
             stagePoint.text = levelStr;
             timeTextField.text = scoreStore.stageTime.ToString();
             totalScoreOverall.text = scoreStore.playerOverallScore.ToString();

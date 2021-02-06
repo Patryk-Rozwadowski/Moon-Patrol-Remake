@@ -7,8 +7,8 @@ namespace UI {
         [SerializeField] private GameObject vehicle;
         [SerializeField] private Slider slider;
 
-        void Update() {
-            var calculate = 5 + (vehicle.transform.position.x / 479.7f) * 6;
+        private void Update() {
+            var calculate = 5 + vehicle.transform.position.x / 479.7f * 6;
             slider.value = calculate;
         }
     }

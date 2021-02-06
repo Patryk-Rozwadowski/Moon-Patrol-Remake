@@ -1,11 +1,10 @@
-﻿using UnityEngine.Audio;
+﻿using System;
 using UnityEngine;
-using System;
 
 public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
 
-    void Awake() {
+    private void Awake() {
         foreach (var s in sounds) {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -16,12 +15,12 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
-    void Start() {
+    private void Start() {
         Play("Theme");
     }
 
     public void Play(string name) {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        var s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) {
             Debug.Log("Sound: " + name + "not found!");
             return;

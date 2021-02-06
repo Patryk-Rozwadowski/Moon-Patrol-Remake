@@ -6,24 +6,18 @@ using UnityEngine;
 
 namespace Enemy {
     public class EnemyController : MonoBehaviour {
+        private const float ExplosionEffectLifeTime = 4f;
         [SerializeField] private GameObject explosionEffect;
         [SerializeField] private Transform pfScorePopup;
         [SerializeField] private EnemyParamsSO enemyParamsSO;
-
-        private const float ExplosionEffectLifeTime = 4f;
-        
-        private ScoreManager _scoreManager;
-        private EnemyAI _enemyAi;
         private AudioManager _audioManager;
-        
+        private EnemyAI _enemyAi;
+
         private bool _isplayerPosNull, _fleeing;
+
+        private ScoreManager _scoreManager;
         private float _spawnedTime, _timeToFlee, _respawnTime;
-        
-        public void EnemyDeath() {
-            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
-            RenderExplosionAndDestroy();
-        }
-        
+
         private void Start() {
             _audioManager = FindObjectOfType<AudioManager>();
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -40,12 +34,17 @@ namespace Enemy {
             Debug.Log($"{gameObject.name} is fleeing!");
         }
 
+        public void EnemyDeath() {
+            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
+            RenderExplosionAndDestroy();
+        }
+
         private void RenderExplosionAndDestroy() {
             var explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);
             var aiWalls = GameObject.Find("AiWalls").transform;
             explosionEffectGO.transform.parent = aiWalls;
             _audioManager.Play("Hit");
-            
+
             Destroy(explosionEffectGO, ExplosionEffectLifeTime);
             Destroy(gameObject);
         }

@@ -13,8 +13,8 @@ namespace Projectiles.Enemy {
             if (other.CompareTag("Ground")) {
                 var explosionPosition = transform.position;
                 var explosionEffectObject = Instantiate(explosionEffect, explosionPosition, Quaternion.identity);
-                
-                if(holeGameObject != null) Instantiate(holeGameObject, explosionPosition, Quaternion.identity);
+
+                if (holeGameObject != null) Instantiate(holeGameObject, explosionPosition, Quaternion.identity);
                 Destroy(gameObject);
                 Destroy(explosionEffectObject, 0.2f);
             }
@@ -25,9 +25,7 @@ namespace Projectiles.Enemy {
             }
 
             var playerVerticalBullet = other.GetComponent<VerticalBullet>();
-            if (playerVerticalBullet != null) {
-                Destroy(gameObject);
-            }
+            if (playerVerticalBullet != null) Destroy(gameObject);
             // TODO --player life
         }
     }

@@ -14,24 +14,26 @@ namespace Obstacles {
             GetComponent<SpriteRenderer>().sprite = rockParams.obstacleSprite;
         }
 
+        private void OnTriggerEnter2D(Collider2D other) {
+            var vehicleController = other.GetComponentInParent<VehicleController>();
+            var vehicleTire = other.GetComponent<VehicleTireController>();
+
+            if (vehicleController != null || vehicleTire) vehicleController.PlayerDeath();
+        }
+
         public void Destroy() {
-            ScoreManager scoreManager = GetComponent<ScoreManager>();
+            var scoreManager = GetComponent<ScoreManager>();
             scoreManager.AddOverallPlayerScore(rockParams.destroyScore);
 
             if (explosionEffect != null) {
                 var explosionEffectGameObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                 Destroy(explosionEffectGameObject, 4f);
             }
-            else Debug.LogWarning($"{gameObject.name} missing explosion effect");
+            else {
+                Debug.LogWarning($"{gameObject.name} missing explosion effect");
+            }
 
             Destroy(gameObject);
-        }
-
-        private void OnTriggerEnter2D(Collider2D other) {
-            var vehicleController = other.GetComponentInParent<VehicleController>();
-            var vehicleTire = other.GetComponent<VehicleTireController>();
-
-            if (vehicleController != null || vehicleTire) vehicleController.PlayerDeath();
         }
     }
 }

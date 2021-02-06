@@ -10,6 +10,8 @@ namespace Vehicle {
         [SerializeField] private PlayerParamsSO playerParams;
         [SerializeField] private KeyboardActionKeyCodeSO keyboardActionKeyCodeSo;
 
+        private bool _isJumping, _isAnyButtonPressed;
+
         private float
             _jumpTime,
             _pos,
@@ -19,12 +21,11 @@ namespace Vehicle {
             _speedStep,
             _playerHorizontalJumpSpeed;
 
+        private KeyCode _slowDownKey, _speedUpKey, _jumpKey;
+
         // SpeedTolerance is for tolerance which is used to calculate differences
         // between normal vehicle speed and deviation min / max speed
         private float _speedTolerance;
-        private KeyCode _slowDownKey, _speedUpKey, _jumpKey;
-
-        private bool _isJumping, _isAnyButtonPressed;
 
         private void Start() {
             _slowDownKey = keyboardActionKeyCodeSo.slowDown;
@@ -56,7 +57,7 @@ namespace Vehicle {
         }
 
         private void Jump() {
-            bool ifPressedJumpAndReadyToJump =
+            var ifPressedJumpAndReadyToJump =
                 Input.GetKeyDown(_jumpKey) && Time.time > _jumpTime + playerParams.jumpTimeInAir;
 
             if (ifPressedJumpAndReadyToJump) {
@@ -68,18 +69,20 @@ namespace Vehicle {
         }
 
         private void CheckIfVehicleIsStillInAir() {
-            bool ifVehicleIsStillInAir = Time.time < _jumpTime;
+            var ifVehicleIsStillInAir = Time.time < _jumpTime;
 
             if (ifVehicleIsStillInAir) {
                 _isJumping = true;
-                tireRigidbody2D.velocity = new Vector2(_playerHorizontalJumpSpeed + (100 * Time.deltaTime),
+                tireRigidbody2D.velocity = new Vector2(_playerHorizontalJumpSpeed + 100 * Time.deltaTime,
                     playerParams.jumpHeightAccelerate);
             }
-            else _isJumping = false;
+            else {
+                _isJumping = false;
+            }
         }
 
         private void SpeedUp() {
-            bool isSlowerThanMaxSpeed = _playerSpeed <= _maxSpeed;
+            var isSlowerThanMaxSpeed = _playerSpeed <= _maxSpeed;
 
             if (Input.GetKey(_speedUpKey) && isSlowerThanMaxSpeed) {
                 Debug.Log($"Speeding up: {_playerSpeed}");
@@ -91,7 +94,7 @@ namespace Vehicle {
         }
 
         private void SlowDown() {
-            bool ifFasterThanMinimalSpeed = _playerSpeed >= _minSpeed;
+            var ifFasterThanMinimalSpeed = _playerSpeed >= _minSpeed;
 
             if (Input.GetKey(_slowDownKey) && ifFasterThanMinimalSpeed) {
                 Debug.Log($"Slowing down: {_playerSpeed}");
@@ -104,7 +107,7 @@ namespace Vehicle {
 
         private void MoveForward() {
             if (_isJumping == false)
-                tireRigidbody2D.velocity = new Vector2(_playerSpeed + (100 * Time.deltaTime), _pos);
+                tireRigidbody2D.velocity = new Vector2(_playerSpeed + 100 * Time.deltaTime, _pos);
         }
 
         private void BackToNormalSpeed() {
@@ -120,7 +123,7 @@ namespace Vehicle {
                     _playerSpeed += Time.deltaTime * _speedStep;
                 }
                 else if (whenSpeedIsHigherThanStandard) {
-                    if (Math.Abs(_playerSpeed - (Time.deltaTime * _speedStep)) < 0.2f) return;
+                    if (Math.Abs(_playerSpeed - Time.deltaTime * _speedStep) < 0.2f) return;
 
                     Debug.Log($"Speed is higher than standard - slowing down: {_playerSpeed}");
                     _playerSpeed -= Time.deltaTime * _speedStep;
