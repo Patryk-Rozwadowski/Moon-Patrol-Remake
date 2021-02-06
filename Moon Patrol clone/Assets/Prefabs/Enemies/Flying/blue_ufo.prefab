@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 527922703292381389}
   - component: {fileID: 6353717052363778853}
   - component: {fileID: 571303114}
+  - component: {fileID: 1916951816957631983}
   m_Layer: 0
   m_Name: blue_ufo
   m_TagString: Untagged
@@ -168,12 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 7129360452310556015, guid: dbc287e6683027441b90055920ad7a8a,
     type: 3}
-  firepoint: {fileID: 0}
-  playerPos: {fileID: 0}
-  enemyParamsSO: {fileID: 11400000, guid: ab08490525526e246af33fb15ec0dab8, type: 2}
-  enemyHorizontalBullet: {fileID: 0}
   pfScorePopup: {fileID: 1705395976370819582, guid: 419884f15473a324ab7a404ff8e5b63c,
     type: 3}
+  enemyParamsSO: {fileID: 11400000, guid: ab08490525526e246af33fb15ec0dab8, type: 2}
 --- !u!114 &527922703292381389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +227,18 @@ MonoBehaviour:
   yellow: 0
   blue: 1
   enemyParamsSO: {fileID: 11400000, guid: ab08490525526e246af33fb15ec0dab8, type: 2}
+--- !u!114 &1916951816957631983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6969824601966314449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a30c7ece1185f49a47b905f673350e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1678070774326707183
 PrefabInstance:
   m_ObjectHideFlags: 0

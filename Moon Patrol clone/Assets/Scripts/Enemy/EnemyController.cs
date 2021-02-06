@@ -10,7 +10,7 @@ namespace Enemy {
         [SerializeField] private Transform pfScorePopup;
         [SerializeField] private EnemyParamsSO enemyParamsSO;
 
-        private const float ExplosionEffectLifeTime = 2f;
+        private const float ExplosionEffectLifeTime = 4f;
         
         private ScoreManager _scoreManager;
         private EnemyAI _enemyAi;

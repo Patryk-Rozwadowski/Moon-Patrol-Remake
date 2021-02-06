@@ -20,7 +20,7 @@ namespace Obstacles {
 
             if (explosionEffect != null) {
                 var explosionEffectGameObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-                Destroy(explosionEffectGameObject, 0.2f);
+                Destroy(explosionEffectGameObject, 4f);
             }
             else Debug.LogWarning($"{gameObject.name} missing explosion effect");
 

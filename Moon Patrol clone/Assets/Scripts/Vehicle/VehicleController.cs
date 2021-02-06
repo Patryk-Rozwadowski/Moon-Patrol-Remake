@@ -18,7 +18,7 @@ namespace Vehicle {
             
             gameObject.SetActive(false);
             var explosionEffectObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-            Destroy(explosionEffectObject, 3f);
+            Destroy(explosionEffectObject, 4f);
 
             _levelController.SetCurrentLevel();
             _levelController.GameOverHandler();

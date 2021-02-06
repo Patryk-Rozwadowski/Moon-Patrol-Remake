@@ -72,7 +72,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleParamsScriptableObject: {fileID: 11400000, guid: ebdeb418935b05b4ba8345e29d00ab19,
     type: 2}
-  jumpOverCollider2D: {fileID: 1878631379316608640}
 --- !u!1 &9149311217638397554
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 9149311217638397554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.485, y: -1.213, z: -6.540738}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 6865587256266201169}
   m_Father: {fileID: 0}
@@ -122,6 +121,7 @@ SpriteMask:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -177,6 +177,10 @@ EdgeCollider2D:
   - {x: -0.16444881, y: 4.3871374}
   - {x: 2.985846, y: 3.9118207}
   - {x: 5.885902, y: 2.1393006}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &7666393657471754313
 MonoBehaviour:
   m_ObjectHideFlags: 0
