@@ -1,11 +1,12 @@
 ﻿#pragma warning disable 649
 
+using Interfaces;
 using Score;
 using ScriptableObjects.Enemies;
 using UnityEngine;
 
 namespace Enemy {
-    public class EnemyController : MonoBehaviour {
+    public class EnemyController : MonoBehaviour, IDestroyable {
         private const float ExplosionEffectLifeTime = 4f;
         [SerializeField] private GameObject explosionEffect;
         [SerializeField] private Transform pfScorePopup;
@@ -18,6 +19,11 @@ namespace Enemy {
         private ScoreManager _scoreManager;
         private float _spawnedTime, _timeToFlee, _respawnTime;
 
+        public void Destroyed() {
+            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
+            RenderExplosionAndDestroy();
+        }
+        
         private void Start() {
             _audioManager = FindObjectOfType<AudioManager>();
             _scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
@@ -34,10 +40,7 @@ namespace Enemy {
             Debug.Log($"{gameObject.name} is fleeing!");
         }
 
-        public void EnemyDeath() {
-            _scoreManager.AddOverallPlayerScore(enemyParamsSO.score);
-            RenderExplosionAndDestroy();
-        }
+   
 
         private void RenderExplosionAndDestroy() {
             var explosionEffectGO = Instantiate(explosionEffect, transform.position, Quaternion.identity);

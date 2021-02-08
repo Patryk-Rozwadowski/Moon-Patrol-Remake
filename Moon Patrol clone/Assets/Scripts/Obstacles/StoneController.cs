@@ -1,12 +1,13 @@
 ﻿#pragma warning disable 649
 
+using Interfaces;
 using Score;
 using ScriptableObjects.Obstacles;
 using UnityEngine;
 using Vehicle;
 
 namespace Obstacles {
-    public class StoneController : MonoBehaviour {
+    public class StoneController : MonoBehaviour, IDestroyable {
         [SerializeField] private ObstaclesParamsSO rockParams;
         [SerializeField] private GameObject explosionEffect;
 
@@ -21,7 +22,7 @@ namespace Obstacles {
             if (vehicleController != null || vehicleTire) vehicleController.PlayerDeath();
         }
 
-        public void Destroy() {
+        public void Destroyed() {
             var scoreManager = GetComponent<ScoreManager>();
             scoreManager.AddOverallPlayerScore(rockParams.destroyScore);
 

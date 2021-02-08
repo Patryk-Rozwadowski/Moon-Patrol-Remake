@@ -1,6 +1,7 @@
 ﻿#pragma warning disable 649
 
 using Enemy;
+using Interfaces;
 using Obstacles;
 using ScriptableObjects.Projectile;
 using UnityEngine;
@@ -19,15 +20,9 @@ namespace Projectiles.Player {
         }
 
         private void OnTriggerEnter2D(Collider2D obj) {
-            var enemy = obj.GetComponent<EnemyController>();
-            if (enemy != null) enemy.EnemyDeath();
-
-            var stone = obj.GetComponent<StoneController>();
-            if (stone != null) {
-                stone.Destroy();
-                Destroy(gameObject);
-            }
-
+            var objetHit = obj.GetComponent<IDestroyable>();
+            objetHit?.Destroyed();
+            Destroy(gameObject);
             Debug.Log($"Vertical Bullet hit: {obj.name}");
         }
     }
