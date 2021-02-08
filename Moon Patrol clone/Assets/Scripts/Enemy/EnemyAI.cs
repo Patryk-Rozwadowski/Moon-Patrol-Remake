@@ -8,7 +8,6 @@ namespace Enemy {
 
         private readonly float _directionChangeTime = 2f;
 
-        // TODO refactor
         private float _latestDirectionChangeTime;
         private bool _moveDownAtStart = true;
 
@@ -17,15 +16,22 @@ namespace Enemy {
 
         private bool _reverse, _flee;
 
+        public void EnemyFlee() {
+            _flee = true;
+            _characterVelocity = 15f;
+            _movementDirection = new Vector2(Random.Range(-1f, 1f), 1f);
+        }
+
         private void Start() {
             _latestDirectionChangeTime = 0f;
             CalcuateNewMovementVector();
         }
 
-
         private void Update() {
-            transform.position = new Vector2(transform.position.x + _movementPerSecond.x * Time.deltaTime,
-                transform.position.y + _movementPerSecond.y * Time.deltaTime);
+            var position = transform.position;
+            position = new Vector2(position.x + _movementPerSecond.x * Time.deltaTime,
+                position.y + _movementPerSecond.y * Time.deltaTime);
+            transform.position = position;
             if (_flee) return;
             if (Time.time - _latestDirectionChangeTime > _directionChangeTime) _reverse = false;
             if (Time.time - _latestDirectionChangeTime > _directionChangeTime && _reverse != true) {
@@ -41,12 +47,6 @@ namespace Enemy {
                 _movementPerSecond = new Vector2(_movementDirection.x * 4, _movementDirection.y);
                 _reverse = true;
             }
-        }
-
-        public void EnemyFlee() {
-            _flee = true;
-            _characterVelocity = 10f;
-            _movementDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(0, 1f));
         }
 
         private void CalcuateNewMovementVector() {
