@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &520473716699258471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2723150947464674755}
+  m_Layer: 0
+  m_Name: YellowFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2723150947464674755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520473716699258471}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.6666665, y: 6.6666665, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4407065285603332760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &997524567895117773
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +63,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2723150947464674755}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -117,10 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 116b65fed788f5e46a5bcdddbc4a24a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletRocket: {fileID: 3466955665583854342, guid: cc77c2645d4b66041b78e9ff92e06844,
+  enemyProjectile: {fileID: 3466955665583854342, guid: cc77c2645d4b66041b78e9ff92e06844,
     type: 3}
-  firepoint: {fileID: 4472842409739086702, guid: 19d995f2a346b2b4eafdd546126cede6,
-    type: 3}
+  firepoint: {fileID: 520473716699258471}
   rocket: 1
   bomb: 0
   color: 0
