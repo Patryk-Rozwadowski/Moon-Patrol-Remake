@@ -12,5 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a4293e442c81d489797300b6d7fd78, type: 3}
   m_Name: VerticalProjectileSpeed
   m_EditorClassIdentifier: 
-  projectileSpeed: 7
-  rocketSpeed: 0
+  projectileSpeed: 10

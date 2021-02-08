@@ -11,10 +11,6 @@ namespace Vehicle {
             firePointHorizon,
             firePointVertical;
 
-        [SerializeField] private GameObject
-            bulletVertical,
-            bulletHorizon;
-
         [SerializeField] private ProjectileDistanceSO
             horizonDistanceRange,
             verticalDistanceRange;
@@ -65,7 +61,6 @@ namespace Vehicle {
             if (horizontalBullet is null) return;
 
             horizontalBullet.transform.position = initialPosition;
-
             Destroy(horizontalBullet, horizonDistanceRange.projectileDistance);
         }
     }
