@@ -6,11 +6,15 @@ using ScriptableObjects.Projectile;
 using UnityEngine;
 
 namespace Projectiles.Player {
-    public class VerticalBullet : MonoBehaviour {
+    public class VerticalBullet : MonoBehaviour, IDestroyable {
         public Transform firePointVertical;
         private ProjectileSpeedSO _projectileSpeed;
 
         private Rigidbody2D _rigidbody2D;
+
+        public void Destroyed() {
+            Destroy(gameObject);
+        }
 
         private void Start() {
             _projectileSpeed = Resources.Load<ProjectileSpeedSO>("ScriptableObjects/VerticalProjectileSpeed");

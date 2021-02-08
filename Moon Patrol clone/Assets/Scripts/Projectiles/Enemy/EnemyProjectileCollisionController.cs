@@ -1,13 +1,19 @@
 ﻿#pragma warning disable 649
 
-using Projectiles.Player;
+using Interfaces;
 using UnityEngine;
 using Vehicle;
 
 namespace Projectiles.Enemy {
-    public class EnemyProjectileCollisionController : MonoBehaviour {
+    public class EnemyProjectileCollisionController : MonoBehaviour, IDestroyable {
         [SerializeField] private GameObject explosionEffect;
         [SerializeField] private GameObject holeGameObject;
+
+        public void Destroyed() {
+            var explosionEffectGameObject = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+            Destroy(explosionEffectGameObject, 1f);
+            Destroy(gameObject);
+        }
 
         private void OnTriggerEnter2D(Collider2D other) {
             if (other.CompareTag("Ground")) {
@@ -23,10 +29,6 @@ namespace Projectiles.Enemy {
                 var playerVehicle = other.GetComponentInParent<VehicleController>();
                 playerVehicle.PlayerDeath();
             }
-
-            var playerVerticalBullet = other.GetComponent<VerticalBullet>();
-            if (playerVerticalBullet != null) Destroy(gameObject);
-            // TODO --player life
         }
     }
 }
