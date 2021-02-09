@@ -7,7 +7,6 @@ using UnityEngine;
 namespace Enemy {
     public class EnemyRocketShootingController : MonoBehaviour {
         [SerializeField] private GameObject enemyProjectile;
-        [SerializeField] private GameObject firepoint;
         [SerializeField] private bool rocket, bomb;
         [SerializeField] private bool color, yellow, blue;
 
@@ -65,12 +64,13 @@ namespace Enemy {
             Debug.Log(chancesInfo);
         }
 
-        private void Update() {
+        private void FixedUpdate() {
             _respawnTime += Time.deltaTime;
             if (!(_rocketShootTreshold < _rocketShootChance) || _rocketLaunched) return;
             if (!(_respawnTime > _randomTime) || _rocketLaunched) return;
             _rocketLaunched = true;
             Debug.Log($"{gameObject.name} launched rocket.");
+            var firepoint = transform.GetChild(0);
             Instantiate(enemyProjectile, firepoint.transform.position, Quaternion.identity);
         }
     }

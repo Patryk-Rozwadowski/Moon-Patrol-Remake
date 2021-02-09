@@ -2,6 +2,7 @@
 
 namespace Enemy {
     [RequireComponent(typeof(PolygonCollider2D))]
+    [DisallowMultipleComponent]
     public class EnemyAI : MonoBehaviour {
         // TODO take from enemyParamsSO
         private float _characterVelocity = 5f;

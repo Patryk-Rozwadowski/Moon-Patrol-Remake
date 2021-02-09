@@ -77,9 +77,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePointHorizon: {fileID: 3026630540239808739}
   firePointVertical: {fileID: 6670653756850915319}
-  bulletVertical: {fileID: 0}
-  bulletHorizon: {fileID: 6669357145383317162, guid: fd3bd5fcad9a01044a3565f58a657a6b,
-    type: 3}
   horizonDistanceRange: {fileID: 11400000, guid: 7b23d4377f1867d4ab66a52397891a34,
     type: 2}
   verticalDistanceRange: {fileID: 11400000, guid: 22c017105cb161b4fb04a5ce8741fa58,
@@ -204,10 +201,10 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!235 &5799261185466914932
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -225,7 +222,7 @@ WheelJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -0.3166542, y: -0.12587976}
   m_Suspension:
-    m_DampingRatio: 1
+    m_DampingRatio: 0.58
     m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
@@ -299,14 +296,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.114889584
+  m_Mass: 0.12037114
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6956607034192976408
 BoxCollider2D:
@@ -321,7 +318,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.510657, y: 0.12120205}
+  m_Offset: {x: -0.510657, y: 0.100210965}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -332,7 +329,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.021510482, y: 0.87991726}
+  m_Size: {x: 0.021510482, y: 0.92189944}
   m_EdgeRadius: 0
 --- !u!114 &5799261185691537402
 MonoBehaviour:
@@ -467,10 +464,10 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!235 &5799261185751826668
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -488,7 +485,7 @@ WheelJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -0.74842644, y: -0.10179424}
   m_Suspension:
-    m_DampingRatio: 1
+    m_DampingRatio: 0.58
     m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
@@ -630,10 +627,10 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!235 &5799261187123936563
 WheelJoint2D:
   m_ObjectHideFlags: 0
@@ -651,7 +648,7 @@ WheelJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.5259819, y: -0.074379444}
   m_Suspension:
-    m_DampingRatio: 1
+    m_DampingRatio: 0.58
     m_Frequency: 3.5
     m_Angle: 90
   m_UseMotor: 0
@@ -714,7 +711,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5799261187168670395}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 07e0cb35f5b30d24494852f1238b3e4d, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
