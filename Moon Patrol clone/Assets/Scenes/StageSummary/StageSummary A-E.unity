@@ -534,7 +534,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.078431375, g: 0.078431375, b: 0.09803922, a: 0}
+  m_BackGroundColor: {r: 0.101960786, g: 0.101960786, b: 0.11764706, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59700678e0092463cb106a3995cd22a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanlineIntensity: 20
+  scanlineIntensity: 15
   scanlineWidth: 2
 --- !u!1001 &526010307
 PrefabInstance:
@@ -723,7 +723,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.332636, y: 1}
+    m_SensorSize: {x: 1.3337629, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -1458,7 +1458,7 @@ PrefabInstance:
     - target: {fileID: 6774843180939403644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
       propertyPath: scanlineIntensity
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6774843180939403644, guid: 231d525ad6e7c8a4d95b221a8162fd73,
         type: 3}
@@ -10777,7 +10777,7 @@ PrefabInstance:
     - target: {fileID: 6459083158172885333, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6459083158935866568, guid: b4b5c0d49ec76c149ad4bf3b82f876a4,
         type: 3}

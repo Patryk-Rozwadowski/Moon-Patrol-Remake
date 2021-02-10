@@ -53,6 +53,10 @@ EdgeCollider2D:
   - {x: -9.54439, y: -1.3475323}
   - {x: -9.590408, y: 6.21165}
   - {x: 9.736286, y: 6.199273}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!50 &4035830006449030201
 Rigidbody2D:
   serializedVersion: 4
@@ -257,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59700678e0092463cb106a3995cd22a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scanlineIntensity: 20
+  scanlineIntensity: 15
   scanlineWidth: 2
 --- !u!1 &4035830006860377326
 GameObject:
@@ -320,7 +324,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3336673, y: 1}
+    m_SensorSize: {x: 1.3331901, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
