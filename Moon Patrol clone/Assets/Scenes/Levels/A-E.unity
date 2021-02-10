@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 5799261185691537401, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}
       propertyPath: m_Mass
-      value: 0.12037114
+      value: 0.06770877
       objectReference: {fileID: 0}
     - target: {fileID: 5799261185691537407, guid: 1afe299bbdc3bec4b921f0fabf840491,
         type: 3}
@@ -3314,6 +3314,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 423350837324172890, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
+        type: 3}
+      propertyPath: m_Points.Array.data[177].y
+      value: 4.933157
+      objectReference: {fileID: 0}
+    - target: {fileID: 423350837324172890, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
+        type: 3}
+      propertyPath: m_Points.Array.data[177].x
+      value: 114.57344
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdd7ec2e616bbbf4f8dd53ca0442904a, type: 3}
 --- !u!1001 &184061369
@@ -4165,6 +4175,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.Array.data[182].x
       value: 115.31815
+      objectReference: {fileID: 0}
+    - target: {fileID: 423350835495020011, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
+        type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 4.9446106
+      objectReference: {fileID: 0}
+    - target: {fileID: 423350835495020011, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
+        type: 3}
+      propertyPath: m_Points.Array.data[1].x
+      value: -115.317856
       objectReference: {fileID: 0}
     - target: {fileID: 423350835686846280, guid: fdd7ec2e616bbbf4f8dd53ca0442904a,
         type: 3}
@@ -5143,7 +5163,7 @@ PrefabInstance:
     - target: {fileID: 7999246633759032796, guid: a8ba3084f7fc7024c8e5942866c8428f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -33.7
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 7999246633759032796, guid: a8ba3084f7fc7024c8e5942866c8428f,
         type: 3}
