@@ -39,9 +39,8 @@ namespace Vehicle {
             _speedTolerance = playerParams.maxSpeed - playerParams.minimalSpeed;
 
             _isJumping = false;
-
-            _pos = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.down)).collider.transform
-                .position.y;
+            _pos = Physics2D.Raycast(transform.position, Vector2.negativeInfinity).collider.transform
+                .position.y - 1;
         }
 
         private void Update() {
