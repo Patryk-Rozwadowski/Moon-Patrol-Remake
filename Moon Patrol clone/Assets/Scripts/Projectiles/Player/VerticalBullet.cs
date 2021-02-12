@@ -1,6 +1,5 @@
 ﻿#pragma warning disable 649
 
-using Enemy;
 using Interfaces;
 using ScriptableObjects.Projectile;
 using UnityEngine;
@@ -34,10 +33,9 @@ namespace Projectiles.Player {
 
         private void OnTriggerEnter2D(Collider2D obj) {
             var enemy = obj.GetComponent<IDestroyable>();
-            if (enemy != null) {
-                enemy?.Destroyed();
-                Destroy(gameObject);                
-            } 
+            if (enemy == null) return;
+            enemy?.Destroyed();
+            Destroy(gameObject);
         }
 
         private void BulletFired() {

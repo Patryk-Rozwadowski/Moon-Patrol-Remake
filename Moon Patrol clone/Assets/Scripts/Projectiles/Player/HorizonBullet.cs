@@ -1,8 +1,6 @@
 ﻿#pragma warning disable 649
 
-using Enemy;
 using Interfaces;
-using Obstacles;
 using ScriptableObjects.Projectile;
 using UnityEngine;
 
