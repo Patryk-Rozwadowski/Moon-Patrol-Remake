@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 1230540237286939330}
   - component: {fileID: 2948181338926058891}
   - component: {fileID: 7934382606101779366}
-  - component: {fileID: 3474985246887007336}
   m_Layer: 0
-  m_Name: pfEnemey_ufo_bomb
+  m_Name: pfUfo_bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,6 +70,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -138,15 +138,5 @@ MonoBehaviour:
     type: 3}
   holeGameObject: {fileID: 6146700907840957741, guid: 91885068fbe9d894caf82b868c55b33a,
     type: 3}
---- !u!114 &3474985246887007336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230540237286939342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa777e743ef218a41a0365c5d1cc0681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  thrustForce: 3
+  createHole: 1

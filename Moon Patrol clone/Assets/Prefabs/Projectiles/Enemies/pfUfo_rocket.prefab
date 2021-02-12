@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3466955665583854341}
   - component: {fileID: 1755150204661666966}
   - component: {fileID: 1469172412232684364}
-  - component: {fileID: 4817869546859764387}
   m_Layer: 0
   m_Name: pfUfo_rocket
   m_TagString: Untagged
@@ -4927,15 +4926,5 @@ MonoBehaviour:
   explosionEffect: {fileID: 2338237513012446354, guid: 9539e168a3b34ba488df7187b3957bbf,
     type: 3}
   holeGameObject: {fileID: 0}
---- !u!114 &4817869546859764387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3466955665583854342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02126467b8599a149bfeae1908adc14a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  thrustForce: 1
+  createHole: 0
