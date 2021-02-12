@@ -5,4 +5,4 @@
 ### Team:
 #### Lead programmer: Patryk Rozwadowski
 #### Lead Graphic Designer: Daniel Pytel
-#### Designers: Michał Antosiewicz, Magda Kowalska, Paweł J. Rodan
+#### Game Designers: Michał Antosiewicz, Magda Kowalska, Paweł J. Rodan
