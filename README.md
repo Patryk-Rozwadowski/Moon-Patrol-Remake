@@ -1,7 +1,7 @@
-# Moon Patrol Remake
+# Moon Patrol Remake    
 
 ## The remake of the cult game for atari from 1982 Moon Patrol. Made in unity as part of a group project during game dev school.
-
+# <a href="https://patryk-rozwadowski.github.io/Moon-Patrol-Remake/" alt="Link to the game">Play!</p>
 ![](https://github.com/Patryk-Rozwadowski/Moon-Patrol-Remake/blob/main/Screenshots/mainmenu.png?raw=true)
 
 ## Team:
